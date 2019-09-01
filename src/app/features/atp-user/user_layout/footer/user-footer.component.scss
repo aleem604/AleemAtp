@@ -1,0 +1,31 @@
+@import '../../../../../assets/css/bootstrap.min.css';
+
+.footer {
+	/*position: absolute;*/
+	height: 60px;
+	line-height: 60px;
+	position: relative;
+	/*bottom: 2em;*/
+	/*margin-left: 33vw;*/
+}
+
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+body > .cont {
+	padding: 60px 15px 0;
+}
+
+.footer > .cont {
+	/*width: 32vw;*/
+}
+
+code {
+	font-size: 80%;
+}
+
+.color-white{
+	color:#86c6e6 !important;
+}

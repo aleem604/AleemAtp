@@ -1,0 +1,28 @@
+﻿@import "../../../../../_variables.scss";
+
+ul {
+    .dropdown-menu {
+        left: auto;
+        right: 0 !important;
+    }
+
+    .profile-dropdown {
+        margin-top: 10px !important;
+        background: $atp-red !important;
+        color: #fff !important;
+        border: solid 1px $atp-red;
+        border-radius: 20px !important;
+        height: 32px;
+        padding-top: 4px;
+
+        i {
+            font-size: 1.5em;
+            padding-top: 1px;
+        }
+
+        img {
+            width: 33px;
+            height: 33px;
+        }
+    }
+}

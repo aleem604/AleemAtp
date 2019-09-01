@@ -1,0 +1,45 @@
+<div class="row articles">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 mt-1 pl-0 pr-0" *ngFor="let a of articles; first as isFirst; last as isLast" [ngClass]="{'pt-2':isFirst, 'pb-2':isLast}">
+        <table class="org-table">
+            <tr>
+                <td colspan="2">
+
+                    <img [src]="a.avatar[0].src" alt="avatar" class="img-post">
+                </td>
+                <td>
+                    <p><strong class="level-2h">Change.Org</strong></p>
+                    <div class="row">
+                        <div class="col-xs-7"><strong class="atp-blue level-1h" [innerText]="a.name"></strong></div>
+                        <div class="col-xs-5 text-right" [innerText]="a.time"></div>
+                    </div>
+                    <p class="level-3h"><span [innerText]="a.date"></span></p>
+                    <p class="desc" [innerHtml]="a.desc"></p>
+                    <!--<p>
+                        <span><i class="fa fa-heart-o heart"></i> {{a.likes}}</span>
+                        <span class="ml-1 cursor-p" placement="bottom" [tooltip]="shareTemplate" containerClass="share-tooltip"><i class="fa fa-share-alt cogs"></i> 2</span>
+                        <span class="pull-right">
+                            <ul class="rating">
+                                <li><i [className]="a.rating >= 1 ? 'fa fa-star':'fa fa-star-o' "></i> </li>
+                                <li><i [className]="a.rating >= 2 ? 'fa fa-star':'fa fa-star-o' "></i> </li>
+                                <li><i [className]="a.rating >= 3 ? 'fa fa-star':'fa fa-star-o' "></i> </li>
+                                <li><i [className]="a.rating >= 4 ? 'fa fa-star':'fa fa-star-o' "></i> </li>
+                                <li><i [className]="a.rating >= 5 ? 'fa fa-star':'fa fa-star-o' "></i> </li>
+                            </ul>
+                        </span>
+                    </p>-->
+                </td>
+
+            </tr>
+        </table>
+        <div *ngIf="!isLast" class="clearfix mt-0 mb-0">
+            <hr class="clearfix" />
+        </div>
+    </div>
+</div>
+<ng-template #shareTemplate>
+    <span class="well-sm">
+        <i class="fa fa-facebook-official facebook-color txt-14"></i>
+        <span class="txt-14 pl-1 pr-1 atp-blue opacity-point-4">|</span>
+        <i class="fa fa-twitter twitter-color txt-14"></i>
+    </span>
+</ng-template>

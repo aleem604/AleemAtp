@@ -1,0 +1,15 @@
+<ul class="header-dropdown-list hidden-xs ng-cloak">
+  <li class="dropdown" dropdown>
+    <a class="dropdown-toggle profile-dropdown" dropdownToggle>
+      <img src="../../../../../assets/atp/profile.jpg"
+           class="profile"
+           alt="porfile" />
+      <!--<span>&nbsp;&nbsp;</span>
+      <i class="fa fa-angle-down"></i>-->
+    </a>
+    <ul *dropdownMenu class="dropdown-menu">
+      <li><a [routerLink]="['/profile']" class="dropdown-item"><i class="fa fa-user"></i> Profile</a></li>
+      <li><a [routerLink]="['/atp/login']" class="dropdown-item"><i class="fa fa-sign-out"></i> Logout</a></li>
+    </ul>
+  </li>
+</ul>

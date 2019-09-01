@@ -1,0 +1,85 @@
+<div id="content" class="pl-0">
+  <div class="input-group input-group-lg hidden-mobile search-div">
+    <input class="form-control input-lg" type="text" placeholder="Search" id="search-project">
+    <div class="input-group-btn">
+      <button type="submit" class="btn btn-default">
+        &#xA0;&#xA0;&#xA0;<i class="fa fa-fw fa-search fa-lg"></i>&#xA0;&#xA0;&#xA0;
+      </button>
+    </div>
+  </div>
+  <div class="row wrapper">
+    <div class="col-xs-12 col-sm-8 col-md-8 col-lg-9 content-section">
+      <div class="profile-section pt-1 pb-1">
+        <table>
+          <tr>
+            <td rowspan="2">
+              <div class="push-bit"><img src="../../../assets/atp/profile.jpg" /></div>
+            </td>
+            <td>
+              <label class="txt-16 atp-color bolder m-0">Nick Taylor</label> <small class="pull-right pr-1 atp-blue opacity-point-8">53 years . New York</small>
+            </td>
+          </tr>
+          <tr>
+            <td><label class="atp-blue bold"><img class="profile-image" src="../../../assets/atp/org2-logo.png" /> Freedom Party</label></td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="sub-menu">
+        <nav class="navbar navbar-default">
+          <div class="container-fluid pl-0 pr-0">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header visible-xs">
+              <button type="button" class="navbar-toggle collapsed" (click)="isCollapsed = !isCollapsed" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <!--<a class="navbar-brand" href="#" (click)="null">Menu</a>-->
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse1" [collapse]=isCollapsed>
+              <ul class="nav navbar-nav">
+                <li routerLinkActive="active">
+                  <a (click)="isCollapsed = !isCollapsed" [routerLink]="'/politicians/vote-history'">Vote History</a>
+                </li>
+                <li  routerLinkActive="active">
+                  <a (click)="isCollapsed = !isCollapsed" [routerLink]="'/politicians/write-me'">Write me</a>
+                </li>
+                <li routerLinkActive="active">
+                    <a (click)="isCollapsed = !isCollapsed" [routerLink]="'/politicians/posts'">Posts</a>
+                </li>
+                <li routerLinkActive="active">
+                    <a (click)="isCollapsed = !isCollapsed" [routerLink]="'/politicians/responses'">Responses</a>
+                </li>
+                <li routerLinkActive="active">
+                    <a (click)="isCollapsed = !isCollapsed" [routerLink]="'/politicians/district-concerns'">District Concerns</a>
+                </li>
+
+              </ul>
+            </div><!-- /.navbar-collapse -->
+          </div><!-- /.container-fluid -->
+        </nav>
+
+      </div>
+      <div class="content-container">
+          <router-outlet></router-outlet>
+      </div>
+
+    </div>
+    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-3 recomm-section hidden-xs">
+      <recommended-orgs></recommended-orgs>
+    </div>
+  </div>
+
+</div>
+<!-- END MAIN CONTENT -->
+<ng-template #shareTemplate>
+  <span class="well-sm">
+    <i class="fa fa-facebook-official facebook-color txt-14"></i>
+    <span class="txt-14 pl-1 pr-1 atp-blue opacity-point-4">|</span>
+    <i class="fa fa-twitter twitter-color txt-14"></i>
+  </span>
+</ng-template>

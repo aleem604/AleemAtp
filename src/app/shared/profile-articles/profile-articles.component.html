@@ -1,0 +1,31 @@
+<div class="row articles">
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 mt-1 pl-0 pr-0" *ngFor="let a of articles; first as isFirst; last as isLast" [ngClass]="{'pt-2':isFirst, 'pb-2':isLast}">
+    <table class="org-table">
+      <tr>
+        <td colspan="2"><img [src]="a.avatar[0].src" alt="avatar" class="img-post"></td>
+        <td>         
+          <div class="row">
+            <div class="col-xs-7"><strong class="atp-blue level-1h" [innerText]="a.name"></strong></div>
+            <div class="col-xs-5 text-right">
+              <ul class="rating">
+                <li><i [className]="a.rating >= 1 ? 'fa fa-star':'fa fa-star-o' "></i> </li>
+                <li><i [className]="a.rating >= 2 ? 'fa fa-star':'fa fa-star-o' "></i> </li>
+                <li><i [className]="a.rating >= 3 ? 'fa fa-star':'fa fa-star-o' "></i> </li>
+                <li><i [className]="a.rating >= 4 ? 'fa fa-star':'fa fa-star-o' "></i> </li>
+                <li><i [className]="a.rating >= 5 ? 'fa fa-star':'fa fa-star-o' "></i> </li>
+              </ul>
+
+            </div>
+          </div>
+        <p class="desc" [innerHtml]="a.desc"></p>
+        <p class="atp-red desc bolder cursor-p"><small class="bold">Read More</small></p>
+        </td>
+        
+      </tr>
+    </table>
+
+    <div *ngIf="!isLast" class="clearfix mt-0 mb-0">
+      <hr class="clearfix" />
+    </div>
+  </div>
+</div>

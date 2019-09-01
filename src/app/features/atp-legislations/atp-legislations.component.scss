@@ -1,0 +1,36 @@
+$legHeight: 887px;
+
+#content {
+  padding: 0;
+
+
+  .search-div {
+    .form-control {
+      border-left: none;
+    }
+  }
+
+
+  .wrapper {
+    margin: 0;
+
+    div.clearfix {
+      margin-left: -13px;
+    }
+
+    .content-section {
+      height: $legHeight;
+      overflow: auto;
+      padding: 0;
+      border-right: 2px solid rgba(220,220,220,0.5);
+      box-shadow: 1px 1px 6px rgba(228,228,228,0.5);
+    }
+
+    .recomm-section {
+      height: $legHeight;
+      overflow-y: auto;
+      overflow-x: hidden;
+      background: rgba(248, 248, 248, 0.5);
+    }
+  }
+}

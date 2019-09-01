@@ -1,0 +1,39 @@
+<div class="row videos">
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 videos-loop" *ngFor="let v of videos; first as isFirst; last as isLast" [ngClass]="{'pt-2':isFirst, 'pb-2':isLast}">
+    <div class="col-xs-4 col-sm-3 col-md-3 col-lg-2 text-center m-0 pl-half">
+      <div class="push-bit" (click)="openModal(video)">
+        <img [src]="v.url" alt="avatar" class="img-post">
+        <i class="fa fa fa-play"></i>
+      </div>
+    </div>
+    <div class="col-xs-8 col-sm-9 col-md-9 col-lg-10 pl-0">
+      <div class="post-heading">
+        <strong class="bold txt-13 opacity-point-8" [innerText]="v.name"></strong>
+      </div>
+      <div class="post-heading mb-half">
+        <strong class="bold txt-13 atp-blue bolder" [innerText]="v.title | slice : 0 : 25 "></strong>
+      </div>
+      <div class="post-heading">
+        <strong class="bold txt-13 opacity-point-7" [innerText]="v.date"></strong>
+      </div>
+    </div>
+    <div *ngIf="!isLast" class="clearfix mt-0 mb-0">
+      <hr class="clearfix" />
+    </div>
+    
+  </div>
+</div>
+
+<ng-template #video>
+  <div class="modal-body p-0 relative video-template">
+    <button type="button" class="close pull-right hidden-mobile" aria-label="Close" (click)="hideModal()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    <mat-video title="" [autoplay]="true" [preload]="true" [fullscreen]="true" [download]="false" color="accent" spinner="spin" poster="image.jpg">
+      <source matVideoSource src="../../../assets/atp/videos/NASA-Nuova-missione-sulla-Luna-360p.mp4" type="video/mp4" poster="../../../assets/atp/videos/space shuttle launch 1.jpg" >
+      <!--<source src="tutorial.webm" type="video/webm">-->
+      <!--<track matVideoTrack src="subtitles_en.vtt" kind="subtitles" srclang="en" label="English">
+    <track src="subtitles_no.vtt" kind="subtitles" srclang="no" label="Norwegian">-->
+    </mat-video>
+  </div>
+</ng-template>

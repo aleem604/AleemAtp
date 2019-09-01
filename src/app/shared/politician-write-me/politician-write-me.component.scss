@@ -1,0 +1,25 @@
+.articles {
+    overflow-y: auto;
+    height: 695px;
+    margin-left: 1em;
+    clear: both;
+    overflow-x: hidden;
+    margin-right: -2px;
+
+    table.org-table {
+        width: 98%;
+
+        button {
+            background-color: #012778;
+            border: solid 1px #ccc;
+            box-shadow: 1px 1px 0px #ccc;
+            border-radius: 25px;
+            font-size: 11px;
+            padding: 6px 16px;
+            color: white;
+            font-weight: bolder;
+            opacity: 0.8;
+            text-transform: uppercase;
+        }
+    }
+}

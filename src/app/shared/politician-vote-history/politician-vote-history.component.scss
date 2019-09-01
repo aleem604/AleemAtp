@@ -1,0 +1,28 @@
+.articles {
+    overflow-y: auto;
+    height: 695px;
+    margin-left: 0px;
+    clear: both;
+    overflow-x: hidden;
+    margin-right: -2px;
+
+    table.politician-table {
+        width: 99%;
+
+        tr {
+
+            td.width-100p {
+                width: 30px;
+            }
+
+            td:first-of-type {
+                padding-left: 1.5em;
+            }
+
+            td:last-of-type {
+                text-align: right;
+                padding-right: 1.5em;
+            }
+        }
+    }
+}

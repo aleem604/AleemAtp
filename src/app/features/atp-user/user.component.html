@@ -1,0 +1,42 @@
+
+<div class="container">
+	<ngx-spinner bdColor="rgba(51,51,51,0.8)"
+							 size="medium"
+							 color="#fff"
+							 type="ball-scale-multiple">
+		<p style="font-size: 20px; color: white">Loading...</p>
+	</ngx-spinner>
+    <div class="row">
+        <div class="col-sm-12 text-center">
+            <a [routerLink]="'/'">
+                <img src="/assets/atp/logo-inverse.png" alt="The American Taxpayer" class="img-responsive mx-auto">
+            </a>
+        </div>
+    </div>
+	<div class="row">
+		<div class="col-lg-5 col-md-7 col-sm-12 mx-auto">
+			<router-outlet></router-outlet>
+			<br />
+            <footer class="footer">
+                <div class="cont">
+                    <div class="row">
+                        <div class="col-sm-12 text-right">
+                            <span class="color-white pull-left">ATP <i class="fa fa-copyright"></i> 2019</span>
+                            <a [routerLink]="'/about'">
+                                <span class="color-white pr-2">About</span>
+                            </a>
+                            <a [routerLink]="'/terms'">
+                                <span class="color-white pr-2">Terms</span>
+                            </a>
+                            <a [routerLink]="'/policy'">
+                                <span class="color-white pr-2">Policy</span>
+                            </a>
+                            <a [routerLink]="'/contact'"><span class="color-white pl-2">Contact</span></a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+		</div>
+	</div>
+</div>
+

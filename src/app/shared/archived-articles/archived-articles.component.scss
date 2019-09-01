@@ -1,0 +1,33 @@
+.articles {
+  overflow-y: auto;
+  height: 836px;
+  margin-left: -13px;
+  clear: both;
+  overflow-x: hidden;
+  margin-right: -2px;
+
+  .archives {
+    border-bottom: solid 1px #ccc;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+    padding-left: 0;
+    margin-left: 1em;
+  }
+
+  .archives-count {
+    color: #ff6a00;
+  }
+
+  .ease-in {
+    transition: width 2s, height 4s;
+  }
+
+  .img-post {
+    width: 100%;
+    height: 100%;
+    max-width: 80px;
+    max-height: 80px;
+    min-width: 60px;
+    min-height: 60px;
+  }
+}

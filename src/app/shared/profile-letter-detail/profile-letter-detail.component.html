@@ -1,0 +1,75 @@
+<div class="row articles">
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 mt-1 pl-0 pr-0 pt-2">
+
+      <table class="org-table">
+          <tr>
+              <td colspan="2" class="text-center pb-1">
+                  <p class="atp-blue mb-0"><i class="fa fa-angle-left"></i> <a class="cursor-p" [routerLink]="'/profile/letters'">Letters</a></p>
+              </td>
+          </tr>
+          <tr>
+              <td colspan="2">              
+                  <img [src]="letter.avatar[0].src" alt="avatar" class="img-post">
+              </td>
+              <td>
+                  <br />
+                  <p class="">
+                      <strong class="bold atp-color">To: </strong>
+                      <strong class="bold txt-12 atp-red opacity-point-9" [innerText]="letter.representative"></strong>
+                  </p>
+                  <div class="row">
+                      <div class="col-xs-9 col-sm-10 col-md-11 col-lg-11 mr-0 pr-0 mb-half">
+                          <strong class="bold txt-13 atp-blue opacity-point-9" [innerText]="letter.name"></strong>
+                      </div>
+                      <div class="col-xs-3 col-sm-2 col-md-1 col-lg-1 text-right"><small class="opacity-point-6" [innerText]="letter.time"></small> </div>
+                  </div>
+                  <p class="letter-detail-desc" [innerHtml]="letter.desc"></p>
+                  <table class="org-child-table">
+                      <tr>
+                          <td colspan="2" class="pl-0 ml-0">
+                              <p class="opacity-point-7"><small>2 REPLIES</small></p>
+                              <img [src]="letter.avatar[0].src" alt="avatar" class="img-post">
+                          </td>
+                          <td class="ml-0">
+                              <br />
+                              <div class="row">
+                                  <div class="col-xs-9 col-sm-10 col-md-11 col-lg-11 mr-0 pr-0 mb-half">
+                                      <strong class="bold atp-color">To: </strong>
+                                      <strong class="bold txt-12 atp-red opacity-point-9" [innerText]="letter.representative"></strong>
+                                  </div>
+                                  <div class="col-xs-3 col-sm-2 col-md-1 col-lg-1 text-right"><small class="opacity-point-6" [innerText]="letter.time"></small> </div>
+                              </div>
+                              <p [innerHtml]="letter.desc"></p>
+                          </td>
+                      </tr>
+                      <tr>
+                          <td colspan="3">
+                              <p class="letter-detail-desc"></p>
+                          </td>
+                      </tr>
+                      <tr>
+                          <td colspan="2" class="pl-0 ml-0">
+                              <img [src]="letter.avatar[0].src" alt="avatar" class="img-post">
+                          </td>
+                          <td class="ml-0">
+                              <br />
+                              <div class="row">
+                                  <div class="col-xs-9 col-sm-10 col-md-11 col-lg-11 mr-0 pr-0 mb-half">
+                                      <strong class="bold atp-color">To: </strong>
+                                      <strong class="bold txt-12 atp-red opacity-point-9" [innerText]="letter.representative"></strong>
+                                  </div>
+                                  <div class="col-xs-3 col-sm-2 col-md-1 col-lg-1 text-right"><small class="opacity-point-6" [innerText]="letter.time"></small> </div>
+                              </div>
+                              <p [innerHtml]="letter.desc"></p>
+                          </td>
+
+                      </tr>
+                  </table>
+
+
+              </td>
+
+          </tr>
+      </table>
+  </div>
+</div>

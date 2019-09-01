@@ -1,0 +1,42 @@
+.articles {
+  overflow-y: auto;
+  height: 695px;
+  margin-left: 0px;
+  clear: both;
+  overflow-x: hidden;
+  margin-right: -2px;
+  padding-right:2px;
+
+  table.org-table {
+    width: 98%;
+
+    tr {
+      td:first-of-type {
+        padding-left: 1.2em;
+        padding-right: 0.8em;
+        text-align: center;
+        vertical-align: top;
+
+        img {
+          width: 90px;
+          height: 90px;
+        }
+      }
+    }
+
+    .rating {
+      float: right;
+      padding:0;
+      li {
+        display: inline;
+        padding-right: 3px;
+        float: left;
+        font-size:11px;
+      }
+
+      .fa-star {
+        color: #ffd800;
+      }
+    }
+  }
+}

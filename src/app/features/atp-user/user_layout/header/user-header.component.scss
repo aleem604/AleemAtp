@@ -1,0 +1,29 @@
+@import '../../../../../assets/css/bootstrap.min.css';
+
+img.img-responsive {
+    width: 18%;
+    margin-top: 1.5%;
+    margin-bottom: 2.5%;
+}
+
+@media screen and (max-width: 991px) {
+    img.img-responsive {
+        width: 18%;
+        margin-top: 1.5%;
+        margin-bottom: 2.5%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    img.img-responsive {
+        width: 17%;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    img.img-responsive {
+        width: 15%;
+        margin-top: 1.5%;
+        margin-bottom: 2.5%;
+    }
+}

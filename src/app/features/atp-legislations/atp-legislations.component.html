@@ -1,0 +1,48 @@
+<!-- MAIN CONTENT -->
+<div id="content" class="pl-0">
+  <div class="input-group input-group-lg search-div">
+    <input class="form-control input-lg" type="text" placeholder="Search" id="search-project">
+    <div class="input-group-btn">
+      <button type="submit" class="btn btn-default">
+        &#xA0;&#xA0;&#xA0;<i class="fa fa-fw fa-search fa-lg"></i>&#xA0;&#xA0;&#xA0;
+      </button>
+    </div>
+  </div>
+    <div class="row wrapper">
+      <div class="col-xs-12 col-sm-8 col-md-8 col-lg-9 content-section">
+        <div class="col-xs-12 pr-0" *ngFor="let n of news; first as isFirst; last as isLast" [ngClass]="{'pt-2':isFirst}">
+
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" >
+            <div class="post-heading mb-half">
+              <strong class="level-2h" [innerText]="n.name"></strong>
+            </div>
+            <div class="post-heading mb-half">
+              <strong class="atp-blue level-1h" [innerText]="n.topic"></strong>
+              <span class="pull-right time-span" [innerText]="n.time"></span>
+            </div>
+            <div class="post-heading mb-half">
+              <strong class="level-3h" [innerText]="n.city"></strong>
+            </div>
+            <p class="desc" [innerHtml]="n.desc">
+            </p>
+          </div>
+          <div *ngIf="!isLast" class="clearfix">
+            <hr class="clearfix" />
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xs-12 col-sm-4 col-md-4 col-lg-3 recomm-section hidden-xs">
+        <recommended-orgs></recommended-orgs>
+      </div>
+    </div>
+
+</div>
+<!-- END MAIN CONTENT -->
+<ng-template #shareTemplate>
+  <span class="well-sm">
+    <i class="fa fa-facebook-official facebook-color txt-14"></i>
+    <span class="txt-14 pl-1 pr-1 atp-blue opacity-point-4">|</span>
+    <i class="fa fa-twitter twitter-color txt-14"></i>
+  </span>
+</ng-template>

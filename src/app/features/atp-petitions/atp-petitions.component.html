@@ -1,0 +1,54 @@
+<div id="content" class="pl-0">
+  <div class="input-group input-group-lg search-div">
+    <input class="form-control input-lg" type="text" placeholder="Search" id="search-project">
+    <div class="input-group-btn">
+      <button type="submit" class="btn btn-default">
+        &#xA0;&#xA0;&#xA0;<i class="fa fa-fw fa-search fa-lg"></i>&#xA0;&#xA0;&#xA0;
+      </button>
+    </div>
+  </div>
+  <div class="row wrapper">
+    <div class="col-xs-12 col-sm-8 col-md-8 col-lg-9 content-section">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" *ngFor="let n of news; first as isFirst; last as isLast" [ngClass]="{'pt-2':isFirst, 'pb-2':isLast}">
+        <div class="col-xs-3 col-sm-2 col-md-2 col-lg-1 text-center m-0 p-0">
+          <div class="push-bit">
+            <a [routerLink]="['/profile']"> <img [src]="n.avatar[0].src" alt="avatar" class="img-post"> </a>
+          </div>
+        </div>
+        <div class="col-xs-9 col-sm-10 col-md-10 col-lg-11">
+          <div class="post-heading mb-half">
+            <strong class="level-2h" [innerText]="n.name"></strong>
+            <span class="pull-right time-span" [innerText]="n.time"></span>
+          </div>
+          <div class="post-heading mb-half">
+            <strong class="level-1h atp-blue" [innerText]="n.event"></strong>
+          </div>
+          <div class="post-heading mb-half">
+            <strong class="atp-color level-3h" [innerText]="n.date"></strong>
+          </div>
+          <div class="post-heading mb-half">
+            <strong class="level-4h" [innerText]="n.address"></strong>
+          </div>
+          <p class="desc" [innerHtml]="n.desc"></p>
+          <p>
+            <span><i class="fa fa-heart-o heart"></i> {{n.likes}}</span>
+            <span class="ml-1 cursor-p" placement="bottom" [tooltip]="shareTemplate" containerClass="share-tooltip"><i class="fa fa-share-alt cogs"></i> 2</span>
+          </p>
+        </div>
+        <div *ngIf="!isLast" class="pt-1 clearfix">
+          <hr class="clearfix" />
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-3 recomm-section hidden-xs">
+      <recommended-orgs></recommended-orgs>
+    </div>
+  </div>
+</div>
+<ng-template #shareTemplate>
+  <span class="well-sm">
+    <i class="fa fa-facebook-official facebook-color txt-14"></i>
+    <span class="txt-14 pl-1 pr-1 atp-blue opacity-point-4">|</span>
+    <i class="fa fa-twitter twitter-color txt-14"></i>
+  </span>
+</ng-template>

@@ -1,0 +1,40 @@
+.articles {
+    overflow-y: auto;
+    height: 695px;
+    margin-left: 0px;
+    clear: both;
+    overflow-x: hidden;
+    margin-right: -2px;
+
+    table.org-table {
+        width: 98%;
+
+        tr {
+            td {
+               padding-left:1em; 
+            }
+
+            .level-3h {
+                padding-top: 8px;
+                font-size: 11.5px;
+                opacity: 0.8;
+            }
+        }
+
+        .rating {
+            float: right;
+            padding: 0;
+
+            li {
+                display: inline;
+                padding-right: 3px;
+                float: left;
+                font-size: 11px;
+            }
+
+            .fa-star {
+                color: #ffd800;
+            }
+        }
+    }
+}

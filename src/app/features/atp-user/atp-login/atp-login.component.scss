@@ -1,0 +1,162 @@
+.container {
+    background-color: #012778;
+    height: 100vh;
+    max-width: 100vw;
+}
+.login-heading {
+    font-size: 28px;
+    margin-top: 12px;
+    margin-bottom: 0;
+    opacity: 0.8;
+}
+
+a {
+    text-decoration: none !important;
+    color: #012778;
+}
+
+.text-normal {
+    font-weight: normal !important;
+}
+
+.form {
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: 0.5rem;
+    outline: 0;
+    padding-bottom: 4rem;
+
+    .myform {
+        position: relative;
+        display: -ms-flexbox;
+        display: flex;
+        padding: 8% 12% 2% 12%;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        width: 100%;
+        pointer-events: auto;
+        /*max-width: 500px;*/
+    }
+}
+
+.grey {
+    color: #A0A0A0;
+}
+
+.google-color {
+    color: #ff0000 !important;
+}
+
+.dark-grey {
+    color: #707070;
+}
+
+.tx-tfm {
+    text-transform: uppercase;
+}
+
+
+.login-btn {
+    border-radius: 2rem;
+    width: 60%;
+    background-color: #012778;
+    color: white;
+    font-size: 78%;
+    font-weight: bold;
+    padding: 3.5% 0.9%;
+    cursor: pointer;
+}
+
+.google {
+    border-radius: 2rem;
+    font-size: 12px;
+    font-weight: bold;
+    /*padding: 0.5rem 0.9rem;*/
+    text-align: center;
+    outline: none;
+    border: 1px solid #eee;
+    background-color: none;
+    color: #012778;
+    width: 85%;
+    background-color: white;
+    box-shadow: 1px 1px 1px #eee;
+    cursor: pointer;
+}
+
+.login-or {
+    position: relative;
+    color: #aaa;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.span-or {
+    display: block;
+    background-color: #fff;
+    text-align: center;
+}
+
+.hr-or {
+    box-shadow: 1px 2px 3px #eee;
+    margin: 0;
+    padding: 0;
+    height: 1px;
+    border: none;
+    padding-bottom: 0em;
+}
+
+small {
+    /*font-size: 65%;*/
+}
+
+
+
+form .error {
+    color: #ff0000;
+}
+
+.invalid-feedback {
+    display: block;
+    width: 100%;
+    margin-top: .25rem;
+    color: #dc3545;
+}
+.grey {
+    color: #A0A0A0;
+}
+
+.dark-grey {
+    color: #707070;
+}
+
+.tx-tfm {
+    text-transform: uppercase;
+}
+
+.mt-1 {
+    margin-top: 1%;
+}
+
+.mt-2 {
+    margin-top: 2%;
+}
+
+.mt-3 {
+    margin-top: 3%;
+}
+
+.mt-4 {
+    margin-top: 4%;
+}
+
+.mt-5 {
+    margin-top: 5%;
+}
+
+.login-btn-row {
+    line-height: 38px;
+    margin-top: 2.5em;
+}

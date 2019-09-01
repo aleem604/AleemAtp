@@ -1,0 +1,48 @@
+<!-- MAIN CONTENT -->
+    <div id="content">
+        <div class="input-group input-group-lg">
+            <input class="form-control input-lg" type="text" placeholder="Search again..." id="search-project">
+            <div class="input-group-btn">
+                <button type="submit" class="btn btn-default">
+                    &#xA0;&#xA0;&#xA0;<i class="fa fa-fw fa-search fa-lg"></i>&#xA0;&#xA0;&#xA0;
+                </button>
+            </div>
+        </div>
+        <div class="row blotters">
+            <div class="col-xs-12 pt-half pb-1">
+                <h3 class="atp-red level-1h text-center pt-half pb-half m-0">
+                    Select a cause <small class="atp-color desc pull-right" (click)="showMessage(template)">What is this?</small>
+                </h3>
+            </div>
+            <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 text-center" *ngFor="let b of blotters">
+                <div class="image-post relative">
+                    <input type="checkbox" class="can-check" />
+                    <img alt="assets/img" class="img-responsive margin-0-auto" src="./../../assets/atp/vote/pet{{b.id}}.jpg">
+
+                    <ul class="list-block">
+                        <li><span class="bold" [innerText]="b.name"></span> </li>
+                        <li><span class="desc" [innerText]="b.addr"></span> </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <ng-template #template>
+        <div class="modal-header">
+            <h4 class="modal-title pull-left atp-red"><i class="fa fa-warning atp-color desc"></i> What is this page?</h4>
+            <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body pl-half pr-half">
+            <p>Daily users get to decide how a percentage of our profits are used.</p>
+            <p>Please slect one of these greate causes.</p>
+            <p>We appreciate you using our platform!</p>
+        </div>
+        <div class="modal-footer text-center atp-modal-footer">
+            <button type="button" class="btn btn-default" aria-label="Close" (click)="modalRef.hide()">
+                Ok
+            </button>
+        </div>
+    </ng-template>

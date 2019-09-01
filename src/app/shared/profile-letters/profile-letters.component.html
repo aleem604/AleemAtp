@@ -1,0 +1,27 @@
+<div class="row articles">
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 mt-1 pl-0 pr-0" *ngFor="let a of letters; first as isFirst; last as isLast" [ngClass]="{'pt-2':isFirst, 'pb-2':isLast}">
+    <table class="org-table">
+       
+      <tr>
+        <td colspan="2"><img [src]="a.avatar[0].src" alt="avatar" class="img-post"></td>
+        <td>
+          <p class="level-3h">
+            <small *ngIf="a.replies > 0; else reply">{{a.replies}} replies</small>
+            <ng-template #reply> <small>No Reply</small></ng-template>
+          </p>
+          <div class="row">
+            <div class="col-xs-9 col-sm-10 col-md-11 col-lg-11 mr-0 pr-0">
+            <strong class="level-1h" [innerText]="a.name"></strong>
+            </div>
+            <div class="col-xs-3 col-sm-2 col-md-1 col-lg-1 text-right"><small class="opacity-point-6" [innerText]="a.time"></small> </div>
+          </div>
+          <p class="desc" [innerHtml]="a.desc"></p>
+          <p class="atp-red opacity-point-8 cursor-p bold"><small class="bold"><a [routerLink]="['/profile/letters/',a.id]">Read More</a></small></p>
+        </td>
+      </tr>
+    </table>
+    <div *ngIf="!isLast" class="clearfix mt-0 mb-0">
+      <hr class="clearfix" />
+    </div>
+  </div>
+</div>

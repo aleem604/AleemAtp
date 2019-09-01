@@ -1,0 +1,93 @@
+.recommendation-section {
+    padding: 0em;
+    padding-top: 0;
+    padding-left: 0;
+
+
+    .table-recomm {
+        td:first-child {
+            width: 20%;
+        }
+    }
+
+
+    .img-responsive {
+        margin: 0 auto;
+        width: 100%;
+        height: 100%;
+        max-width: 50px;
+        max-height: 50px;
+        background: none;
+        background-color: transparent;
+    }
+
+    .btn-round {
+        padding: 3px 5px 5px 5px;
+        border-radius: 25px;
+        color: #0f61fa;
+        font-size: 12px;
+        width: 73px;
+        border: 1px solid #efefef;
+        font-weight: bold;
+    }
+
+    .btn-follow {
+        background-color: white;
+        border: solid 1px #ccc;
+        box-shadow: 1px 1px 0px #ccc;
+        border-radius: 25px;
+        font-size: 10px;
+        padding: 3px 10px;
+        color: #012778;
+        font-weight: bolder;
+        opacity: 0.8;
+        text-transform: uppercase;
+    }
+
+    .btn-view-all {
+        background-color: #012778;
+        border: solid 1px #ccc;
+        box-shadow: 1px 1px 0px #ccc;
+        border-radius: 25px;
+        font-size: 11px;
+        padding: 4px 16px;
+        color: white;
+        font-weight: bolder;
+        opacity: 0.8;
+        text-transform: uppercase;
+    }
+
+    .text-white {
+        color: white;
+    }
+
+    .arrow-left {
+        font-size: 1.6rem;
+        padding-right: 3px;
+        cursor: pointer;
+    }
+
+    .arrow-right {
+        font-size: 1.6rem;
+        padding-left: 3px;
+        cursor: pointer;
+    }
+
+
+    .event-tab {
+        td:first-child {
+            font-size: 32px;
+            color: #CE0000;
+            font-weight: bold;
+            padding-right: 2px;
+        }
+
+        td:last-child {
+            font-size: 11px;
+            padding-left: 0.2em;
+            line-height: 14px;
+            opacity: 0.5;
+            font-weight: bold;
+        }
+    }
+}

@@ -1,0 +1,59 @@
+#content {
+    padding: 0;
+
+    .blotter-filter {
+        ul {
+            border-top: none;
+            border-left: none;
+            border-right: none;
+        }
+
+        .active > a {
+            color: #333;
+        }
+
+        a, a:hover {
+            color: #808080;
+            border: none;
+        }
+    }
+
+
+
+    .blotters {
+        margin-left: 1em;
+        margin-right: 1em;
+        margin-top: 1em;
+
+        img {
+            width: 100%;
+            height: 100%;
+            max-width: 260px;
+            max-height: 260px;
+        }
+
+
+        .list-block {
+            list-style-type: none;
+            list-style: none;
+            padding: 10px 10px 10px 0px;
+            width: 100%;
+            display: table;
+            text-align: center;
+            margin: 0 auto;
+            line-height: 20px;
+
+            li {
+                text-align: left;
+            }
+        }
+
+        @media only screen and (min-width: 320px) {
+            .list-block {
+                height: 120px;
+            }
+        }
+    }
+}
+
+

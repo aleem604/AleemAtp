@@ -1,0 +1,72 @@
+<div class="row articles">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 mt-1 pl-0 pr-0 pt-2">
+        <table class="org-table">
+            <tr>
+                <td colspan="2"><img [src]="res.avatar[0].src" alt="avatar" class="img-post"></td>
+                <td>
+                    <p class="level-2h"><span class="opacity-point-8">To:</span><span class="atp-red pl-half">Nick Taylor</span> </p>
+                    <div class="row">
+                        <div class="col-xs-7"><strong class="atp-blue level-1h" [innerText]="res.name"></strong></div>
+                        <div class="col-xs-5 text-right"><small class="desc">5 days ago</small> </div>
+                    </div>
+                    <p class="desc" [innerHtml]="res.desc"></p>
+                </td>
+
+            </tr>
+        </table>
+        <div *ngIf="!isLast" class="clearfix mt-0 mb-0">
+            <hr class="clearfix" />
+        </div>
+        <table class="org-table">
+            <tr>
+                <td colspan="2"><img src="../../../assets/atp/news-letter/10.PNG" alt="avatar" class="img-post rounded-image"></td>
+                <td>
+                    <p class="level-2h pt-2"><span class="opacity-point-8">Responses To:</span><span class="atp-red pl-half">Jennifer Miller</span> </p>
+                    <p class="desc" [innerHtml]="res.desc"></p>
+
+                    <div class="desc">
+                        Directly answered all questions :
+                        <ul class="rating1">
+                            <li><i [className]="res.rating >= 1 ? 'fa fa-star':'fa fa-star-o'"></i> </li>
+                            <li><i [className]="res.rating >= 2 ? 'fa fa-star':'fa fa-star-o'"></i> </li>
+                            <li><i [className]="res.rating >= 3 ? 'fa fa-star':'fa fa-star-o'"></i> </li>
+                            <li><i [className]="res.rating >= 4 ? 'fa fa-star':'fa fa-star-o'"></i> </li>
+                            <li><i [className]="res.rating >= 5 ? 'fa fa-star':'fa fa-star-o'"></i> </li>
+                        </ul>
+                    </div>
+
+                    <div class="desc">
+                        Agree with responses:
+                        <ul class="rating1">
+                            <li><i [className]="res.rating1 >= 1 ? 'fa fa-star':'fa fa-star-o'"></i> </li>
+                            <li><i [className]="res.rating1 >= 2 ? 'fa fa-star':'fa fa-star-o'"></i> </li>
+                            <li><i [className]="res.rating1 >= 3 ? 'fa fa-star':'fa fa-star-o'"></i> </li>
+                            <li><i [className]="res.rating1 >= 4 ? 'fa fa-star':'fa fa-star-o'"></i> </li>
+                            <li><i [className]="res.rating1 >= 5 ? 'fa fa-star':'fa fa-star-o'"></i> </li>
+                        </ul>
+                    </div>
+                    <div class="desc">
+                        Good, Concise, POA (Plang of Action) given:
+                        <ul class="rating1">
+                            <li><i [className]="res.rating2 >= 1 ? 'fa fa-star':'fa fa-star-o'"></i> </li>
+                            <li><i [className]="res.rating2 >= 2 ? 'fa fa-star':'fa fa-star-o'"></i> </li>
+                            <li><i [className]="res.rating2 >= 3 ? 'fa fa-star':'fa fa-star-o'"></i> </li>
+                            <li><i [className]="res.rating2 >= 4 ? 'fa fa-star':'fa fa-star-o'"></i> </li>
+                            <li><i [className]="res.rating2 >= 5 ? 'fa fa-star':'fa fa-star-o'"></i> </li>
+                        </ul>
+                    </div>
+                </td>
+
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+<!--<ul class="rating">
+    <li><i [className]="res.rating >= 1 ? 'fa fa-star':'fa fa-star-o' "></i> </li>
+    <li><i [className]="res.rating >= 2 ? 'fa fa-star':'fa fa-star-o' "></i> </li>
+    <li><i [className]="res.rating >= 3 ? 'fa fa-star':'fa fa-star-o' "></i> </li>
+    <li><i [className]="res.rating >= 4 ? 'fa fa-star':'fa fa-star-o' "></i> </li>
+    <li><i [className]="res.rating >= 5 ? 'fa fa-star':'fa fa-star-o' "></i> </li>
+</ul>-->

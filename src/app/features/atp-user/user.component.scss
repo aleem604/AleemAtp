@@ -1,0 +1,55 @@
+@import '../../../assets/atp/css/bootstrap.min.css';
+/*html, body{
+	background-color: #012778;
+}*/
+
+/*.container {
+	max-width: 100vw;
+	
+	height: 100vh;
+}*/
+
+a {
+    text-decoration: none !important;
+    color: #012778;
+}
+
+.text-normal {
+    font-weight: normal !important;
+}
+
+.color-white {
+    color: #86c6e6 !important;
+}
+
+img {
+    width: 150px;
+    margin-top: 1.5%;
+    margin-bottom: 2.5%;
+}
+
+@media screen and (max-width: 991px) {
+    img {
+        width: 150px;
+        margin-top: 3%;
+        margin-bottom: 5%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    img {
+        width: 150px;
+        margin-top: 3%;
+        margin-bottom: 5%;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    img {
+        width: 130px;
+        margin-top: 3%;
+        margin-bottom: 5%;
+    }
+}
+
+

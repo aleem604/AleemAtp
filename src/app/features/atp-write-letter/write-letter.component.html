@@ -1,0 +1,52 @@
+<!-- MAIN CONTENT -->
+<div id="content">
+  <div class="input-group input-group-lg search-bar">
+    <input class="form-control input-lg" type="text" placeholder="Search again..." id="search-project">
+    <div class="input-group-btn">
+      <button type="submit" class="btn btn-default">
+        &#xA0;&#xA0;&#xA0;<i class="fa fa-fw fa-search fa-lg"></i>&#xA0;&#xA0;&#xA0;
+      </button>
+    </div>
+  </div>
+  <div class="row letters">
+      <div class="col-sm-12 mb-3">
+          <a [routerLink]="'edit'" class="pull-right atp-blue pt-half pr-half">Change my address</a>
+      </div>
+      <div class="col-xs-12 text-center">
+          <h1 class="letter-heading">Federal</h1>
+      </div>
+      <div class="col-xs-6 col-sm-4 col-md-4 col-lg-2 text-center" *ngFor="let f of letters.federal">
+          <img alt="assets/img" class="img-responsive margin-0-auto" src="../../../assets/atp/news-letter/{{f.id}}.PNG">
+          <ul class="list-block">
+              <li><span class="bold atp-blue" [innerText]="f.name"></span> </li>
+              <li><span class="atp-color opacity-point-7" [innerText]="f.addr"></span> </li>
+              <li><span class="atp-color opacity-point-7" [innerText]="f.district"></span> </li>
+          </ul>
+      </div>
+
+      <div class="col-xs-12 text-center">
+          <h1 class="letter-heading">State</h1>
+      </div>
+      <div class="col-xs-6 col-sm-4 col-md-4 col-lg-2 text-center" *ngFor="let s of letters.state">
+          <img alt="assets/img" class="img-responsive margin-0-auto" src="../../../assets/atp/news-letter/{{s.id}}.PNG">
+          <ul class="list-block">
+              <li><span class="bold" [innerText]="s.name"></span> </li>
+              <li><span class="atp-color opacity-point-7" [innerText]="s.addr"></span> </li>
+              <li><span class="atp-color opacity-point-7" [innerText]="s.district"></span> </li>
+          </ul>
+      </div>
+
+      <div class="col-xs-12 text-center">
+          <h1 class="letter-heading">Local</h1>
+      </div>
+      <div class="col-xs-6 col-sm-4 col-md-4 col-lg-2 text-center" *ngFor="let l of letters.local">
+          <img alt="assets/img" class="img-responsive margin-0-auto" src="../../../assets/atp/news-letter/{{l.id}}.PNG">
+          <ul class="list-block">
+              <li><span class="bold" [innerText]="l.name"></span> </li>
+              <li><span class="atp-color opacity-point-7" [innerText]="l.addr"></span> </li>
+              <li><span class="atp-color opacity-point-7" [innerText]="l.district"></span> </li>
+          </ul>
+      </div>
+  </div>
+
+</div>
