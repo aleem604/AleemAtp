@@ -1,17 +1,13 @@
-.articles {
-  overflow-y: auto;
+.partial-wrapper {
   height: 695px;
-  margin-left: 0px;
-  clear: both;
-  overflow-x: hidden;
-  margin-right: -2px;
-  padding-right:2px;
 
-  table.org-table {
-    width: 97.5%;
+
+  table.wrapper-table {
+    width: auto;
+    /*margin-left:auto;*/
 
     tr {
-      td:first-of-type {
+      /*td:first-of-type {
         padding-left: 1.2em;
         padding-right: 0.8em;
         text-align: center;
@@ -21,7 +17,7 @@
           width: 90px;
           height: 90px;
         }
-      }
+      }*/
     }
 
     .rating {

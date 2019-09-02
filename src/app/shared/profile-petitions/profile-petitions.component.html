@@ -1,9 +1,8 @@
-<div class="row articles">
-    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 mt-1 pl-0 pr-0" *ngFor="let a of articles; first as isFirst; last as isLast" [ngClass]="{'pt-2':isFirst, 'pb-2':isLast}">
-        <table class="org-table">
+<div class="row partial-wrapper">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 pl-0 pr-0" *ngFor="let a of articles; first as isFirst; last as isLast" [ngClass]="{'pt-2':isFirst, 'pb-2':isLast}">
+        <table class="wrapper-table">
             <tr>
                 <td colspan="2">
-
                     <img [src]="a.avatar[0].src" alt="avatar" class="img-post">
                 </td>
                 <td>
@@ -14,19 +13,6 @@
                     </div>
                     <p class="level-3h"><span [innerText]="a.date"></span></p>
                     <p class="desc" [innerHtml]="a.desc"></p>
-                    <!--<p>
-                        <span><i class="fa fa-heart-o heart"></i> {{a.likes}}</span>
-                        <span class="ml-1 cursor-p" placement="bottom" [tooltip]="shareTemplate" containerClass="share-tooltip"><i class="fa fa-share-alt cogs"></i> 2</span>
-                        <span class="pull-right">
-                            <ul class="rating">
-                                <li><i [className]="a.rating >= 1 ? 'fa fa-star':'fa fa-star-o' "></i> </li>
-                                <li><i [className]="a.rating >= 2 ? 'fa fa-star':'fa fa-star-o' "></i> </li>
-                                <li><i [className]="a.rating >= 3 ? 'fa fa-star':'fa fa-star-o' "></i> </li>
-                                <li><i [className]="a.rating >= 4 ? 'fa fa-star':'fa fa-star-o' "></i> </li>
-                                <li><i [className]="a.rating >= 5 ? 'fa fa-star':'fa fa-star-o' "></i> </li>
-                            </ul>
-                        </span>
-                    </p>-->
                 </td>
 
             </tr>

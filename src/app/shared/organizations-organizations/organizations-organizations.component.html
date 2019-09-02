@@ -4,7 +4,12 @@
       <tr>
         <td><img [src]="a.avatar[0].src" alt="avatar" class="img-post"></td>
         <td><strong class="level-1h" [innerText]="a.name"></strong></td>
-        <td class="width-100p"><button class="btn btn-round btn-following">Following</button></td>
+        <td class="width-100p">
+          <button *ngIf="a.following;else notFollowing" class="btn btn-round btn-following">Following</button>
+          <ng-template #notFollowing>
+              <button class="btn btn-round btn-follow">Follow</button>
+          </ng-template>
+        </td>
       </tr>
     </table>
     <div *ngIf="!isLast" class="clearfix mt-0 mb-0">

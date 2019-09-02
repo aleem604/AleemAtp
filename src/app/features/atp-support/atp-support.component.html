@@ -7,27 +7,25 @@
             </button>
         </div>
     </div>
-    <div class="row wrapper">
+    <div class="row partial-wrapper">
         <div class="col-xs-12 col-sm-8 col-md-8 col-lg-9 content-section">
-            <div class="row articles">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 mt-half pl-0 pr-0" *ngFor="let a of articles; first as isFirst; last as isLast" [ngClass]="{'pt-1':isFirst, 'pb-1':isLast}">
-                    <table class="org-table">
+                    <table class="wrapper-table">
                         <tr>
                             <td colspan="2">
                                 <img [src]="a.avatar[0].src" alt="avatar" class="img-post">
                             </td>
-                            <td>
-                                <!--<p class="level-2h atp-blue" [innerText]="a.website"></p>-->
-                                <div class="row pt-half">
-                                    <div class="col-xs-7"><strong class="level-1h" [innerText]="a.name"></strong></div>
-                                    <div class="col-xs-5 text-right m-0 p-0">
-                                        <button *ngIf="!a.supported;else supported" class="support">Support</button>
+                            <td>                                                          
+                                <div>
+                                    <strong class="level-1h" [innerText]="a.name"></strong>
+                                    <span class="pull-right">
+                                        <button *ngIf="!a.supported;else supported" class="btn btn-round btn-follow">Support</button>
                                         <ng-template #supported>
-                                            <button class="supported">Supported</button>
-                                        </ng-template> 
-                                    </div>
+                                            <button class="btn btn-round btn-following">Supported</button>
+                                        </ng-template>
+                                    </span>
                                 </div>
-                                <p class="pt-1"><strong class="level-3h">REASONS:</strong></p>
+                                <p class="pt-1"><strong class="level-1h atp-blue">REASON:</strong></p>
                                 <p class="desc" [innerHtml]="a.desc"></p>
 
                             </td>
@@ -37,8 +35,7 @@
                         <hr class="clearfix" />
                     </div>
                 </div>
-            </div>
-
+           
         </div>
 
         <div class="col-xs-12 col-sm-4 col-md-4 col-lg-3 recomm-section hidden-xs">

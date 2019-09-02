@@ -1,23 +1,17 @@
-.articles {
-    overflow-y: auto;
+.partial-wrapper {
     height: 695px;
-    margin-left: -13px;
-    clear: both;
-    overflow-x: hidden;
-    margin-right: -2px;
-    padding-right:2px;
 
     hr {
         margin-top: 10px;
         margin-bottom: 10px;
     }
 
-    table.district-table {
-        width: 98%;
+    table.wrapper-table {
+       width:auto;
 
         tr {
             td {
-                padding-left: 1em;
+               text-align:left;
 
                 .thumbs-up {
                     color: green;
@@ -47,22 +41,6 @@
                     }
                 }
             }
-        }
-
-        .rating {
-            float: right;
-            padding: 0;
-
-            li {
-                display: inline;
-                padding-right: 3px;
-                float: left;
-                font-size: 11px;
-            }
-
-            .fa-star {
-                color: #ffd800;
-            }
-        }
+        }       
     }
 }

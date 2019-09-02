@@ -1,27 +1,18 @@
-<div class="row articles">
-    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 mt-1 pl-0 pr-0" *ngFor="let a of articles; first as isFirst; last as isLast" [ngClass]="{'pt-2':isFirst, 'pb-2':isLast}">
-        <table class="org-table">
+<div class="row partial-wrapper">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 pl-0 pr-0" *ngFor="let a of articles; first as isFirst; last as isLast" [ngClass]="{'pt-2':isFirst, 'pb-2':isLast}">
+        <table class="wrapper-table">
             <tr>
                 <td> 
-                    <div class="row m-0">
-                        <div class="col-xs-12 mb-1"><strong class="level-2h">Topic: Topic Name Goes Here</strong></div>
-                        <div class="col-xs-7"><strong class="atp-blue level-1h" [innerText]="a.name"></strong></div>
-                        <div class="col-xs-5 text-right" [innerText]="a.time"></div>
+                    <div class="row">
+                        <div class="col-xs-12 pb-half"><strong class="level-2h">Topic: Topic Name Goes Here</strong></div>
+                        <!--<div class="col-xs-7"><strong class="atp-blue level-1h" [innerText]="a.name"></strong></div>
+                        <div class="col-xs-5 text-right" [innerText]="a.time"></div>-->
 
-                        <div class="col-xs-12 level-3h pt-1 pb-1">State if Pertains to or Federal</div>
+                        <!--<div class="col-xs-12 level-3h pt-1 pb-1">State if Pertains to or Federal</div>-->
                         <div class="col-xs-12 desc" [innerHtml]="a.desc"></div>
                         <div class="col-xs-12 mt-1">
                             <span><i class="fa fa-heart-o heart"></i> {{a.likes}}</span>
                             <span class="ml-1 cursor-p" placement="bottom" [tooltip]="shareTemplate" containerClass="share-tooltip"><i class="fa fa-share-alt cogs"></i> 2</span>
-                            <!--<span class="pull-right">
-                                <ul class="rating">
-                                    <li><i [className]="a.rating >= 1 ? 'fa fa-star':'fa fa-star-o' "></i> </li>
-                                    <li><i [className]="a.rating >= 2 ? 'fa fa-star':'fa fa-star-o' "></i> </li>
-                                    <li><i [className]="a.rating >= 3 ? 'fa fa-star':'fa fa-star-o' "></i> </li>
-                                    <li><i [className]="a.rating >= 4 ? 'fa fa-star':'fa fa-star-o' "></i> </li>
-                                    <li><i [className]="a.rating >= 5 ? 'fa fa-star':'fa fa-star-o' "></i> </li>
-                                </ul>
-                            </span>-->
                         </div>
                     </div>
                 </td>

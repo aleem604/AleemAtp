@@ -1,12 +1,12 @@
-<div class="row articles ml-0">
-  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 mt-half pl-1 pr-0" *ngFor="let a of articles; first as isFirst; last as isLast" [ngClass]="{'pt-2':isFirst, 'pb-2':isLast}">
-    <table class="district-table">
+<div class="row partial-wrapper">
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 pl-0 pr-0" *ngFor="let a of articles; first as isFirst; last as isLast" [ngClass]="{'pt-2':isFirst, 'pb-2':isLast}">
+    <table class="wrapper-table">
       <tr>
           <td>
-              <div class="row m-0">
-                  <div class="col-xs-7 text-left"><strong class="level-1h atp-blue" [innerText]="a.name"></strong></div>
+              <div class="row">
+                  <div class="col-xs-7 text-left"><strong class="level-2h atp-blue">Name of topic</strong></div>
                   <div class="col-xs-5 text-right"><small [innerText]="a.time"></small> </div>
-                  <div class="col-xs-12"><strong class="atp-red opacity-point-8">Plan of actions:</strong> <span class="desc pl-half" [innerHtml]="a.desc"></span></div>
+                  <div class="col-xs-12"><strong class="atp-red">Plan of actions:</strong> <span class="desc pl-half" [innerHtml]="a.desc"></span></div>
               </div>
               
           </td>
@@ -14,7 +14,7 @@
         <tr>
             <td class="pt-1 pb-1">
 
-                <div class="row m-0">
+                <div class="row">
                     <div class="col-xs-12">
                         <small class="atp-blue">Users approve of plan of action </small>
                         <span class="relative pull-right"><small class="thumbs-down"><i class="fa fa-thumbs-o-down"></i><small>52</small> </small></span>

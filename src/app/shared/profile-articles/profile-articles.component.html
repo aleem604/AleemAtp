@@ -1,10 +1,10 @@
-<div class="row articles">
-  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 mt-1 pl-0 pr-0" *ngFor="let a of articles; first as isFirst; last as isLast" [ngClass]="{'pt-2':isFirst, 'pb-2':isLast}">
-    <table class="org-table">
+<div class="row partial-wrapper">
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 pl-0 pr-0" *ngFor="let a of articles; first as isFirst; last as isLast" [ngClass]="{'pt-2':isFirst, 'pb-2':isLast}">
+    <table class="wrapper-table">
       <tr>
         <td colspan="2"><img [src]="a.avatar[0].src" alt="avatar" class="img-post"></td>
         <td>         
-          <div class="row">
+          <div class="row p-0 m-0">
             <div class="col-xs-7"><strong class="atp-blue level-1h" [innerText]="a.name"></strong></div>
             <div class="col-xs-5 text-right">
               <ul class="rating">

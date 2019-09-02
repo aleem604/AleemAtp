@@ -8,75 +8,74 @@
     </div>
   </div>
   <div class="row wrapper">
-    <div class="col-xs-12 col-sm-8 col-md-8 col-lg-9 content-section">
-      <div class="profile-section pt-1 pb-1">
-        <table>
-          <tr>
-            <td rowspan="2">
-              <div class="push-bit"><img src="../../../assets/atp/presbyterian-women-logo.png" /></div>
-              
-            </td>
-            <td>
-              <label class="txt-16 atp-color bolder m-0">Presbyterian women</label>
-            </td>
-          </tr>
-          <tr>
-            <td><label class="atp-blue bold"><i class="fa fa-map-marker"></i> San Francisco, CA </label></td>
-          </tr>
-        </table>
+      <div class="col-xs-12 col-sm-8 col-md-8 col-lg-9 content-section">
+          <div class="profile-section pt-1 pb-1">
+              <table>
+                  <tr>
+                      <td rowspan="2">
+                          <div class="push-bit"><img src="../../../assets/atp/presbyterian-women-logo.png" /></div>
+
+                      </td>
+                      <td>
+                          <label class="txt-16 atp-color bolder m-0">Presbyterian women</label>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td><label class="atp-blue bold"><i class="fa fa-map-marker"></i> San Francisco, CA </label></td>
+                  </tr>
+              </table>
+          </div>
+
+          <!--<div class="sub-menu">
+              <nav class="navbar navbar-default">
+                  <div class="container-fluid pl-0 pr-0">
+
+                      <div class="navbar">
+                          <ul class="nav navbar-nav">
+                              <li routerLinkActive="active">
+                          <a (click)="(null)" [routerLink]="'/organizations'">Organizations</a>
+                        </li>
+                              <li routerLinkActive="active">
+                                  <a (click)="(null)" [routerLink]="'/organizations/video'">Videos</a>
+                              </li>
+                              <li routerLinkActive="active">
+                                  <a (click)="(null)" [routerLink]="'/organizations/articles'">Articles</a>
+                              </li>
+                              <li routerLinkActive="active">
+                                  <a (click)="(null)" [routerLink]="'/organizations/about'">About</a>
+                              </li>
+                              <li routerLinkActive="active">
+                                  <a (click)="(null)" [routerLink]="'/organizations/stance'">Stance</a>
+                              </li>
+
+                              <li routerLinkActive="active">
+                                  <a (click)="(null)" [routerLink]="'/organizations/events'">Events</a>
+                              </li>
+
+                          </ul>
+                      </div>
+                  </div>
+              </nav>
+
+          </div>-->
+
+          <div class="scroll-menu">
+              <header class="atp-scroll-menu">
+                  <nav class="vertical-align-middle">
+                      <span routerLinkActive="active" [routerLink]="'/organizations/video'">Videos</span>
+                      <span routerLinkActive="active" [routerLink]="'/organizations/articles'">Articles</span>
+                      <span routerLinkActive="active" [routerLink]="'/organizations/about'">About</span>
+                      <span routerLinkActive="active" [routerLink]="'/organizations/stance'">Stance</span>
+                      <span routerLinkActive="active" [routerLink]="'/organizations/events'">Events</span>
+                  </nav>
+              </header>
+          </div>
+
+          <div class="content-container">
+              <router-outlet></router-outlet>
+          </div>
+
       </div>
-
-      <div class="sub-menu">
-        <nav class="navbar navbar-default">
-          <div class="container-fluid pl-0 pr-0">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header visible-xs">
-              <button type="button" class="navbar-toggle collapsed" (click)="isCollapsed = !isCollapsed" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              <!--<a class="navbar-brand" href="#" (click)="null">Menu</a>-->
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" [collapse]=isCollapsed>
-              <ul class="nav navbar-nav">
-                <li routerLinkActive="active">
-                  <a (click)="(null)" [routerLink]="'/organizations/video'">Videos</a>
-                </li>
-                <li  routerLinkActive="active">
-                  <a (click)="(null)" [routerLink]="'/organizations/articles'">Articles</a>
-                </li>
-                <li routerLinkActive="active">
-                    <a (click)="(null)" [routerLink]="'/organizations/about'">About</a>
-                </li>
-                <li routerLinkActive="active">
-                    <a (click)="(null)" [routerLink]="'/organizations/stance'">Stance</a>
-                </li>
-                
-                <li routerLinkActive="active">
-                    <a (click)="(null)" [routerLink]="'/organizations/events'">Events</a>
-                </li>
-
-              </ul>
-            </div><!-- /.navbar-collapse -->
-          </div><!-- /.container-fluid -->
-        </nav>
-
-      </div>
-      <div class="content-container">
-          <router-outlet></router-outlet>
-        <!--<profile-videos *ngIf="tab == 'videos'"></profile-videos>
-        <profile-articles *ngIf="tab == 'articles'"></profile-articles>
-        <profile-organizations *ngIf="tab == 'organizations'"></profile-organizations>
-        <profile-letters *ngIf="tab == 'letters'"></profile-letters>
-        <profile-letter-detail *ngIf="tab == 'letter-detail'"></profile-letter-detail>-->
-
-      </div>
-
-    </div>
     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-3 recomm-section hidden-xs">
       <recommended-orgs></recommended-orgs>
     </div>

@@ -1,13 +1,13 @@
-<div class="row articles">
-    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 mt-1 pl-0 pr-0 pt-2">
-        <table class="org-table">
+<div class="row partial-wrapper">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 pl-0 pr-0 pt-2">
+        <table class="wrapper-table">
             <tr>
                 <td colspan="2"><img [src]="res.avatar[0].src" alt="avatar" class="img-post"></td>
                 <td>
-                    <p class="level-2h"><span class="opacity-point-8">To:</span><span class="atp-red pl-half">Nick Taylor</span> </p>
+                    <p class="level-2h"><span class="opacity-point-8">To:</span><span class="atp-red pl-half">Nick Taylor</span> <small class="pull-right font-normal">5 days ago</small> </p>
                     <div class="row">
-                        <div class="col-xs-7"><strong class="atp-blue level-1h" [innerText]="res.name"></strong></div>
-                        <div class="col-xs-5 text-right"><small class="desc">5 days ago</small> </div>
+                        <div class="col-xs-12"><strong class="atp-blue level-1h" [innerText]="res.name"></strong></div>
+                        <!--<div class="col-xs-5 text-right"><small class="desc">5 days ago</small> </div>-->
                     </div>
                     <p class="desc" [innerHtml]="res.desc"></p>
                 </td>
@@ -17,7 +17,7 @@
         <div *ngIf="!isLast" class="clearfix mt-0 mb-0">
             <hr class="clearfix" />
         </div>
-        <table class="org-table">
+        <table class="wrapper-table">
             <tr>
                 <td colspan="2"><img src="../../../assets/atp/news-letter/10.PNG" alt="avatar" class="img-post rounded-image"></td>
                 <td>

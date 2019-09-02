@@ -42,6 +42,7 @@ import { PoliticianResponsesComponent } from "../politician-responses/politician
 import { PoliticianResponseDetailComponent } from "../politician-response-detail/politician-response-detail.component";
 import { PoliticianVoteHistoryComponent } from "../politician-vote-history/politician-vote-history.component";
 import { PoliticianWriteMeComponent } from "../politician-write-me/politician-write-me.component";
+import { OrganizationsOrganizationsComponent } from "../organizations-organizations/organizations-organizations.component";
 
 @NgModule({
     imports: [
@@ -91,7 +92,8 @@ import { PoliticianWriteMeComponent } from "../politician-write-me/politician-wr
         PoliticianResponsesComponent,
         PoliticianResponseDetailComponent,
         PoliticianVoteHistoryComponent,
-        PoliticianWriteMeComponent
+        PoliticianWriteMeComponent,
+        OrganizationsOrganizationsComponent
     ],
     exports: [
         HeaderModule,
@@ -122,7 +124,8 @@ import { PoliticianWriteMeComponent } from "../politician-write-me/politician-wr
         PoliticianResponsesComponent,
         PoliticianResponseDetailComponent,
         PoliticianVoteHistoryComponent,
-        PoliticianWriteMeComponent
+        PoliticianWriteMeComponent,
+        OrganizationsOrganizationsComponent
     ]
 })
 export class SmartadminLayoutModule {

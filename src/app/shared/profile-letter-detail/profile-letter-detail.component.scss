@@ -1,4 +1,4 @@
-.articles {
+.partial-wrapper {
     overflow-y: auto;
     height: 695px;
     margin-left: -13px;
@@ -6,8 +6,8 @@
     overflow-x: hidden;
     margin-right: -2px;
 
-    table.org-table {
-        width: 98%;
+    table.wrapper-table {
+        width: auto;
 
         .letter-detail-desc {
             border-bottom: solid 1px rgb(178, 178, 178,0.2);

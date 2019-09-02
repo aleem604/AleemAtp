@@ -9,8 +9,16 @@ $legHeight: 887px;
         }
     }
 
-    .wrapper {
-        margin: 0;
+    .partial-wrapper {
+        width:auto;
+        .wrapper-table {
+            width: auto;
+
+            tr {
+                td:first-of-type {
+                }
+            }
+        }
 
         div.clearfix {
             margin-left: -13px;

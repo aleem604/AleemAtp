@@ -1,29 +1,26 @@
-<div class="row videos">
-    <div class="col-xs-12 atp-blue pt-2 favorite">
-    Favorite videos    
+<div class="row partial-wrapper">
+    <div class="col-xs-12 atp-blue pt-2 favorite pl-2">
+        Favorite videos
     </div>
-    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 videos-loop" *ngFor="let v of videos; first as isFirst; last as isLast" [ngClass]="{'pt-2':isFirst, 'pb-2':isLast}">
-        <div class="col-xs-4 col-sm-3 col-md-3 col-lg-2 text-center m-0 pl-half">
-            <div class="push-bit" (click)="openModal(video)">
-                <img [src]="v.url" alt="avatar" class="img-post">
-                <i class="fa fa fa-play"></i>
-            </div>
-        </div>
-        <div class="col-xs-8 col-sm-9 col-md-9 col-lg-10 pl-0">
-            <div class="post-heading">
-                <strong class="level-2h" [innerText]="v.name"></strong>
-            </div>
-            <div class="post-heading mb-half">
-                <strong class="atp-blue level-1h" [innerText]="v.title "></strong>
-            </div>
-            <div class="post-heading">
-                <strong class="level-3h" [innerText]="v.date"></strong>
-            </div>
-        </div>
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 pl-0 pr-0" *ngFor="let v of videos; first as isFirst; last as isLast" [ngClass]="{'pt-2':isFirst, 'pb-2':isLast}">
+        <table class="wrapper-table">
+            <tr>
+                <td>
+                    <div class="push-bit" (click)="openModal(video)">
+                        <img [src]="v.url" alt="avatar" class="img-post">
+                        <i class="fa fa fa-play"></i>
+                    </div>
+                </td>
+                <td>
+                    <div class="level-2h" [innerText]="v.name"></div>
+                    <div class="level-1h atp-blue" [innerText]="v.title | slice : 0 : 30"></div>
+                    <div class="level-3h" [innerText]="v.date"></div>
+                </td>
+            </tr>
+        </table>
         <div *ngIf="!isLast" class="clearfix mt-0 mb-0">
             <hr class="clearfix" />
         </div>
-
     </div>
 </div>
 

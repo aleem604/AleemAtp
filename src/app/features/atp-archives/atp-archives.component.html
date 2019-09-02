@@ -14,8 +14,10 @@
         <div class="col-xs-12">
           <table>
             <tr>            
-              <td class="cursor-p" [ngClass]="activeTab === 'materials' ? 'active-cell' : ''" (click)="activeTab = 'materials'">               
-                  <i class="fa fa-building"></i> <strong class="ml-half">All Materials</strong>              
+              <td class="drp-topic">               
+                 <select>
+                     <option>Topic</option>
+                 </select>           
               </td>
               <td class="cursor-p" [ngClass]="activeTab === 'articles' ? 'active-cell' : ''" (click)="activeTab = 'articles'">
                   <i class="fa fa-list"></i> <strong class="ml-half">Articles</strong>

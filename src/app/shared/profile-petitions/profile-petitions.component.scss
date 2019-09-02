@@ -1,36 +1,30 @@
-.articles {
-    overflow-y: auto;
+.partial-wrapper {
     height: 695px;
-    margin-left: 0px;
-    clear: both;
-    overflow-x: hidden;
-    margin-right: -3px;
-    padding-right: 2px;
 
-    table.org-table {
-        width: 97.5%;
+    table.wrapper-table {
+        width:auto;
 
         tr {
             td:first-of-type {
-                padding-left: 1.2em;
+                /*padding-left: 1.2em;
                 padding-right: 0.8em;
                 text-align: center;
-                vertical-align: top;
+                vertical-align: top;*/
 
-                img {
+                /*img {
                     width: 90px;
                     height: 90px;
-                }
+                }*/
             }
 
-            .level-3h {
+            /*.level-3h {
                 padding-top: 8px;
                 font-size: 11.5px;
                 opacity: 0.8;
-            }
+            }*/
         }
 
-        .rating {
+        /*.rating {
             float: right;
             padding: 0;
 
@@ -44,6 +38,6 @@
             .fa-star {
                 color: #ffd800;
             }
-        }
+        }*/
     }
 }

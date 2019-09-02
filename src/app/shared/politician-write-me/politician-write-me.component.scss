@@ -1,13 +1,8 @@
-.articles {
-    overflow-y: auto;
+.partial-wrapper {
     height: 695px;
-    margin-left: 1em;
-    clear: both;
-    overflow-x: hidden;
-    margin-right: -2px;
 
-    table.org-table {
-        width: 98%;
+    table.wrapper-table {
+        width:auto;
 
         button {
             background-color: #012778;
@@ -22,4 +17,7 @@
             text-transform: uppercase;
         }
     }
+}
+.modal-title{
+    width:95%;
 }

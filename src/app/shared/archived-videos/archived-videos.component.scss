@@ -1,54 +1,59 @@
-.videos {
-  overflow-y: auto;
-  height: 836px;
-  margin-left: -13px;
-  clear: both;
-  overflow-x: hidden;
-  margin-right: -2px;
+.partial-wrapper {
+    height: 839px;
 
-  img {
-    width: 100%;
-    height: 100%;
-    max-width: 170px;
-    max-height: 120px;
-    min-width: 94px;
-    min-height: 85px;
-  }
+    .wrapper-table {
+        td {
+            vertical-align: top;
+        }
 
-  .push-bit {
-    position: relative;
+        td:first-of-type {
+            /* padding-left: 0.2em; */
+            padding-right: 0.8em;
+            text-align: center;
+            vertical-align: middle;
+            width: 14%;
 
-    i {
-      position: absolute;
-      z-index: 5;
-      top: 40%;
-      right: 45%;
-      color: white;
-      font-size: 1.5em;
+            img {
+                width: 140px;
+                height: 90px;
+            }
+
+            .push-bit {
+                position: relative;
+
+                i {
+                    position: absolute;
+                    z-index: 5;
+                    top: 40%;
+                    right: 45%;
+                    color: white;
+                    font-size: 1.5em;
+                }
+            }
+        }
     }
-  }
 
-  .videos-loop {
-    padding-right: 0;
-  }
 
-  .post-heading:not(:first-of-type):not(:last-of-type) {
-    margin-top: 0.5em;
-  }
+    .videos-loop {
+        padding-right: 0;
+    }
 
-  .post-heading:last-of-type {
-    margin-top: 1.60em;
-    ;
-  }
+    .post-heading:not(:first-of-type):not(:last-of-type) {
+        margin-top: 0.5em;
+    }
+
+    .post-heading:last-of-type {
+        margin-top: 1.50em;
+    }
 }
 
 .video-template {
-  button.close {
-    position: absolute;
-    color: #333;
-    right: -1em;
-    background: #fff;
-    padding: 5px;
-    opacity: 0.7;
-  }
+    button.close {
+        position: absolute;
+        color: #333;
+        right: -1em;
+        background: #fff;
+        padding: 5px;
+        opacity: 0.7;
+    }
 }

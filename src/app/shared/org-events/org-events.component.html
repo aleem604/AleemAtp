@@ -1,6 +1,6 @@
-<div class="row articles">
-    <div class="col-xs-12 pr-0" *ngFor="let n of events; first as isFirst; last as isLast" [ngClass]="{'pt-2':isFirst, 'pb-2':isLast}">
-        <table class="news-table">
+<div class="row partial-wrapper">
+    <div class="col-xs-12 pr-0 pl-0 mr-0 ml-0" *ngFor="let n of events; first as isFirst; last as isLast" [ngClass]="{'pt-2':isFirst, 'pb-2':isLast}">
+        <table class="wrapper-table">
             <tr>
                 <td colspan="2"><img [src]="n.avatar[0].src" alt="avatar" class="img-post"> </td>
                 <td>
@@ -9,26 +9,16 @@
                     <div class="pb-half"><strong class="level-3h" [innerText]="n.date"></strong> </div>
                     <div class="pb-half"><strong class="level-4h" [innerText]="n.addr"></strong> </div>
                     <p class="pt-1 desc" [innerText]="n.desc"></p>
-                    <div class="mb-1">
+                    <!--<div class="mb-1">
                         <img *ngFor="let img of n.images" [src]="img.src" alt="avatar" class="image-reponsive main-post pt-1" />
                     </div>
                     <p>
                         <span><i class="fa fa-heart-o heart"></i> {{n.likes}}</span>
                         <span class="ml-1 cursor-p" placement="bottom" [tooltip]="shareTemplate" containerClass="share-tooltip"><i class="fa fa-share-alt cogs"></i> 2</span>
-                        <!--<span class="pull-right">
-                            <ul class="rating">
-                                <li><i [className]="n.rating >= 1 ? 'fa fa-star':'fa fa-star-o' "></i> </li>
-                                <li><i [className]="n.rating >= 2 ? 'fa fa-star':'fa fa-star-o' "></i> </li>
-                                <li><i [className]="n.rating >= 3 ? 'fa fa-star':'fa fa-star-o' "></i> </li>
-                                <li><i [className]="n.rating >= 4 ? 'fa fa-star':'fa fa-star-o' "></i> </li>
-                                <li><i [className]="n.rating >= 5 ? 'fa fa-star':'fa fa-star-o' "></i> </li>
-                            </ul>
-                        </span>-->
-                    </p>
+                    </p>-->
                 </td>
             </tr>
         </table>
-
 
         <div *ngIf="!isLast" class="clearfix">
             <hr class="clearfix" />

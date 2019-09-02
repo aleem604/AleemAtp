@@ -1,6 +1,6 @@
-<div class="row articles">
-  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 mt-1 pl-0 pr-0" *ngFor="let a of organizations; first as isFirst; last as isLast" [ngClass]="{'pt-2':isFirst, 'pb-2':isLast}">
-    <table class="politician-table">
+<div class="row partial-wrapper">
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 pl-0 pr-0" *ngFor="let a of organizations; first as isFirst; last as isLast" [ngClass]="{'pt-2':isFirst, 'pb-2':isLast}">
+    <table class="wrapper-table">
       <tr>
         <td><div class="level-2h">
             <span class="atp-blue">Name of Topic Goes Here .</span>

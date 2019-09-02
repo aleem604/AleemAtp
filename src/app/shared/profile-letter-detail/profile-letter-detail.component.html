@@ -1,10 +1,10 @@
-<div class="row articles">
-  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 mt-1 pl-0 pr-0 pt-2">
+<div class="row partial-wrapper">
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 pl-0 pr-0 pt-2">
 
-      <table class="org-table">
+      <table class="wrapper-table">
           <tr>
               <td colspan="2" class="text-center pb-1">
-                  <p class="atp-blue mb-0"><i class="fa fa-angle-left"></i> <a class="cursor-p" [routerLink]="'/profile/letters'">Letters</a></p>
+                  <strong class="atp-blue mb-0"><i class="fa fa-angle-left bolder mr-half"></i> <a class="cursor-p" [routerLink]="'/profile/letters'">Letters</a></strong>
               </td>
           </tr>
           <tr>
@@ -23,7 +23,7 @@
                       </div>
                       <div class="col-xs-3 col-sm-2 col-md-1 col-lg-1 text-right"><small class="opacity-point-6" [innerText]="letter.time"></small> </div>
                   </div>
-                  <p class="letter-detail-desc" [innerHtml]="letter.desc"></p>
+                  <p class="desc" [innerHtml]="letter.desc"></p>
                   <table class="org-child-table">
                       <tr>
                           <td colspan="2" class="pl-0 ml-0">
@@ -39,7 +39,7 @@
                                   </div>
                                   <div class="col-xs-3 col-sm-2 col-md-1 col-lg-1 text-right"><small class="opacity-point-6" [innerText]="letter.time"></small> </div>
                               </div>
-                              <p [innerHtml]="letter.desc"></p>
+                              <p class="desc" [innerHtml]="letter.desc"></p>
                           </td>
                       </tr>
                       <tr>
@@ -60,7 +60,7 @@
                                   </div>
                                   <div class="col-xs-3 col-sm-2 col-md-1 col-lg-1 text-right"><small class="opacity-point-6" [innerText]="letter.time"></small> </div>
                               </div>
-                              <p [innerHtml]="letter.desc"></p>
+                              <p class="desc" [innerHtml]="letter.desc"></p>
                           </td>
 
                       </tr>

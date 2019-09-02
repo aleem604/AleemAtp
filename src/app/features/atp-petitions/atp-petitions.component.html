@@ -7,34 +7,36 @@
       </button>
     </div>
   </div>
-  <div class="row wrapper">
+  <div class="row partial-wrapper">
     <div class="col-xs-12 col-sm-8 col-md-8 col-lg-9 content-section">
-      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" *ngFor="let n of news; first as isFirst; last as isLast" [ngClass]="{'pt-2':isFirst, 'pb-2':isLast}">
-        <div class="col-xs-3 col-sm-2 col-md-2 col-lg-1 text-center m-0 p-0">
-          <div class="push-bit">
-            <a [routerLink]="['/profile']"> <img [src]="n.avatar[0].src" alt="avatar" class="img-post"> </a>
-          </div>
-        </div>
-        <div class="col-xs-9 col-sm-10 col-md-10 col-lg-11">
-          <div class="post-heading mb-half">
-            <strong class="level-2h" [innerText]="n.name"></strong>
-            <span class="pull-right time-span" [innerText]="n.time"></span>
-          </div>
-          <div class="post-heading mb-half">
-            <strong class="level-1h atp-blue" [innerText]="n.event"></strong>
-          </div>
-          <div class="post-heading mb-half">
-            <strong class="atp-color level-3h" [innerText]="n.date"></strong>
-          </div>
-          <div class="post-heading mb-half">
-            <strong class="level-4h" [innerText]="n.address"></strong>
-          </div>
-          <p class="desc" [innerHtml]="n.desc"></p>
-          <p>
-            <span><i class="fa fa-heart-o heart"></i> {{n.likes}}</span>
-            <span class="ml-1 cursor-p" placement="bottom" [tooltip]="shareTemplate" containerClass="share-tooltip"><i class="fa fa-share-alt cogs"></i> 2</span>
-          </p>
-        </div>
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 pl-0 pr-0" *ngFor="let n of news; first as isFirst; last as isLast" [ngClass]="{'pt-2':isFirst, 'pb-2':isLast}">
+          <table class="wrapper-table">
+              <tr>
+                  <td colspan="2"><img [src]="n.avatar[0].src" alt="avatar" class="img-post"></td>
+                  <td>
+                      <div class="post-heading mb-half">
+                          <strong class="level-2h">Name of Petition</strong>
+                          <span class="pull-right time-span" [innerText]="n.time"></span>
+                      </div>
+                      <div class="post-heading mb-half">
+                          <strong class="level-1h atp-blue">Topic</strong>
+                      </div>
+                      <!--<div class="post-heading mb-half">
+                          <strong class="atp-color level-3h" [innerText]="n.date"></strong>
+                      </div>-->
+                      <!--<div class="post-heading mb-half">
+                          <strong class="level-4h" [innerText]="n.address"></strong>
+                      </div>-->
+                      <p class="desc" [innerHtml]="n.desc"></p>
+                      <!--<p>
+                          <span><i class="fa fa-heart-o heart"></i> {{n.likes}}</span>
+                          <span class="ml-1 cursor-p" placement="bottom" [tooltip]="shareTemplate" containerClass="share-tooltip"><i class="fa fa-share-alt cogs"></i> 2</span>
+                      </p>-->
+                  </td>
+
+              </tr>
+          </table>
+
         <div *ngIf="!isLast" class="pt-1 clearfix">
           <hr class="clearfix" />
         </div>

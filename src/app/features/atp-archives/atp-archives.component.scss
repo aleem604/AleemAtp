@@ -24,7 +24,15 @@ $legHeight: 887px;
           }
 
           td:first-child {
-            border-left: none;
+            width:33.33%;
+            padding:0;
+            select{
+                padding:5px;
+                width:60%;
+                height:30px;
+                font-weight:700;
+                border:none;
+            }
           }
 
           td:last-child {
@@ -38,8 +46,6 @@ $legHeight: 887px;
         }
       }
     }
-
-
 
     div.clearfix {
       margin-left: -13px;

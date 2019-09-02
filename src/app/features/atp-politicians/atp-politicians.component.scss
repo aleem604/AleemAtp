@@ -23,6 +23,16 @@ $legHeight: 887px;
                         width: 20px;
                     }
                 }
+
+                td:last-of-type {
+                    position: relative;
+
+                    small {
+                        position: absolute;
+                        bottom: 8px;
+                        right: 0;
+                    }
+                }
             }
 
             tr:first-of-type {
