@@ -6,7 +6,17 @@
     background-color: #aaa !important;
 }
 
+@media (max-width: 768px) {
+    .txt-sm-center {
+        text-align: center;
+    }
+}
 
+@media (max-width: 500px) {
+    .txt-xs-center {
+        text-align: center;
+    }
+}
 
 .progress {
     margin-bottom: -11px;
@@ -30,7 +40,7 @@
 .level-1h {
     font-size: 16px;
     font-weight: 600;
-    opacity: 0.8;
+    opacity: 1;
 }
 
 .level-2h {
@@ -871,6 +881,14 @@
     vertical-align: top !important;
 }
 
+.vertical-middle {
+    vertical-align: middle !important;
+}
+
+.vertical-bottom {
+    vertical-align: bottom !important;
+}
+
 .heart {
     color: #ff0000;
 }
@@ -939,6 +957,72 @@
 .twitter-color {
     color: #1DA1F2;
 }
+/*----------------------------------------LINE HEIGHT -----------------------------*/
+.line-height-15{
+    line-height:15px;
+}
+
+.line-height-16 {
+    line-height: 16px;
+}
+
+.line-height-17 {
+    line-height: 17px;
+}
+
+.line-height-18 {
+    line-height: 18px;
+}
+
+.line-height-19 {
+    line-height: 19px;
+}
+
+.line-height-20 {
+    line-height: 20px;
+}
+
+.line-height-21 {
+    line-height: 21px;
+}
+
+.line-height-22 {
+    line-height: 22px;
+}
+
+.line-height-23 {
+    line-height: 23px;
+}
+
+.line-height-24 {
+    line-height: 24px;
+}
+
+.line-height-25 {
+    line-height: 25px;
+}
+
+.line-height-26 {
+    line-height: 26px;
+}
+
+.line-height-27 {
+    line-height: 27px;
+}
+
+.line-height-28 {
+    line-height: 28px;
+}
+
+.line-height-29 {
+    line-height: 29px;
+}
+
+.line-height-30 {
+    line-height: 30px;
+}
+
+
 /*----------------------------------------BUTTONS---------------------------------*/
 button.btn-following {
     background: white;
@@ -990,11 +1074,11 @@ button.btn-follow-small{
     padding-right: 2px;
 
     table.wrapper-table {
-        width:100%;
+        width: 100%;
         margin-left: 2.0rem;
         margin-right: 2.0rem;
 
-        tr {
+        tr:first-of-type {
             td:first-of-type {
                 /*padding-left: 0.2em;*/
                 padding-right: 0.8em;
@@ -1003,8 +1087,15 @@ button.btn-follow-small{
                 width: 6%;
 
                 img {
-                    width: 80px;
-                    height: 80px;
+                    width: 90px;
+                    height: 90px;
+                }
+
+                @media (max-width: 500px) {
+                    img {
+                        width: 80px;
+                        height: 80px;
+                    }
                 }
             }
 

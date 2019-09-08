@@ -1,4 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ElementRef, Renderer2 } from '@angular/core';
+import { BreakpointObserver } from '@angular/cdk/layout';
+import { take, retry } from 'rxjs/operators';
 
 @Component({
     selector: 'org-events',
@@ -25,6 +27,8 @@ import { Component, OnInit, Input } from '@angular/core';
     ]
 })
 export class OrgEventsComponent implements OnInit {
+    isMobile: boolean = true;
+    colSpan: number = 1;
     events = [
         {
             avatar: [{ src: '../../../assets/atp/habitat-for-humanity-logo.png', alt: 'avatar' }],
@@ -32,7 +36,7 @@ export class OrgEventsComponent implements OnInit {
             name: 'Habbit for Humanity',
             desc: 'Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.Nullam dictum felis eu pede mollis pretium.Integer tincidunt.Cras dapibus.Vivamus elementum semper nisi.Aenean vulputate eleifend tellus.Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.Phasellus viverra nulla ut metus varius laoreet.Quisque rutrum.Aenean imperdiet.',
             time: '30 m',
-            date: '23-25 DECEMBER, 2017 5:30 PM',
+            date: '23 DECEMBER, 2017 5:30 PM',
             addr:'123 Main Street, Balboa Center, San Fancisco, CA 954874',
             images: [
                 {
@@ -52,7 +56,7 @@ export class OrgEventsComponent implements OnInit {
             addr: '123 Main Street, Balboa Center, San Fancisco, CA 954874',
             desc: 'Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.Nullam dictum felis eu pede mollis pretium.Integer tincidunt.Cras dapibus.Vivamus elementum semper nisi.Aenean vulputate eleifend tellus.Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.Phasellus viverra nulla ut metus varius laoreet.Quisque rutrum.Aenean imperdiet.',
             time: '2.5 Hr',
-            date: '23-25 DECEMBER, 2017 5:30 PM',
+            date: '25 DECEMBER, 2017 5:30 PM',
             images: [
 
             ],
@@ -66,7 +70,7 @@ export class OrgEventsComponent implements OnInit {
             addr: '123 Main Street, Balboa Center, San Fancisco, CA 954874',
             desc: 'Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.Nullam dictum felis eu pede mollis pretium.Integer tincidunt.Cras dapibus.Vivamus elementum semper nisi.Aenean vulputate eleifend tellus.Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.Phasellus viverra nulla ut metus varius laoreet.Quisque rutrum.Aenean imperdiet.',
             time: '45 m',
-            date: '23-25 DECEMBER, 2017 5:30 PM',
+            date: '12 DECEMBER, 2017 5:30 PM',
             images: [
                 {
                     src: '../../../assets/atp/wwf.jpg', alt: 'wwf women'
@@ -82,7 +86,7 @@ export class OrgEventsComponent implements OnInit {
             addr: '123 Main Street, Balboa Center, San Fancisco, CA 954874',
             desc: 'Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.Nullam dictum felis eu pede mollis pretium.Integer tincidunt.Cras dapibus.Vivamus elementum semper nisi.Aenean vulputate eleifend tellus.Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.Phasellus viverra nulla ut metus varius laoreet.Quisque rutrum.Aenean imperdiet.',
             time: '30 m',
-            date: '23-25 DECEMBER, 2017 5:30 PM',
+            date: '15 DECEMBER, 2017 5:30 PM',
             images: [
                 {
                     src: '../../../assets/atp/presbyterian-women.jpg', alt: 'presbyterian women'
@@ -99,7 +103,7 @@ export class OrgEventsComponent implements OnInit {
             addr: '123 Main Street, Balboa Center, San Fancisco, CA 954874',
             desc: 'Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.Nullam dictum felis eu pede mollis pretium.Integer tincidunt.Cras dapibus.Vivamus elementum semper nisi.Aenean vulputate eleifend tellus.Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.Phasellus viverra nulla ut metus varius laoreet.Quisque rutrum.Aenean imperdiet.',
             time: '30 m',
-            date: '23-25 DECEMBER, 2017 5:30 PM',
+            date: '16 DECEMBER, 2017 5:30 PM',
             images: [
                 {
                     src: '../../../assets/atp/presbyterian-women.jpg', alt: 'presbyterian women'
@@ -118,7 +122,7 @@ export class OrgEventsComponent implements OnInit {
             addr: '123 Main Street, Balboa Center, San Fancisco, CA 954874',
             desc: 'Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.Nullam dictum felis eu pede mollis pretium.Integer tincidunt.Cras dapibus.Vivamus elementum semper nisi.Aenean vulputate eleifend tellus.Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.Phasellus viverra nulla ut metus varius laoreet.Quisque rutrum.Aenean imperdiet.',
             time: '30 m',
-            date: '23-25 DECEMBER, 2017 5:30 PM',
+            date: '20 DECEMBER, 2017 5:30 PM',
             images: [
                 {
                     src: '../../../assets/atp/presbyterian-women.jpg', alt: 'presbyterian women'
@@ -137,7 +141,7 @@ export class OrgEventsComponent implements OnInit {
             desc: 'Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.Nullam dictum felis eu pede mollis pretium.Integer tincidunt.Cras dapibus.Vivamus elementum semper nisi.Aenean vulputate eleifend tellus.Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.Phasellus viverra nulla ut metus varius laoreet.Quisque rutrum.Aenean imperdiet.',
             time: '30 m',
             addr: '123 Main Street, Balboa Center, San Fancisco, CA 954874',
-            date: '23-25 DECEMBER, 2017 5:30 PM',
+            date: '05 DECEMBER, 2017 5:30 PM',
             images: [
                 {
                     src: '../../../assets/atp/presbyterian-women.jpg', alt: 'presbyterian women'
@@ -156,7 +160,7 @@ export class OrgEventsComponent implements OnInit {
             desc: 'Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.Nullam dictum felis eu pede mollis pretium.Integer tincidunt.Cras dapibus.Vivamus elementum semper nisi.Aenean vulputate eleifend tellus.Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.Phasellus viverra nulla ut metus varius laoreet.Quisque rutrum.Aenean imperdiet.',
             time: '30 m',
             addr: '123 Main Street, Balboa Center, San Fancisco, CA 954874',
-            date: '23-25 DECEMBER, 2017 5:30 PM',
+            date: '19 DECEMBER, 2017 5:30 PM',
             images: [
                 {
                     src: '../../../assets/atp/presbyterian-women.jpg', alt: 'presbyterian women'
@@ -170,9 +174,31 @@ export class OrgEventsComponent implements OnInit {
         },
     ];
 
-    constructor() { }
+    constructor(private breakpointObserver: BreakpointObserver,
+        private renderer: Renderer2) { }
 
     ngOnInit() {
+        this.breakpointObserver.observe([
+            '(max-width: 500px)'
+        ]).subscribe(result => {
+            if (result.matches) {
+                this.colSpan = 2;
+            } else {
+                this.colSpan = 1;
+            }
+        });
+
+    }
+    toggleShowDesc(event: any) {
+        if (this.colSpan == 1)
+            return;
+
+        var target = event.currentTarget;
+        if (target.nextElementSibling.style.display === 'none') {
+            target.nextElementSibling.style.display = '';
+        } else {
+            target.nextElementSibling.style.display = 'none'
+        }
     }
 
 }

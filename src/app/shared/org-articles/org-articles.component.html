@@ -8,7 +8,7 @@
             <div class="col-xs-12"><strong class="atp-blue level-1h" [innerText]="a.name"></strong></div>
             
           </div>
-        <p class="desc" [innerHtml]="a.desc"></p>    
+        <p class="desc" [innerHtml]="a.desc  | slice: 0 : trunkLength"></p>    
         </td>       
       </tr>
     </table>
