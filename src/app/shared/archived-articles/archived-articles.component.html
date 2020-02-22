@@ -1,38 +1,31 @@
 <div class="row partial-wrapper">
-    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 archives" *ngFor="let a of archives | slice: 0:5; first as isFirst; last as isLast" [ngClass]="{'pt-2':isFirst, 'pb-2':isLast}">
-        <p class="mb-0 atp-blue cursor-p pl-1 level-2h" (click)="a.hidden = !a.hidden">
-            <span [innerText]="a.date"></span>
-            <span class="ml-half archives-count bold">({{a.count}})</span>
-            <span class="ml-half"> <i class="fa fa-caret-down" [ngClass]="a.hidden?' fa-caret-down':' fa-caret-up'"></i></span>
-        </p>
-        <div [ngClass]="a.hidden? 'hidden':''" class="ease-in border-top mt-1 pl-0 pr-0">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 mt-1 pl-0 pr-0" *ngFor="let n of a.detail | slice: 0:2; first as isFirst; last as isLast">
-                <table class="wrapper-table">
-                    <tr>
-                        <td colspan="2"><img [src]="n.avatar[0].src" alt="avatar" class="img-post"></td>
-                        <td>
-                            <div><strong class="level-1h" [innerText]="n.name"></strong></div>
-                            <p class="desc" [innerHtml]="n.desc"></p>
-                        </td>
-                    </tr>
-                </table>
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 pl-0 pr-0" *ngFor="let a of articles; first as isFirst; last as isLast" [ngClass]="{'pt-2':isFirst, 'pb-2':isLast}">
+    <table class="wrapper-table">
+      <tr>
+        <td colspan="2"><img [src]="a.avatar[0].src" alt="avatar" class="img-post"></td>
+        <td>         
+          <div class="row p-0 m-0">
+            <div class="col-xs-7 pl-0 pb-half"><span class="blueTitles" [innerText]="a.name"></span></div>
+            <!--<div class="col-xs-5 text-right">
+              <ul class="rating">
+                <li><i [className]="a.rating >= 1 ? 'fa fa-star':'fa fa-star-o' "></i> </li>
+                <li><i [className]="a.rating >= 2 ? 'fa fa-star':'fa fa-star-o' "></i> </li>
+                <li><i [className]="a.rating >= 3 ? 'fa fa-star':'fa fa-star-o' "></i> </li>
+                <li><i [className]="a.rating >= 4 ? 'fa fa-star':'fa fa-star-o' "></i> </li>
+                <li><i [className]="a.rating >= 5 ? 'fa fa-star':'fa fa-star-o' "></i> </li>
+              </ul>
 
-                <!--<div class="col-xs-3 col-sm-2 col-md-2 col-lg-1 text-center m-0 pr-0">
-                  <div class="push-bit">
-                    <a [routerLink]="['/profile']"> <img [src]="n.avatar[0].src" alt="avatar" class="img-post"> </a>
-                  </div>
-                </div>
-                <div class="col-xs-9 col-sm-10 col-md-10 col-lg-11">
-                  <div class="post-heading mb-half">
-                    <strong class="level-1h" [innerText]="n.name"></strong>
-                  </div>
-                  <p class="desc" [innerHtml]="n.desc"></p>
-                </div>-->
-                <div *ngIf="!isLast" class="clearfix mt-0 mb-0">
-                    <hr class="clearfix" />
-                </div>
-            </div>
-        </div>
+            </div>-->
+          </div>
+        <p class="genericBlackText" [innerHtml]="a.desc"></p>
+        <!--<p class="genericRedText cursor-p"><small class="bold">Read More</small></p>-->
+        </td>
+        
+      </tr>
+    </table>
 
+    <div *ngIf="!isLast" class="clearfix mt-0 mb-0">
+      <hr class="clearfix" />
     </div>
+  </div>
 </div>

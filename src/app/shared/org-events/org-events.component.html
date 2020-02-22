@@ -6,13 +6,14 @@
                 <td class="line-height-23">
                     <div><strong class="level-1h atp-blue" [innerText]="n.name"></strong>  <small class="pull-right" [innerText]="n.time"></small></div>
                     <div><strong class="atp-red" [innerText]="n.date"></strong> </div>
-                    <div><strong class="level-4h" [innerText]="n.addr"></strong> </div>               
+                    <div><strong class="level-4h" [innerText]="n.addr"></strong> </div>
                 </td>
             </tr>
-            <tr [style.display] ="colSpan ===2 ? 'none': ''">
-                <td  [style.display] ="colSpan ===2 ? 'none': ''"></td>
+            <tr [style.display] ="colSpan ===2 ? 'none': 'none'"> 
+            
+                <td [style.display]="colSpan ===2 ? 'none': ''"></td>
                 <td [attr.colspan]="colSpan">
-                    <p class="pt-1 desc" [innerText]="n.desc"></p>
+                    <p class="desc" [innerText]="n.desc"></p>
                 </td>
             </tr>
         </table>

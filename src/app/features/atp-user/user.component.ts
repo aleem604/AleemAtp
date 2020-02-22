@@ -8,7 +8,7 @@ import { document } from 'ngx-bootstrap';
 	encapsulation: ViewEncapsulation.Emulated
 })
 export class AtpUserComponent implements OnInit, OnDestroy {
-
+    currentDate = new Date().getFullYear();
     prefix = 'is-';
     sizes = [
         {

@@ -56,7 +56,7 @@ export class AtpVoteComponent implements OnInit {
   }
 
     showMessage(template: TemplateRef<any>) {
-        this.modalRef = this.modalService.show(template, { class: 'modal-sm modal-dialog-centered', ignoreBackdropClick: false, keyboard: false });
+        this.modalRef = this.modalService.show(template, { class: 'modal-md modal-dialog-centered', ignoreBackdropClick: false, keyboard: false });
         return this.modalRef;
     }
 

@@ -1,63 +1,82 @@
 
 <div class="form">
-	<div class="myform">
-		<div class="logo mb-2">
-			<div class="col-md-12 text-center">
-				<h3 class="login-heading">Log In</h3>
-				<p class="text-center mt-3"><small class="grey">Changing your country, one click at a time</small></p>
-			</div>
-		</div>
-		<form [formGroup]="loginForm" (ngSubmit)="onSubmit()" autocomplete="off">
-			<div class="form-group">
-				<label for="exampleInputEmail1"><small class="grey tx-tfm">Email</small></label>
+    <div class="myform">
+        <div class="logo mb-2">
+            <div class="col-md-12 text-center">
+                <h3 class="welcome">Welcome</h3>
+                <p class="text-center mt-3"><small class="genericGreyText">We appreciate your time and support</small></p>
+            </div>
+        </div>
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" autocomplete="off">
+            <div class="form-group">
+                <label for="exampleInputEmail1"><small class="genericGreyText tx-tfm">Email</small></label>
 
-				<div class="form-wrapper">
-					<input type="text" formControlName="email" class="form-control" aria-describedby="emailHelp" placeholder="" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" autocomplete="off">
-				</div>
-				<div *ngIf="submitted && f.email.errors" class="invalid-feedback">
-					<div *ngIf="f.email.errors.required" class="text-right">Email is required</div>
-					<div *ngIf="f.email.errors.email" class="text-right">Email must be a valid email address</div>
-				</div>
-			</div>
-			<div class="form-group">
-				<label for="exampleInputEmail1"><small class="grey tx-tfm">Password</small></label>
-				<label for="exampleInputEmail1" class="pull-right"><a [routerLink]="'/user/forgot-password'"><small class="dark-grey">Forgot Password?</small></a></label>
-				<div class="form-wrapper">
-					<input type="password" formControlName="password" class="form-control" aria-describedby="emailHelp" placeholder="" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" autocomplete="off">
-				</div>
-				<div *ngIf="submitted && f.password.errors" class="invalid-feedback">
-					<div *ngIf="f.password.errors.required" class="text-right">Password is required</div>
-					<div *ngIf="f.password.errors.minlength" class="text-right">Password must be at least 6 characters</div>
-				</div>
-			</div>
+                <div class="form-wrapper">
+                    <input type="text" formControlName="email" class="form-control genericBlackText"
+                           aria-describedby="emailHelp"
+                           placeholder=""
+                           [ngClass]="{ 'is-invalid': submitted && f.email.errors }"
+                           autocomplete="off">
+                </div>
+                <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                    <div *ngIf="f.email.errors.required" class="text-right">Email is required</div>
+                    <div *ngIf="f.email.errors.email" class="text-right">Email must be a valid email address</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1"><small class="genericGreyText tx-tfm">Password</small></label>
+                <label for="exampleInputEmail1" class="pull-right">
+                    <a [routerLink]="'/user/forgot-password'">
+                        <small class="greyBoldText">Forgot Password?</small>
+                    </a>
+                </label>
+                <div class="form-wrapper">
+                    <input type="password" 
+                           formControlName="password" 
+                           class="form-control genericBlackText" 
+                           aria-describedby="emailHelp" 
+                           placeholder="" 
+                           [ngClass]="{ 'is-invalid': submitted && f.password.errors }" 
+                           autocomplete="off">
+                </div>
+                <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                    <div *ngIf="f.password.errors.required" class="text-right">Password is required</div>
+                    <div *ngIf="f.password.errors.minlength" class="text-right">Password must be at least 6 characters</div>
+                </div>
+            </div>
             <div class="row login-btn-row">
                 <div class="col-md-12 text-center ">
                     <button type="submit" class=" btn login-btn tx-tfm">Login</button>
                 </div>
                 <p></p>
                 <div class="col-md-12 text-center mt-3">
-                    <small class="grey">Don't have an account?</small> <a [routerLink]="'/atp/register'"><small class="dark-grey"> Sign Up</small></a>
+                    <small class="genericGreyText">Don't have an account?</small>
+                    <a [routerLink]="'/atp/register'">
+                        <small class="greyBoldText"> Sign Up</small>
+                    </a>
                 </div>
             </div>
-		</form>
-	</div>
-	<hr class="hr-or">
-	<div class="col-md-12 mt-4">
-		<p class="text-center pt-3"><small>OR SIGN IN WITH</small></p>
-	</div>
-	<div class="row mb-2">
-		<div class="col-xs-6 col-md-6 text-right">
-			<button (click)="signInWithGoogle()" class="google btn mybtn tx-tfm google-color">
-				<i class="fa fa-google-plus">
-				</i> Google
-			</button>
-		</div>
-		<div class="col-xs-6 col-md-6 text-left">
-			<button (click)="signInWithFB()" class="google btn mybtn tx-tfm">
-				<i class="fa fa-facebook-square"></i> Facebook
-			</button>
-		</div>
-	</div>
+        </form>
+    </div>
+    <hr class="hr-or">
+    <div class="col-md-12 mt-4">
+        <p class="text-center pt-3">
+            <small class="genericGreyText">OR SIGN IN WITH</small>
+        </p>
+    </div>
+    <div class="row mb-2">
+        <div class="col-xs-6 col-md-6 text-right">
+            <button (click)="signInWithGoogle()" class="google btn mybtn tx-tfm google-color">
+                <i class="fa fa-google-plus">
+                </i> Google
+            </button>
+        </div>
+        <div class="col-xs-6 col-md-6 text-left">
+            <button (click)="signInWithFB()" class="google btn mybtn tx-tfm">
+                <i class="fa fa-facebook-square"></i> Facebook
+            </button>
+        </div>
+    </div>
 </div>
 
 

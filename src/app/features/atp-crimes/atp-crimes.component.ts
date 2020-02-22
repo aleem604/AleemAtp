@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'atp-blotters',
-    templateUrl: './atp-blotters.component.html',
-    styleUrls: ['./atp-blotters.component.scss'],
+  selector: 'atp-crimes',
+    templateUrl: './atp-crimes.component.html',
+    styleUrls: ['./atp-crimes.component.scss'],
 })
-export class AtpBlottersComponent implements OnInit {
-    blotters = [
+export class AtpCrimesComponent implements OnInit {
+    crimes = [
         { id: 1, name: 'Jacob Wray', addr: 'Belleville News Democrat', crime: 'Animal Abuse' },
         { id: 2, name: 'Ryan Wilson', addr: 'St. Louis Dispatch', crime: 'Prostitution' },
         { id: 3, name: 'Tony West', addr: 'Belleville News Democrat', crime: 'Marjuana' },

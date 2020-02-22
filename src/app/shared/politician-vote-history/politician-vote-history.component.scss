@@ -23,5 +23,21 @@
                 text-align: center;
             }
         }
+
+        .text-overflow {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            width: auto;
+        }
+
+        @media (max-width: 320px) {
+            .text-overflow {
+                width: 320px;
+            }
+        }
+
+        .text-overflow > span {
+        }
     }
 }

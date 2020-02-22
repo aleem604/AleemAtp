@@ -1,40 +1,40 @@
 @import '../../../_variables.scss';
-
+$legHeight: 887px;
 .partial-wrapper {
-    height: 71rem;
+    height: $legHeight;
 
     table.wrapper-table {
-        width:auto;
+        width: auto;
 
         tr {
             td.width-100p {
                 width: 110px;
+            }
 
-                button {
-                    background: white;
-                    border-radius: 20px;
-                    padding: 5px 10px 5px 10px;
-                    text-transform: uppercase;
-                    max-width: 100px;
-                    border: solid 1px rgba(230,230,230,1);
-                    box-shadow: 2px 0px 2px rgba(220,230,230,1);
-                    font-size: 10px;
-                    font-weight: 800;
-                }
+            td:last-of-type {
+                text-align: right;
+            }
 
-                .btn-following {
-                    color: $atp-red;
-                }
 
-                .btn-follow {
-                    color: $atp-blue;
+            td:first-of-type {
+                /*width: 6%;*/
+                img {
                 }
             }
 
-            td:first-of-type {
+            td:nth-child(2){
+                width: 100%;
+            }
 
+            .text-ellipses {
+                display: block;
+                width: auto;
+            }
 
-                img {
+            @media (max-width: 425px) {
+                .text-ellipses {
+                    display: block;
+                    width: 137px;
                 }
             }
         }

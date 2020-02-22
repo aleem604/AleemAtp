@@ -6,15 +6,13 @@
                     <img [src]="a.avatar[0].src" alt="avatar" class="img-post">
                 </td>
                 <td>
-                    <p><strong class="level-2h">Change.Org</strong></p>
+                    <div><span class="genericBlackText" [innerHtml]="a.org"></span></div>
                     <div class="row">
-                        <div class="col-xs-7"><strong class="atp-blue level-1h" [innerText]="a.name"></strong></div>
-                        <div class="col-xs-5 text-right" [innerText]="a.time"></div>
+                        <div class="col-xs-10"><span class="blueTitles" [innerText]="a.name"></span></div>
+                        <div class="col-xs-2 text-right genericBlackText p-0" [innerText]="a.time"></div>
+                        <div class="col-xs-12 pt-half"><span class="genericBlackText" [innerHtml]="a.desc"></span> </div>
                     </div>
-                    <p class="level-3h"><span [innerText]="a.date"></span></p>
-                    <p class="desc" [innerHtml]="a.desc"></p>
                 </td>
-
             </tr>
         </table>
         <div *ngIf="!isLast" class="clearfix mt-0 mb-0">

@@ -1,0 +1,247 @@
+﻿/* 9, 10, 13, 19, 20, 21, 22, 23, 24, 26, 27, 29, 35, 36, 39, 44, 52, 53 74, 79 - Screens using it: "Main Menu: Welcome Screen, Newsfeed Tab, Legislation Tab, Support Tab, Boycott Tab, Vote Tab", "User Profile: Articles Tab, Videos Tab, Petition Tab, Support Tab"  */
+.genericBlackText {
+    font-size: 13px;
+    font-family: 'Freight Sans Bold', Helvetica, Arial;
+    color: #000000;
+}
+
+/* 17, 31, 37, 61, 73, 77, 199 - Screens using it: "User Profile: Organizations Tab, Support Tab, Videos Tab", "Main Menu: Petitions Tab, Events Tab, Support, Boycott Tab" */
+.blackTitles {
+    font-size: 16px;
+    font-family: 'Freight Sans Bold', Helvetica, Arial;
+    color: #000000;
+}
+
+/* 1 - Screen using it: "Welcome Screen". */
+.welcome {
+    font-size: 18px;
+    font-family: 'Freight Sans Bold', Helvetica, Arial;
+    color: #000000;
+}
+
+
+/*------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/* 45, 51, 64 - Screens using it: "Main Menu: Vote Tab, Legislation Tab, Events Tab"  */
+.smallGreyBoldText {
+    font-size: 10px;
+    font-family: 'Freight Sans Bold', Helvetica, Arial;
+    font-weight: bold;
+    color: #5e6163;
+}
+
+/* 2, 3, 4, 5, 6, 11(A), 14, 82 - Screens using it: "Welcome Screen", "Main Menu", "Main Menu: Archives Tab", "User Profile: Videos Tab" */
+.genericGreyText {
+    font-size: 13px;
+    font-family: 'Freight Sans Bold', Helvetica, Arial;
+    color: #5e6163;
+}
+
+/* 7, 8, 46 - Screens using it: "Welcome Screen", "Blotter"  */
+.greyBoldText {
+    font-size: 13px;
+    font-family: 'Freight Sans Bold', Helvetica, Arial;
+    font-weight: bold;
+    color: #5e6163;
+}
+
+
+/*------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/* 47 - Screens using it: "Main Menu: Blotter Tab" */
+.smallBlueBoldText {
+    font-size: 10px;
+    font-family: 'Freight Sans Bold', Helvetica, Arial;
+    font-weight: bold;
+    color: #012778;
+}
+
+/* 38, 72 - Screens using it: "User Profile: Support Tab", "Main Menu: Support Tab */
+.genericBlueText {
+    font-size: 13px;
+    font-family: 'Freight Sans Bold', Helvetica, Arial;
+    color: #012778;
+}
+
+/* 11 (B), 12, 18, 49, 54 - Screens using it: "Main Menu", "Legislation Tab", "Organizations Tab", "User Profile: Videos Tab" */
+.blueBoldText {
+    font-size: 13px;
+    font-family: 'Freight Sans Bold', Helvetica, Arial;
+    font-weight: bold !important;
+    color: #012778;
+}
+
+.blueBoldTextMenu {
+    font-size: 13px;
+    font-family: 'Freight Sans Bold', Helvetica, Arial;
+    font-weight: bold !important;
+    color: #012778 !important;
+    border-bottom: solid 2px #012778;
+}
+
+/* 15, 25, 28, 33 62, 83 - Screens using it: "Main Menu: Newsfeed tab, Events Tab, Archives Tab", "User Profile: Articles Tab, Videos Tab, Petitions Tab"*/
+.blueTitles {
+    font-size: 16px;
+    font-family: 'Freight Sans Bold', Helvetica, Arial;
+    color: #012778;
+}
+
+
+/*------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/* 48, 50,  - Screens using it: "Main Menu: Blotter Tab, Petitions Tab, Legislation Tab" */
+.smallRedBoldText {
+    font-size: 10px;
+    font-family: 'Freight Sans Bold', Helvetica, Arial;
+    font-weight: bold;
+    color: #c40000;
+}
+
+/* 16, 30, 34, 42, 63, 78, 84 - Screens using it: "User Profile: Articles Tab, Videos Tab, Boycott Tab, Petitions", "Main Menu: Events Tab, Archives Tab, Boycott Tab" */
+.genericRedText {
+    font-size: 13px;
+    font-family: 'Freight Sans Bold', Helvetica, Arial;
+    color: #c40000;
+}
+
+/* 43 - Screens using it: "Main Menu: Voting Tab" */
+.vote {
+    font-size: 18px;
+    font-family: 'Freight Sans Bold', Helvetica, Arial;
+    color: #c40000 !important;
+}
+
+/*------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/* 56, 71 - Screens using it: "Main Menu: Organizations Tab, Support Tab" */
+.followAndSupportButton {
+    font-size: 10px;
+    font-family: 'Freight Sans Bold', Helvetica, Arial;
+    font-weight: 600;
+    color: #fff;
+    background: #012778;
+    padding: 4px 13px;
+    border-radius: 12px;
+    border: solid 1px #024e86;
+    box-shadow: #b4bfc7 1px 1px 1px;
+    width: 90px;
+}
+
+
+/* 32, 40, 55, 70 - Screens using it: "User Profile: Organizations Tab, Support Tab", "Main Menu: Organizations Tab, Support Tab" */
+.followingAndSupportedButton {
+    font-size: 10px;
+    font-family: "Freight Sans Bold", Helvetica, Arial;
+    font-weight: 600;
+    color: #012778;
+    background: #FFFFFF;
+    padding: 4px 13px;
+    border-radius: 12px;
+    border: solid 1px #083084;
+    box-shadow: #251f5f 1px 1px 1px;
+    width: 90px;
+}
+
+
+/* 75 - Screens using it: "Main Menu: Boycott Tab"*/
+.boycottButton {
+    font-size: 10px;
+    font-family: 'Freight Sans Bold', Helvetica, Arial;
+    font-weight: 600;
+    color: #FFFFFF;
+
+    background: #c40000;
+    padding: 4px 13px;
+    border-radius: 12px;
+    border: solid 1px #ccc;
+    box-shadow: #eee 1px 1px 1px;
+    width: 84px;
+}
+
+/* 41, 76 - Screens using it: "Main Menu: Boycott tab", "User Profile: Boycotted Tab" */
+.boycottedButton {
+    font-size: 10px;
+    font-family: 'Freight Sans Bold', Helvetica, Arial;
+    font-weight: 600;
+    color: #c40000;
+    background: #FFFFFF;
+
+    padding: 4px 13px;
+    border-radius: 12px;
+    border: solid 1px #ccc;
+    box-shadow: #eee 1px 1px 1px;
+    width: 84px;
+}
+
+
+/*------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/* 80 - Screens using it: "Main Menu: Archives Tab" */
+.archivesTab {
+    font-size: 13px;
+    font-family: 'Freight Sans Bold', Helvetica, Arial;
+    font-weight: 600;
+    color: #000000;
+    background-color: #FFFFFF;
+}
+
+/* 81 - Screens using it: "Main Menu: Archives Tab" */
+.archivesHighlightedTab {
+    font-size: 13px;
+    font-family: 'Freight Sans Bold', Helvetica, Arial;
+    color: #FFFFFF;
+    background-color: #012778;
+}
+
+.voteTabBlackText {
+    font-size: 13px;
+    font-weight: 600;
+    font-family: 'Freight Sans Bold', Helvetica, Arial;
+    font-stretch: extra-expanded;
+    color: #000000;
+}
+
+.saveButton {
+    font-size: 10px;
+    font-family: "Freight Sans Bold",Helvetica,Arial;
+    font-weight: 600;
+    color: #fff;
+    background: #012778;
+    border-radius: 12px;
+    width: 60px;
+
+
+    padding: 4px 13px;
+    border-radius: 12px;
+    border: solid 1px #ccc;
+    box-shadow: #eee 1px 1px 1px;
+}
+
+
+.savedButton {
+    font-size: 10px;
+    font-family: "Freight Sans Bold",Helvetica,Arial;
+    font-weight: 600;
+    color: #012778;
+    background: #fff;
+    border-radius: 12px;
+    width: 60px;
+
+    padding: 4px 13px;
+    border-radius: 12px;
+    border: solid 1px #ccc;
+    box-shadow: #eee 1px 1px 1px;
+}
+
+.text-ellipses{
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+
+.organizationAboutHeadings {
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    background: #012778;
+}

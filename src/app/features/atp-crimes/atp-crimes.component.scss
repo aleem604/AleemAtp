@@ -38,26 +38,16 @@
             list-style: none;
             padding: 10px 10px 10px 0px;
             width: 100%;
-            display: table;
             text-align: center;
             margin: 0 auto;
             line-height: 20px;
-            height: 90px;
+            height: 40px;
 
             li {
                 text-align: left;
-            }
-        }
-
-        @media only screen and (max-width: 500px) {
-            .list-block {
-                height: 100px;
-            }
-        }
-
-        @media only screen and (max-width: 320px) {
-            .list-block {
-                height: 120px;
+                overflow:hidden;
+                text-overflow:ellipsis;
+                white-space:nowrap;
             }
         }
     }

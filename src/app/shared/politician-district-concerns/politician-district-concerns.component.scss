@@ -6,41 +6,38 @@
         margin-bottom: 10px;
     }
 
-    table.wrapper-table {
-       width:auto;
+    .display-flex {
+        padding-top: 1.0em;
+        border-bottom: solid 1px #ddd;
+        padding-bottom: 1.5em;
+        line-height: 20px;
 
-        tr {
-            td {
-               text-align:left;
+        .thumbs-up {
+            color: green;
 
-                .thumbs-up {
-                    color: green;
-
-                    i {
-                        font-size: 14px;
-                    }
-
-                    small {
-                        position: absolute;
-                        top: 15px;
-                        right: 13px;
-                    }
-                }
-
-                .thumbs-down {
-                    color: red;
-
-                    i {
-                        font-size: 14px;
-                    }
-
-                    small {
-                        position: absolute;
-                        top: 15px;
-                        right: 0px;
-                    }
-                }
+            i {
+                font-size: 14px;
             }
-        }       
+
+            small {
+                position: absolute;
+                top: 15px;
+                right: 13px;
+            }
+        }
+
+        .thumbs-down {
+            color: red;
+
+            i {
+                font-size: 14px;
+            }
+
+            small {
+                position: absolute;
+                top: 15px;
+                right: 0px;
+            }
+        }
     }
 }

@@ -1,7 +1,4 @@
 <div class="row partial-wrapper">
-    <div class="col-xs-12 atp-blue pt-2 favorite pl-2">
-        Favorite videos
-    </div>
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 pl-0 pr-0" *ngFor="let v of videos; first as isFirst; last as isLast" [ngClass]="{'pt-2':isFirst, 'pb-2':isLast}">
         <table class="wrapper-table">
             <tr>
@@ -12,7 +9,7 @@
                     </div>
                 </td>
                 <td class="vertical-middle line-height-23">
-                    <div class="level-2h" [innerText]="v.name"></div>
+                    <div class="level-2h text-ellipses" [innerText]="v.name"></div>
                     <div class="level-1h atp-blue" [innerText]="v.title | slice : 0 : 30"></div>
                     <div class="bolder atp-red pacity-point-8" [innerText]="v.date"></div>
                 </td>

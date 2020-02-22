@@ -126,9 +126,9 @@ const routes: Routes = [
                 data: { pageTitle: "Vote" }
             },
             {
-                path: "blotter",
-                loadChildren: () => import('./features/atp-blotters/atp-blotters.module').then(m => m.AtpBlottersModule),
-                data: { pageTitle: "Blotter" }
+                path: "crime",
+                loadChildren: () => import('./features/atp-crimes/atp-crimes.module').then(m => m.AtpCrimesModule),
+                data: { pageTitle: "Crimes" }
             },
             {
                 path: "politicians",
@@ -203,7 +203,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-    imports: [RouterModule.forRoot(routes, { useHash: false })],
+    imports: [RouterModule.forRoot(routes, { useHash: false, onSameUrlNavigation: 'reload' })],
     exports: [RouterModule]
 })
 export class AtpRoutingModule { }

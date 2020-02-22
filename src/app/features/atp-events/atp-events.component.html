@@ -1,43 +1,46 @@
 <div id="content" class="pl-0">
-  <div class="input-group input-group-lg search-div">
-    <input class="form-control input-lg" type="text" placeholder="Search" id="search-project">
-    <div class="input-group-btn">
-      <button type="submit" class="btn btn-default">
-        &#xA0;&#xA0;&#xA0;<i class="fa fa-fw fa-search fa-lg"></i>&#xA0;&#xA0;&#xA0;
-      </button>
-    </div>
-  </div>
-  <div class="row partial-wrapper">
-    <div class="col-xs-12 col-sm-8 col-md-8 col-lg-9 content-section">
-      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" *ngFor="let n of news |slice:0:3; first as isFirst; last as isLast" [ngClass]="{'pt-2':isFirst, 'pb-3':isLast}">
-          <table class="wrapper-table">
-              <tr>
-                  <td colspan="2"><img [src]="n.avatar[0].src" alt="avatar" class="img-post"> </td>
-                  <td>
-                      <div class="pb-1"><strong class="level-2h" [innerText]="n.name"></strong> <small class="pull-right" [innerText]="n.time"></small> </div>
-                      <div class="pb-half"><strong class="level-1h atp-blue pt-half" [innerText]="n.name"></strong> </div>
-                      <div class="pb-half"><strong class="level-3h" [innerText]="n.date"></strong> </div>
-                      <div class="pb-half"><strong class="level-4h" [innerText]="n.address"></strong> </div>
-                      <p class="pt-1 desc" [innerText]="n.desc"></p>
-                     
-                  </td>
-              </tr>
-          </table>
-        <div *ngIf="!isLast" class="clearfix">
-          <hr class="clearfix" />
+    <div class="input-group input-group-lg search-div">
+        <input class="form-control input-lg" type="text" placeholder="Search" id="search-project">
+        <div class="input-group-btn">
+            <button type="submit" class="btn btn-default">
+                &#xA0;&#xA0;&#xA0;<i class="fa fa-fw fa-search fa-lg"></i>&#xA0;&#xA0;&#xA0;
+            </button>
         </div>
-      </div>
     </div>
+    <div class="row partial-wrapper">
+        <div class="col-xs-12 col-sm-8 col-md-8 col-lg-9 content-section">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" *ngFor="let n of news |slice:0:3; first as isFirst; last as isLast" [ngClass]="{'pt-2':isFirst, 'pb-3':isLast}">
+                <table class="wrapper-table">
+                    <tr>
+                        <td colspan="2"><img [src]="n.avatar[0].src" alt="avatar" class="img-post"> </td>
+                        <td>
+                            <div class="pb-half">
+                                <strong class="blackTitles" [innerText]="n.name"></strong>
+                                <small class="pull-right" [innerText]="n.time"></small>
+                            </div>
+                            <div class="blueTitles" [innerText]="n.event"></div>
+                            <div class="genericRedText" [innerText]="n.date"></div>
+                            <p class="smallGreyBoldText pt-half" [innerText]="n.address"></p>
+                            <p class="genericBlackText" [innerText]="n.desc"></p>
 
-    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-3 recomm-section hidden-xs">
-      <recommended-orgs></recommended-orgs>
+                        </td>
+                    </tr>
+                </table>
+                <div *ngIf="!isLast" class="clearfix">
+                    <hr class="clearfix" />
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-3 recomm-section hidden-xs">
+            <recommended-orgs></recommended-orgs>
+        </div>
     </div>
-  </div>
 </div>
 <ng-template #shareTemplate>
-  <span class="well-sm">
-    <i class="fa fa-facebook-official facebook-color txt-14"></i>
-    <span class="txt-14 pl-1 pr-1 atp-blue opacity-point-4">|</span>
-    <i class="fa fa-twitter twitter-color txt-14"></i>
-  </span>
+    <span class="well-sm">
+        <i class="fa fa-facebook-official facebook-color txt-14"></i>
+        <span class="txt-14 pl-1 pr-1 atp-blue opacity-point-4">|</span>
+        <i class="fa fa-twitter twitter-color txt-14"></i>
+    </span>
 </ng-template>

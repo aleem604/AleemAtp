@@ -1,28 +1,36 @@
 .partial-wrapper {
-    height: 836px;
+  height: 837px;
 
-    .wrapper-table {
-        width: auto;
+  table.wrapper-table {
+      width:auto;
+      margin-left:auto;
+    tr {
+      td:first-of-type {
+        padding-left: 1.2em;
+        padding-right: 0.8em;
+        text-align: center;
+        vertical-align: top;
+        min-width: 90px;
+        img {
+          /*width: 90px;*/
+          /*height: 70%;*/
+        }
+      }
     }
 
-    .archives {
-        border-bottom: solid 1px #ccc;
-        padding-top: 1.5em;
-        padding-bottom: 1.5em;
-        padding-left: 0;
-        margin-left: 0em;
-    }
+    .rating {
+      float: right;
+      padding:0;
+      li {
+        display: inline;
+        padding-right: 3px;
+        float: left;
+        font-size:11px;
+      }
 
-    .archives-count {
-        color: #ff6a00;
+      .fa-star {
+        color: #ffd800;
+      }
     }
-
-    .ease-in {
-        transition: width 2s, height 4s;
-    }
-
-    .img-post {
-        width: 80px;
-        height: 80px;
-    }
+  }
 }

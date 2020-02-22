@@ -9,7 +9,7 @@
     </div>
     <div class="row partial-wrapper">
         <div class="col-xs-12 col-sm-8 col-md-8 col-lg-9 content-section">
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 mt-half pl-0 pr-0" *ngFor="let a of articles; first as isFirst; last as isLast" [ngClass]="{'pt-1':isFirst, 'pb-1':isLast}">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 mt-half pl-0 pr-0" *ngFor="let a of supports; first as isFirst; last as isLast" [ngClass]="{'pt-1':isFirst, 'pb-1':isLast}">
                     <table class="wrapper-table">
                         <tr>
                             <td colspan="2">
@@ -17,16 +17,16 @@
                             </td>
                             <td>                                                          
                                 <div>
-                                    <strong class="level-1h" [innerText]="a.name"></strong>
-                                    <span class="pull-right">
-                                        <button *ngIf="!a.supported;else supported" class="btn btn-round btn-follow">Support</button>
+                                    <strong class="blackTitles" [innerText]="a.name"></strong>
+                                    <span class="pull-right" (click)="switchSupport(a)">
+                                        <button *ngIf="!a.supported;else supported" class="followAndSupportButton">Support</button>
                                         <ng-template #supported>
-                                            <button class="btn btn-round btn-following">Supported</button>
+                                            <button class="followingAndSupportedButton">Supported</button>
                                         </ng-template>
                                     </span>
                                 </div>
-                                <p class="pt-1"><strong class="level-1h atp-blue">REASON:</strong></p>
-                                <p class="desc" [innerHtml]="a.desc"></p>
+                                <p class="genericBlueText">Reason:</p>
+                                <p class="genericBlackText" [innerHtml]="a.desc"></p>
 
                             </td>
                         </tr>

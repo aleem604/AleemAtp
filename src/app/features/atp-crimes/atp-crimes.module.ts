@@ -1,14 +1,14 @@
 import { NgModule } from "@angular/core";
 
-import { routing } from "./atp-blotters.routing";
-import { AtpBlottersComponent } from "./atp-blotters.component";
+import { routing } from "./atp-crimes.routing";
+import { AtpCrimesComponent } from "./atp-crimes.component";
 import { SharedModule } from "@app/shared/shared.module";
 
 
 
 @NgModule({
     declarations: [
-        AtpBlottersComponent
+        AtpCrimesComponent
     ],
     imports: [
         SharedModule,
@@ -16,6 +16,6 @@ import { SharedModule } from "@app/shared/shared.module";
     ],
     providers: [],
 })
-export class AtpBlottersModule {
+export class AtpCrimesModule {
 
 }

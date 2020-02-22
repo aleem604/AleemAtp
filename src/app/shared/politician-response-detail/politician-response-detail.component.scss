@@ -5,48 +5,60 @@
     clear: both;
     overflow-x: hidden;
     margin-right: -2px;
-    padding-right:2px;
+    padding-right: 2px;
 
-    table.wrapper-table {
-        width:auto;
+    .flex-wrapper {
+        display: flex;
+        margin-right: 0.75em;
+        margin-left: 0.75em;
 
-        tr {
-            td:first-of-type {
-                padding-right: 0.8em;
+        div.image-wrapper {
+            flex: 1;
+            text-align: center;
 
-                .rounded-image {
-                    border-radius: 140px;
+            img {
+                width: 78%;
+                margin: 0 auto;
+                min-width: 82px;
+                padding-right: 0.5em;
+                border-radius:57px;
+            }
+        }
+
+        div.content-wrapper {
+            flex: 7;
+            margin-right: 0.75em;
+
+            .rating {
+                float: right;
+                padding: 0;
+
+                li {
+                    display: inline;
+                    padding-right: 3px;
+                    float: left;
+                    font-size: 11px;
+                }
+
+                .fa-star {
+                    color: #ffd800;
                 }
             }
-        }
-        .rating {
-            float: right;
-            padding: 0;
 
-            li {
-                display: inline;
-                padding-right: 3px;
-                float: left;
-                font-size: 11px;
-            }
+            .rating1 {
+                padding: 0;
+                display: inline-flex;
 
-            .fa-star {
-                color: #ffd800;
-            }
-        }
+                li {
+                    display: inline;
+                    padding-right: 3px;
+                    float: left;
+                    font-size: 11px;
+                }
 
-        .rating1 {
-            padding: 0;
-            display:inline-flex;
-            li {
-                display: inline;
-                padding-right: 3px;
-                float: left;
-                font-size: 11px;
-            }
-
-            .fa-star {
-                color: #ffd800;
+                .fa-star {
+                    color: #ffd800;
+                }
             }
         }
     }

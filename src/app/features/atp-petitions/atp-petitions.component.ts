@@ -1,5 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 
+export interface PetitionsModel {
+    avatar: any;
+    name: string;
+    event: string;
+    date: string;
+    address: string;
+    desc: string;
+    time: string;
+    saved: boolean;
+    rating: number;
+    likes: number;
+}
+
 @Component({
   selector: 'atp-petitions',
     templateUrl: './atp-petitions.component.html',
@@ -29,7 +42,7 @@ export class AtpPetitionsComponent implements OnInit {
     max: number = 5;
     rate: number = 4;
     isReadonly: boolean = true;
-    news = [
+    petitionsList : PetitionsModel [] = [
         {
             avatar: [{ src: '../../../assets/atp/change-logo.png', alt: 'avatar' }],
             name: 'Name of Bill Goes here',
@@ -38,6 +51,7 @@ export class AtpPetitionsComponent implements OnInit {
             address: '123 Main Street, Balboa Center, San Francisco, CA 94201',
             desc: 'Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.Nullam dictum felis eu pede mollis pretium.Integer tincidunt.Cras dapibus.Vivamus elementum semper nisi.Aenean vulputate eleifend tellus.Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.Phasellus viverra nulla ut metus varius laoreet.Quisque rutrum.Aenean imperdiet.',
             time: '30 m',
+            saved:false,
             rating: 2,
             likes: 10
         },
@@ -49,6 +63,7 @@ export class AtpPetitionsComponent implements OnInit {
             address: '123 Main Street, Balboa Center, San Francisco, CA 94201',
             desc: 'Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.Nullam dictum felis eu pede mollis pretium.Integer tincidunt.Cras dapibus.Vivamus elementum semper nisi.Aenean vulputate eleifend tellus.Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.Phasellus viverra nulla ut metus varius laoreet.Quisque rutrum.Aenean imperdiet.',
             time: '30 m',
+            saved: true,
             rating: 2,
             likes: 10
         },
@@ -60,6 +75,7 @@ export class AtpPetitionsComponent implements OnInit {
             address: '123 Main Street, Balboa Center, San Francisco, CA 94201',
             desc: 'Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.Nullam dictum felis eu pede mollis pretium.Integer tincidunt.Cras dapibus.Vivamus elementum semper nisi.Aenean vulputate eleifend tellus.Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.Phasellus viverra nulla ut metus varius laoreet.Quisque rutrum.Aenean imperdiet.',
             time: '30 m',
+            saved: true,
             rating: 2,
             likes: 10
         },
@@ -71,27 +87,18 @@ export class AtpPetitionsComponent implements OnInit {
             address: '123 Main Street, Balboa Center, San Francisco, CA 94201',
             desc: 'Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.Nullam dictum felis eu pede mollis pretium.Integer tincidunt.Cras dapibus.Vivamus elementum semper nisi.Aenean vulputate eleifend tellus.Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.Phasellus viverra nulla ut metus varius laoreet.Quisque rutrum.Aenean imperdiet.',
             time: '30 m',
+            saved: false,
             rating: 2,
             likes: 10
         },
     ];
-    public state: any = {
-        tabs: {
-            demo1: 0,
-            demo2: 'tab-r1',
-            demo3: 'hr1',
-            demo4: 'AA',
-            demo5: 'iss1',
-            demo6: 'l1',
-            demo7: 'tab1',
-            demo8: 'hb1',
-            demo9: 'A1',
-            demo10: 'is1'
-        }
-    };
 
     constructor() { }
 
     ngOnInit() {
+    }
+
+    switchSave(row: PetitionsModel) {
+        row.saved = !row.saved;
     }
 }

@@ -1,53 +1,48 @@
 <div class="row partial-wrapper">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 mt-1 pl-0 pr-0 pt-2">
-        <table class="wrapper-table">
-            <tr>
-                <td>
-                    <div class="row m-0">
-                        <div class="col-xs-12 mb-1">
-                            <div>
-                                <div class="widget-body no-padding">
-                                    <form id="smart-form-register" class="smart-form" novalidate="novalidate">
-                                        <fieldset>
-                                            <section>
-                                                <label class="select">
-                                                    <select name="gender">
-                                                        <option value="0" disabled>Please select a topic.</option>
-                                                        <option value="1">Topic 1</option>
-                                                        <option value="2">Topic 2</option>
-                                                        <option value="3">Topic 3</option>
-                                                    </select> <i></i>
-                                                </label>
-                                            </section>
 
-                                            <section>
-                                                <label class="textarea">
-                                                    <textarea rows="10" name="info" placeholder="Write your message here"></textarea>
-                                                </label>
-                                            </section>
-                                            <div class="row">
-                                                <div class="col col-9 text-left">
-                                                    <label class="checkbox">
-                                                        <input type="checkbox" name="terms" id="terms" [(ngModel)]="debate" (click)="showDebateDiag($event,write_me_template)" />
-                                                        <i></i>Debate
-                                                    </label>
-                                                </div>
-                                                <div class="col col-3 text-right">
-                                                    <button type="submit" class="btn btn-primary">
-                                                        Send
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </fieldset>
-                                    </form>
+        <div class="row m-0">
+            <div class="col-xs-12 mb-1">
+                <div>
+                    <div class="widget-body no-padding">
+                        <form id="smart-form-register" class="smart-form" novalidate="novalidate">
+                            <fieldset>
+                                <section>
+                                    <label class="custom-select">
+                                        <select name="gender">
+                                            <option value="0" disabled>Please select a topic.</option>
+                                            <option value="1">Topic 1</option>
+                                            <option value="2">Topic 2</option>
+                                            <option value="3">Topic 3</option>
+                                        </select> 
+                                    </label>
+                                </section>
+
+                                <section>
+                                    <label class="textarea">
+                                        <textarea rows="10" name="info" placeholder="Write your message here"></textarea>
+                                    </label>
+                                </section>
+                                <div class="row">
+                                    <div class="col col-9 text-left">
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="terms" id="terms" [(ngModel)]="debate" (click)="showDebateDiag($event,write_me_template)" />
+                                            <i></i>Debate
+                                        </label>
+                                    </div>
+                                    <div class="col col-3 text-right">
+                                        <button type="submit" class="btn btn-primary">
+                                            Send
+                                        </button>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
+                            </fieldset>
+                        </form>
                     </div>
-                </td>
+                </div>
+            </div>
+        </div>
 
-            </tr>
-        </table>
     </div>
 </div>
 <ng-template #write_me_template>

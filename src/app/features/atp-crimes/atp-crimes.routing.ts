@@ -1,13 +1,13 @@
 
 import { RouterModule, Routes } from "@angular/router";
-import { AtpBlottersComponent } from "./atp-blotters.component";
+import { AtpCrimesComponent } from "./atp-crimes.component";
 
 
 export const routes: Routes = [
 
     {
         path: '',
-        component: AtpBlottersComponent
+        component: AtpCrimesComponent
     },
 
 ];

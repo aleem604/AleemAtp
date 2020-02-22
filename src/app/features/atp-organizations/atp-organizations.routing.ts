@@ -14,23 +14,23 @@ export const routes: Routes = [
         component: AtpOrganizationsComponent,
         children: [
             {
-                path: 'video',
+                path: 'video/:id',
                 component: OrgVideosComponent
             },
             {
-                path: 'articles',
+                path: 'articles/:id',
                 component: OrgArticlesComponent
             },
             {
-                path: 'about',
+                path: 'about/:id',
                 component: OrgAboutComponent
             },
             {
-                path: 'stance',
+                path: 'stance/:id',
                 component: OrgStanceComponent
             },
             {
-                path: 'events',
+                path: 'events/:id',
                 component: OrgEventsComponent
             },
             {

@@ -1,4 +1,5 @@
 @import "../../../_variables.scss";
+
 $legHeight: 887px;
 
 #content {
@@ -12,9 +13,9 @@ $legHeight: 887px;
     }
 
 
-    .wrapper {
+    .partial-wrapper {
         margin: 0;
-
+        
         div.clearfix {
             margin-left: -13px;
             margin-right: -13px;
@@ -22,7 +23,8 @@ $legHeight: 887px;
 
         .content-section {
             height: $legHeight;
-            overflow: hidden;
+            overflow-y:auto;
+            overflow-x:hidden;
             padding: 0;
             border-right: 2px solid rgba(220,220,220,0.5);
             box-shadow: 1px 1px 6px rgba(228,228,228,0.5);
@@ -35,102 +37,16 @@ $legHeight: 887px;
             }
         }
 
-        .articles {
-            overflow-y: auto;
-            height: $legHeight;
-            margin-left: 0px;
-            clear: both;
-            overflow-x: hidden;
-            margin-right: -2px;
-            padding-right: 11px;
+        .wrapper-table {
+            width: auto;
 
-            table.org-table {
-                width: 98%;
-
-                tr {
-                    td:first-of-type {
-                        padding-left: 1.2em;
-                        padding-right: 0.8em;
-                        text-align: center;
-                        vertical-align: top;
-
-                        img {
-                            width: 90px;
-                            height: 90px;
-                        }
-                    }
-
-                    .level-3h {
-                        padding-top: 11px;
-                        font-size: 11.5px;
-                        opacity: 0.8;
-                    }
-
-                    button.boycott {
-                        background-color: #012778;
-                        border: solid 1px #ccc;
-                        box-shadow: 1px 1px 0px #ccc;
-                        border-radius: 25px;
-                        font-size: 10px;
-                        padding: 4px 11px;
-                        color: white;
-                        font-weight: 800;
-                        opacity: 0.8;
-                        text-transform: uppercase;
-                        float: left;
-                        right: 8px;
-                        position: absolute;
-                    }
-
-                    button.boycotted {
-                        background-color: white;
-                        border: solid 1px #ccc;
-                        box-shadow: 1px 1px 0px #ccc;
-                        border-radius: 25px;
-                        font-size: 10px;
-                        padding: 4px 11px;
-                        color: $atp-red;
-                        font-weight: 800;
-                        opacity: 0.8;
-                        text-transform: uppercase;
-                        float: left;
-                        right: 8px;
-                        position: absolute;
-                    }
-
-                    .website {
-                        color: #012778;
-                        font-size: 11px;
-                        margin-bottom: 0;
-                        font-weight: 800;
-                        opacity: 0.7;
-                    }
-
-
-                    .reasons {
-                        font-size: 10.5px;
-                        font-weight: 800;
-                        opacity: 0.6;
-                    }
-                }
-
-                .rating {
-                    float: right;
-                    padding: 0;
-
-                    li {
-                        display: inline;
-                        padding-right: 3px;
-                        float: left;
-                        font-size: 11px;
-                    }
-
-                    .fa-star {
-                        color: #ffd800;
-                    }
-                }
-            }
+            tr {
+                td:first-of-type {
+                                   
+                }                            
+            }            
         }
+
 
 
 

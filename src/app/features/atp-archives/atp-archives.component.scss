@@ -1,71 +1,74 @@
 $legHeight: 887px;
 
 #content {
-  padding: 0;
-  .search-div {
-    .form-control {
-      border-left: none;
-    }
-  }
-  .wrapper {
-    margin: 0;
+    padding: 0;
 
-    .top-bar {
-      table {
-        width: 100%;
-
-        tr {
-          td {
-            padding: 13px;
-            text-align: center;
-            border-right: solid 1px #ccc;
-            border-bottom: solid 1px #ccc;
-            height:50px;
-          }
-
-          td:first-child {
-            width:33.33%;
-            padding:0;
-            select{
-                padding:5px;
-                width:60%;
-                height:30px;
-                font-weight:700;
-                border:none;
-            }
-          }
-
-          td:last-child {
-            border-right: none;
-          }
-
-          td.active-cell {
-            background-color: #012778;
-            color: white;
-          }
+    .search-div {
+        .form-control {
+            border-left: none;
         }
-      }
     }
 
-    div.clearfix {
-      margin-left: -13px;
-      margin-right: -13px;
-    }
+    .wrapper {
+        margin: 0;
 
-    .content-section {
-      height: $legHeight;
-      /*overflow-y: auto;
+        .top-bar {
+            table {
+                width: 100%;
+
+                tr {
+                    td {
+                        padding: 13px;
+                        text-align: center;
+                        border-right: solid 1px #ccc;
+                        border-bottom: solid 1px #ccc;
+                        height: 44px;
+                    }
+
+                    td:first-child {
+                        width: 33.33%;
+                        padding: 0 !important;
+
+                        select {
+                            padding: 6px 28px 6px 20px;
+                            width: 100%;
+                            height: 44px;
+                            font-weight: 700;
+                            border: none;
+                        }
+                    }
+
+                    td:last-child {
+                        border-right: none;
+                    }
+
+                    td.active-cell {
+                        background-color: #012778;
+                        color: white;
+                    }
+                }
+            }
+        }
+
+        div.clearfix {
+            margin-left: -13px;
+            margin-right: -13px;
+        }
+
+        .content-section {
+            height: $legHeight;
+            /*overflow-y: auto;
       overflow-x: hidden;*/
-      padding: 0;
-      border-right: 2px solid rgba(220,220,220,0.5);
-      box-shadow: 1px 1px 6px rgba(228,228,228,0.5);
-    }
+            padding: 0;
+            border-right: 2px solid rgba(220,220,220,0.5);
+            box-shadow: 1px 1px 6px rgba(228,228,228,0.5);
+        }
 
-    .recomm-section {
-      height: $legHeight;
-      overflow-y: auto;
-      overflow-x: hidden;
-      background: rgba(248, 248, 248, 0.5);
+        .recomm-section {
+            height: $legHeight;
+            overflow-y: auto;
+            overflow-x: hidden;
+            background: rgba(248, 248, 248, 0.5);
+        }
     }
-  }
 }

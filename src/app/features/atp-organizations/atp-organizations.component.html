@@ -9,7 +9,7 @@
   </div>
   <div class="row wrapper">
       <div class="col-xs-12 col-sm-8 col-md-8 col-lg-9 content-section">
-          <div class="profile-section pt-1 pb-1">
+          <div class="profile-section pt-1 pb-1" *ngIf="organizationId">
               <table>
                   <tr>
                       <td rowspan="2">
@@ -26,47 +26,14 @@
               </table>
           </div>
 
-          <!--<div class="sub-menu">
-              <nav class="navbar navbar-default">
-                  <div class="container-fluid pl-0 pr-0">
-
-                      <div class="navbar">
-                          <ul class="nav navbar-nav">
-                              <li routerLinkActive="active">
-                          <a (click)="(null)" [routerLink]="'/organizations'">Organizations</a>
-                        </li>
-                              <li routerLinkActive="active">
-                                  <a (click)="(null)" [routerLink]="'/organizations/video'">Videos</a>
-                              </li>
-                              <li routerLinkActive="active">
-                                  <a (click)="(null)" [routerLink]="'/organizations/articles'">Articles</a>
-                              </li>
-                              <li routerLinkActive="active">
-                                  <a (click)="(null)" [routerLink]="'/organizations/about'">About</a>
-                              </li>
-                              <li routerLinkActive="active">
-                                  <a (click)="(null)" [routerLink]="'/organizations/stance'">Stance</a>
-                              </li>
-
-                              <li routerLinkActive="active">
-                                  <a (click)="(null)" [routerLink]="'/organizations/events'">Events</a>
-                              </li>
-
-                          </ul>
-                      </div>
-                  </div>
-              </nav>
-
-          </div>-->
-
-          <div class="scroll-menu">
+          <div class="scroll-menu" *ngIf="organizationId">
               <header class="atp-scroll-menu">
                   <nav class="vertical-align-middle">
-                      <span routerLinkActive="active" [routerLink]="'/organizations/video'">Videos</span>
-                      <span routerLinkActive="active" [routerLink]="'/organizations/articles'">Articles</span>
-                      <span routerLinkActive="active" [routerLink]="'/organizations/about'">About</span>
-                      <span routerLinkActive="active" [routerLink]="'/organizations/stance'">Stance</span>
-                      <span routerLinkActive="active" [routerLink]="'/organizations/events'">Events</span>
+                      <span routerLinkActive="active" [routerLink]="['/organizations/video', organizationId]">Videos</span>
+                      <span routerLinkActive="active" [routerLink]="['/organizations/articles', organizationId]">Articles</span>
+                      <span routerLinkActive="active" [routerLink]="['/organizations/about', organizationId]">About</span>
+                      <span routerLinkActive="active" [routerLink]="['/organizations/stance', organizationId]">Stance</span>
+                      <!--<span routerLinkActive="active" [routerLink]="'/organizations/events'">Events</span>-->
                   </nav>
               </header>
           </div>

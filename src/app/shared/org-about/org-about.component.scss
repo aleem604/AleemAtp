@@ -6,16 +6,34 @@
     overflow-x: hidden;
     margin-right: -2px;
     text-align: left;
-    padding-right:2px;
+    padding-right: 2px;
 
-    hr{
-        margin-top:1em;
-        margin-bottom:1em;
+    .organizationAboutHeadings {
+        margin-left: -2em;
+        padding-top: 7px;
+        padding-bottom: 7px;
+        padding-left: 1em;
+        margin-right: -2em;
+    }
+
+    hr {
+        margin-top: 1em;
+        margin-bottom: 1em;
     }
 
     img {
-        
         /*width: 150px;
         height: 70px;*/
+    }
+
+    table.table {
+        margin-bottom: 0.25em;
+
+        tr {
+            td:first-of-type {
+                min-width: 85px;
+                vertical-align: top;
+            }
+        }
     }
 }

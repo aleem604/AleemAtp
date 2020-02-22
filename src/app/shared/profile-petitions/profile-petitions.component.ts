@@ -28,6 +28,7 @@ export class ProfilePetitionsComponent implements OnInit {
     articles = [
         {
             avatar: [{ src: '../../../assets/atp/change-logo.png', alt: 'avatar' }],
+            org:'Change.org',
             name: 'Habbit for Humanity',
             desc: 'Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.Nullam dictum felis eu pede mollis pretium.Integer tincidunt.Cras dapibus.Vivamus elementum semper nisi.Aenean vulputate eleifend tellus.Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.Phasellus viverra nulla ut metus varius laoreet.Quisque rutrum.Aenean imperdiet.',
             time: '30 m',
@@ -37,6 +38,7 @@ export class ProfilePetitionsComponent implements OnInit {
         },
         {
             avatar: [{ src: '../../../assets/atp/change-logo.png', alt: 'avatar' }],
+            org: 'Change.org',
             name: 'Habbit for Humanity',
             desc: 'Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.Nullam dictum felis eu pede mollis pretium.Integer tincidunt.Cras dapibus.Vivamus elementum semper nisi.Aenean vulputate eleifend tellus.Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.Phasellus viverra nulla ut metus varius laoreet.Quisque rutrum.Aenean imperdiet.',
             time: '2.5 Hr',
@@ -46,6 +48,7 @@ export class ProfilePetitionsComponent implements OnInit {
         },
         {
             avatar: [{ src: '../../../assets/atp/change-logo.png', alt: 'avatar' }],
+            org: 'Change.org',
             name: 'WWF12',
             desc: 'Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.Nullam dictum felis eu pede mollis pretium.Integer tincidunt.Cras dapibus.Vivamus elementum semper nisi.Aenean vulputate eleifend tellus.Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.Phasellus viverra nulla ut metus varius laoreet.Quisque rutrum.Aenean imperdiet.',
             time: '45 m',
@@ -55,6 +58,7 @@ export class ProfilePetitionsComponent implements OnInit {
         },
         {
             avatar: [{ src: '../../../assets/atp/change-logo.png', alt: 'avatar' }],
+            org: 'Change.org',
             name: 'Habbit for Humanity',
             desc: 'Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.Nullam dictum felis eu pede mollis pretium.Integer tincidunt.Cras dapibus.Vivamus elementum semper nisi.Aenean vulputate eleifend tellus.Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.Phasellus viverra nulla ut metus varius laoreet.Quisque rutrum.Aenean imperdiet.',
             time: '30 m',
@@ -64,6 +68,7 @@ export class ProfilePetitionsComponent implements OnInit {
         },
         {
             avatar: [{ src: '../../../assets/atp/change-logo.png', alt: 'avatar' }],
+            org: 'Change.org',
             name: 'Habbit for Humanity',
             desc: 'Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.Nullam dictum felis eu pede mollis pretium.Integer tincidunt.Cras dapibus.Vivamus elementum semper nisi.Aenean vulputate eleifend tellus.Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.Phasellus viverra nulla ut metus varius laoreet.Quisque rutrum.Aenean imperdiet.',
             time: '2.5 Hr',
@@ -72,6 +77,7 @@ export class ProfilePetitionsComponent implements OnInit {
         },
         {
             avatar: [{ src: '../../../assets/atp/change-logo.png', alt: 'avatar' }],
+            org: 'Change.org',
             name: 'WWF12',
             desc: 'Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.Nullam dictum felis eu pede mollis pretium.Integer tincidunt.Cras dapibus.Vivamus elementum semper nisi.Aenean vulputate eleifend tellus.Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.Phasellus viverra nulla ut metus varius laoreet.Quisque rutrum.Aenean imperdiet.',
             time: '45 m',
@@ -81,6 +87,7 @@ export class ProfilePetitionsComponent implements OnInit {
         },
         {
             avatar: [{ src: '../../../assets/atp/change-logo.png', alt: 'avatar' }],
+            org: 'Change.org',
             name: 'Habbit for Humanity',
             desc: 'Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.Nullam dictum felis eu pede mollis pretium.Integer tincidunt.Cras dapibus.Vivamus elementum semper nisi.Aenean vulputate eleifend tellus.Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.Phasellus viverra nulla ut metus varius laoreet.Quisque rutrum.Aenean imperdiet.',
             time: '30 m',
@@ -90,6 +97,7 @@ export class ProfilePetitionsComponent implements OnInit {
         },
         {
             avatar: [{ src: '../../../assets/atp/change-logo.png', alt: 'avatar' }],
+            org: 'Change.org',
             name: 'Habbit for Humanity',
             desc: 'Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.Nullam dictum felis eu pede mollis pretium.Integer tincidunt.Cras dapibus.Vivamus elementum semper nisi.Aenean vulputate eleifend tellus.Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.Phasellus viverra nulla ut metus varius laoreet.Quisque rutrum.Aenean imperdiet.',
             time: '2.5 Hr',
@@ -99,6 +107,7 @@ export class ProfilePetitionsComponent implements OnInit {
         },
         {
             avatar: [{ src: '../../../assets/atp/change-logo.png', alt: 'avatar' }],
+            org: 'Change.org',
             name: 'WWF12',
             desc: 'Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.Nullam dictum felis eu pede mollis pretium.Integer tincidunt.Cras dapibus.Vivamus elementum semper nisi.Aenean vulputate eleifend tellus.Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.Phasellus viverra nulla ut metus varius laoreet.Quisque rutrum.Aenean imperdiet.',
             time: '45 m',
@@ -108,6 +117,7 @@ export class ProfilePetitionsComponent implements OnInit {
         },
         {
             avatar: [{ src: '../../../assets/atp/change-logo.png', alt: 'avatar' }],
+            org: 'Change.org',
             name: 'Habbit for Humanity',
             desc: 'Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.Nullam dictum felis eu pede mollis pretium.Integer tincidunt.Cras dapibus.Vivamus elementum semper nisi.Aenean vulputate eleifend tellus.Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.Phasellus viverra nulla ut metus varius laoreet.Quisque rutrum.Aenean imperdiet.',
             time: '30 m',
@@ -117,6 +127,7 @@ export class ProfilePetitionsComponent implements OnInit {
         },
         {
             avatar: [{ src: '../../../assets/atp/change-logo.png', alt: 'avatar' }],
+            org: 'Change.org',
             name: 'Habbit for Humanity',
             desc: 'Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.Nullam dictum felis eu pede mollis pretium.Integer tincidunt.Cras dapibus.Vivamus elementum semper nisi.Aenean vulputate eleifend tellus.Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.Phasellus viverra nulla ut metus varius laoreet.Quisque rutrum.Aenean imperdiet.',
             time: '2.5 Hr',

@@ -3,26 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
     selector: 'atp-boycott',
     templateUrl: './atp-boycott.component.html',
-    styleUrls: ['./atp-boycott.component.scss'],
-    styles: [
-        `
-      :host >>> .tooltip-inner {
-        border-radius: 25px;
-        background-color: #fff;
-        border: solid 1px rgba(0, 38, 255, 0.2);
-        color: #888;
-      }
-      :host >>> .tooltip.top .tooltip-arrow:before,
-      :host >>> .tooltip.top .tooltip-arrow {
-        border-top-color: rgba(0, 38, 255, 0.2);
-      }
-
-      :host >>> .tooltip-bottom .tooltip-arrow:before,
-      :host >>> .tooltip .tooltip-arrow {
-        border-bottom-color: rgba(0, 38, 255, 0.2);
-      }
-    `
-    ]
+    styleUrls: ['./atp-boycott.component.scss']
 })
 export class AtpBoycottComponent implements OnInit {
 
@@ -33,24 +14,56 @@ export class AtpBoycottComponent implements OnInit {
         {
             website: 'americataxpayer.com',
             avatar: [{ src: '../../../assets/atp/presbyterian-women-logo.png', alt: 'avatar' }],
-            name: 'Habbit for Humanity',
+            name: 'Seven Moons Company',
             desc: 'Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.Nullam dictum felis eu pede mollis pretium.Integer tincidunt.Cras dapibus.Vivamus elementum semper nisi.Aenean vulputate eleifend tellus.Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.Phasellus viverra nulla ut metus varius laoreet.Quisque rutrum.Aenean imperdiet.',
             time: '30 m',
             date: '10 February 2017',
             rating: 2,
             likes: 10,
-            boycotted:false
+            supported:false
         },
         {
             website: 'americataxpayer.com',
             avatar: [{ src: '../../../assets/atp/presbyterian-women-logo.png', alt: 'avatar' }],
-            name: 'Habbit for Humanity',
+            name: 'Nine Days Company',
             desc: 'Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.Nullam dictum felis eu pede mollis pretium.Integer tincidunt.Cras dapibus.Vivamus elementum semper nisi.Aenean vulputate eleifend tellus.Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.Phasellus viverra nulla ut metus varius laoreet.Quisque rutrum.Aenean imperdiet.',
             time: '2.5 Hr',
             date: '10 February 2017',
             rating: 3,
             likes: 2,
-            boycotted: false
+            supported: false
+        },
+        {
+            website: 'americataxpayer.com',
+            avatar: [{ src: '../../../assets/atp/presbyterian-women-logo.png', alt: 'avatar' }],
+            name: 'WWW Organization',
+            desc: 'Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.Nullam dictum felis eu pede mollis pretium.Integer tincidunt.Cras dapibus.Vivamus elementum semper nisi.Aenean vulputate eleifend tellus.Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.Phasellus viverra nulla ut metus varius laoreet.Quisque rutrum.Aenean imperdiet.',
+            time: '45 m',
+            date: '10 February 2017',
+            rating: 5,
+            likes: 12,
+            supported: true
+        },
+        {
+            website: 'americataxpayer.com',
+            avatar: [{ src: '../../../assets/atp/presbyterian-women-logo.png', alt: 'avatar' }],
+            name: 'Dell Technologies',
+            desc: 'Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.Nullam dictum felis eu pede mollis pretium.Integer tincidunt.Cras dapibus.Vivamus elementum semper nisi.Aenean vulputate eleifend tellus.Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.Phasellus viverra nulla ut metus varius laoreet.Quisque rutrum.Aenean imperdiet.',
+            time: '30 m',
+            date: '10 February 2017',
+            rating: 2,
+            likes: 10,
+            supported: true
+        },
+        {
+            website: 'americataxpayer.com',
+            avatar: [{ src: '../../../assets/atp/presbyterian-women-logo.png', alt: 'avatar' }],
+            name: 'Philips Corporation',
+            desc: 'Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.Nullam dictum felis eu pede mollis pretium.Integer tincidunt.Cras dapibus.Vivamus elementum semper nisi.Aenean vulputate eleifend tellus.Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.Phasellus viverra nulla ut metus varius laoreet.Quisque rutrum.Aenean imperdiet.',
+            time: '2.5 Hr',
+            rating: 3,
+            likes: 2,
+            supported: false
         },
         {
             website: 'americataxpayer.com',
@@ -61,7 +74,7 @@ export class AtpBoycottComponent implements OnInit {
             date: '10 February 2017',
             rating: 5,
             likes: 12,
-            boycotted: true
+            supported: true
         },
         {
             website: 'americataxpayer.com',
@@ -72,7 +85,7 @@ export class AtpBoycottComponent implements OnInit {
             date: '10 February 2017',
             rating: 2,
             likes: 10,
-            boycotted: true
+            supported: true
         },
         {
             website: 'americataxpayer.com',
@@ -80,9 +93,10 @@ export class AtpBoycottComponent implements OnInit {
             name: 'Habbit for Humanity',
             desc: 'Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.Nullam dictum felis eu pede mollis pretium.Integer tincidunt.Cras dapibus.Vivamus elementum semper nisi.Aenean vulputate eleifend tellus.Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.Phasellus viverra nulla ut metus varius laoreet.Quisque rutrum.Aenean imperdiet.',
             time: '2.5 Hr',
+            date: '10 February 2017',
             rating: 3,
             likes: 2,
-            boycotted: false
+            supported: true
         },
         {
             website: 'americataxpayer.com',
@@ -93,7 +107,7 @@ export class AtpBoycottComponent implements OnInit {
             date: '10 February 2017',
             rating: 5,
             likes: 12,
-            boycotted: true
+            supported: true
         },
         {
             website: 'americataxpayer.com',
@@ -103,7 +117,8 @@ export class AtpBoycottComponent implements OnInit {
             time: '30 m',
             date: '10 February 2017',
             rating: 2,
-            likes: 10
+            likes: 10,
+            supported: true
         },
         {
             website: 'americataxpayer.com',
@@ -113,37 +128,8 @@ export class AtpBoycottComponent implements OnInit {
             time: '2.5 Hr',
             date: '10 February 2017',
             rating: 3,
-            likes: 2
-        },
-        {
-            website: 'americataxpayer.com',
-            avatar: [{ src: '../../../assets/atp/presbyterian-women-logo.png', alt: 'avatar' }],
-            name: 'WWF12',
-            desc: 'Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.Nullam dictum felis eu pede mollis pretium.Integer tincidunt.Cras dapibus.Vivamus elementum semper nisi.Aenean vulputate eleifend tellus.Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.Phasellus viverra nulla ut metus varius laoreet.Quisque rutrum.Aenean imperdiet.',
-            time: '45 m',
-            date: '10 February 2017',
-            rating: 5,
-            likes: 12
-        },
-        {
-            website: 'americataxpayer.com',
-            avatar: [{ src: '../../../assets/atp/presbyterian-women-logo.png', alt: 'avatar' }],
-            name: 'Habbit for Humanity',
-            desc: 'Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.Nullam dictum felis eu pede mollis pretium.Integer tincidunt.Cras dapibus.Vivamus elementum semper nisi.Aenean vulputate eleifend tellus.Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.Phasellus viverra nulla ut metus varius laoreet.Quisque rutrum.Aenean imperdiet.',
-            time: '30 m',
-            date: '10 February 2017',
-            rating: 2,
-            likes: 10
-        },
-        {
-            website: 'americataxpayer.com',
-            avatar: [{ src: '../../../assets/atp/presbyterian-women-logo.png', alt: 'avatar' }],
-            name: 'Habbit for Humanity',
-            desc: 'Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.Nullam dictum felis eu pede mollis pretium.Integer tincidunt.Cras dapibus.Vivamus elementum semper nisi.Aenean vulputate eleifend tellus.Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.Phasellus viverra nulla ut metus varius laoreet.Quisque rutrum.Aenean imperdiet.',
-            time: '2.5 Hr',
-            date: '10 February 2017',
-            rating: 3,
-            likes: 2
+            likes: 2,
+            supported: true
         }
     ];
     public state: any = {
@@ -164,6 +150,10 @@ export class AtpBoycottComponent implements OnInit {
     constructor() { }
 
     ngOnInit() {
+    }
+
+    switchBoycott(article) {
+        article.supported = article.supported ? false : true; 
     }
 
 }

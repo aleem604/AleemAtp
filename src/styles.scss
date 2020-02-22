@@ -1,6 +1,11 @@
 @import "_variables.scss";
 
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,300,400,700");
+@import "./src/assets/css/updated-design.scss";
+
+html, body{
+    overflow-x:hidden;
+}
 
 .mat-accent .mat-slider-thumb, .mat-accent .mat-slider-thumb-label, .mat-accent .mat-slider-track-fill {
     background-color: #aaa !important;
@@ -17,7 +22,6 @@
         text-align: center;
     }
 }
-
 .progress {
     margin-bottom: -11px;
 }
@@ -68,9 +72,9 @@
 }
 
 .desc {
-    opacity: 0.7;
     line-height: 22px;
     text-align: justify;
+    color: $atp-desc;
 }
 
 .atp-modal-footer {
@@ -1084,17 +1088,44 @@ button.btn-follow-small{
                 padding-right: 0.8em;
                 text-align: center;
                 vertical-align: top;
-                width: 6%;
-
+                min-width: 60px;
                 img {
-                    width: 90px;
-                    height: 90px;
+                    /*width: 50px;*/
+                    height: 60%;
+                }
+
+                @media (max-width: 800px) {
+                    img {
+                        /*width: 50px;*/
+                        height: 60%;
+                    }
+                }
+
+                @media (max-width: 700px) {
+                    img {
+                        /*width: 50px;*/
+                        height: 60%;
+                    }
+                }
+
+                @media (max-width: 600px) {
+                    img {
+                        /*width: 50px;*/
+                        height: 60%;
+                    }
                 }
 
                 @media (max-width: 500px) {
                     img {
-                        width: 80px;
-                        height: 80px;
+                        /*width: 50px;*/
+                        height: 60%;
+                    }
+                }
+
+                @media (max-width: 400px) {
+                    img {
+                        /*width: 50px;*/
+                        height: 60%;
                     }
                 }
             }
@@ -1151,14 +1182,16 @@ button.btn-follow-small{
         display: flex;
 
         span {
+            flex:1;
+            text-align:center;
             padding: 15px 16px;
             cursor: pointer;
-            color: #444;
+            color: $atp-black;
             font-weight: 500;
         }
 
         span.active {
-            color: $atp-red;
+            color: $atp-blue;
             font-weight: 600;
         }
 
@@ -1167,7 +1200,7 @@ button.btn-follow-small{
         }
 
         span.active {
-            border-bottom: solid 2px $atp-red;
+            border-bottom: solid 2px $atp-blue;
         }
     }
 }

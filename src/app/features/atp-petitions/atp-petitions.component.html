@@ -1,56 +1,60 @@
 <div id="content" class="pl-0">
-  <div class="input-group input-group-lg search-div">
-    <input class="form-control input-lg" type="text" placeholder="Search" id="search-project">
-    <div class="input-group-btn">
-      <button type="submit" class="btn btn-default">
-        &#xA0;&#xA0;&#xA0;<i class="fa fa-fw fa-search fa-lg"></i>&#xA0;&#xA0;&#xA0;
-      </button>
-    </div>
-  </div>
-  <div class="row partial-wrapper">
-    <div class="col-xs-12 col-sm-8 col-md-8 col-lg-9 content-section">
-      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 pl-0 pr-0" *ngFor="let n of news; first as isFirst; last as isLast" [ngClass]="{'pt-2':isFirst, 'pb-2':isLast}">
-          <table class="wrapper-table">
-              <tr>
-                  <td colspan="2"><img [src]="n.avatar[0].src" alt="avatar" class="img-post"></td>
-                  <td>
-                      <div class="post-heading mb-half">
-                          <strong class="level-2h">Name of Petition</strong>
-                          <span class="pull-right time-span" [innerText]="n.time"></span>
-                      </div>
-                      <div class="post-heading mb-half">
-                          <strong class="level-1h atp-blue">Topic</strong>
-                      </div>
-                      <!--<div class="post-heading mb-half">
-                          <strong class="atp-color level-3h" [innerText]="n.date"></strong>
-                      </div>-->
-                      <!--<div class="post-heading mb-half">
-                          <strong class="level-4h" [innerText]="n.address"></strong>
-                      </div>-->
-                      <p class="desc" [innerHtml]="n.desc"></p>
-                      <!--<p>
-                          <span><i class="fa fa-heart-o heart"></i> {{n.likes}}</span>
-                          <span class="ml-1 cursor-p" placement="bottom" [tooltip]="shareTemplate" containerClass="share-tooltip"><i class="fa fa-share-alt cogs"></i> 2</span>
-                      </p>-->
-                  </td>
-
-              </tr>
-          </table>
-
-        <div *ngIf="!isLast" class="pt-1 clearfix">
-          <hr class="clearfix" />
+    <div class="input-group input-group-lg search-div">
+        <input class="form-control input-lg" type="text" placeholder="Search" id="search-project">
+        <div class="input-group-btn">
+            <button type="submit" class="btn btn-default">
+                &#xA0;&#xA0;&#xA0;<i class="fa fa-fw fa-search fa-lg"></i>&#xA0;&#xA0;&#xA0;
+            </button>
         </div>
-      </div>
     </div>
-    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-3 recomm-section hidden-xs">
-      <recommended-orgs></recommended-orgs>
+    <div class="row partial-wrapper">
+        <div class="col-xs-12 col-sm-8 col-md-8 col-lg-9 content-section">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 pl-0 pr-0" *ngFor="let n of petitionsList; first as isFirst; last as isLast" [ngClass]="{'pt-2':isFirst, 'pb-2':isLast}">
+                <table class="wrapper-table">
+                    <tr>
+                        <td colspan="2"><img [src]="n.avatar[0].src" alt="avatar" class="img-post"></td>
+                        <td>
+                            <div class="post-heading mb-half">
+                                <strong class="blueBoldText">Name of Petition</strong>
+                                <span class="pull-right" (click)="switchSave(n)">
+                                    <button class="savedButton" *ngIf="n.saved;else saveButton">Saved</button>
+                                    <ng-template #saveButton>
+                                        <button class="saveButton">Save</button>
+                                    </ng-template>
+                                </span>
+                            </div>
+                            <div class="post-heading mb-half">
+                                <strong class="genericRedText">Topic</strong>
+                            </div>
+                            <!--<div class="post-heading mb-half">
+                                <strong class="atp-color level-3h" [innerText]="n.date"></strong>
+                            </div>-->
+                            <!--<div class="post-heading mb-half">
+                                <strong class="level-4h" [innerText]="n.address"></strong>
+                            </div>-->
+                            <p class="genericBlackText" [innerHtml]="n.desc"></p>
+                            <!--<p>
+                                <span><i class="fa fa-heart-o heart"></i> {{n.likes}}</span>
+                                <span class="ml-1 cursor-p" placement="bottom" [tooltip]="shareTemplate" containerClass="share-tooltip"><i class="fa fa-share-alt cogs"></i> 2</span>
+                            </p>-->
+                        </td>
+
+                    </tr>
+                </table>
+                <div *ngIf="!isLast" class="pt-1 clearfix">
+                    <hr class="clearfix" />
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-3 recomm-section hidden-xs">
+            <recommended-orgs></recommended-orgs>
+        </div>
     </div>
-  </div>
 </div>
 <ng-template #shareTemplate>
-  <span class="well-sm">
-    <i class="fa fa-facebook-official facebook-color txt-14"></i>
-    <span class="txt-14 pl-1 pr-1 atp-blue opacity-point-4">|</span>
-    <i class="fa fa-twitter twitter-color txt-14"></i>
-  </span>
+    <span class="well-sm">
+        <i class="fa fa-facebook-official facebook-color txt-14"></i>
+        <span class="txt-14 pl-1 pr-1 atp-blue opacity-point-4">|</span>
+        <i class="fa fa-twitter twitter-color txt-14"></i>
+    </span>
 </ng-template>

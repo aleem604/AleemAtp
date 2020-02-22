@@ -1,0 +1,28 @@
+.partial-wrapper {
+    height: 836px;
+
+    .wrapper-table {
+        width: auto;
+    }
+
+    .archives {
+        border-bottom: solid 1px #ccc;
+        padding-top: 1.5em;
+        padding-bottom: 1.5em;
+        padding-left: 0;
+        margin-left: 0em;
+    }
+
+    .archives-count {
+        color: #ff6a00;
+    }
+
+    .ease-in {
+        transition: width 2s, height 4s;
+    }
+
+    /*.img-post {
+        width: 80px;
+        height: 80px;
+    }*/
+}

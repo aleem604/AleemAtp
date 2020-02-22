@@ -1,16 +1,18 @@
 <div class="row partial-wrapper">
-      <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3 text-center pt-1" *ngFor="let s of letters">
-          <img alt="assets/img" class="img-responsive margin-0-auto" src="../../../assets/atp/news-letter/{{s.id}}.PNG"  (click)="redirect(s.id)"/>
-          <ul class="list-block">
-              <li><span class="bold" [innerText]="s.name"></span> </li>
-              <li><span class="atp-color opacity-point-7" [innerText]="s.addr"></span> </li>
-              <ul class="rating">
-                  <li><i [className]="s.rating >= 1 ? 'fa fa-star':'fa fa-star-o' "></i> </li>
-                  <li><i [className]="s.rating >= 2 ? 'fa fa-star':'fa fa-star-o' "></i> </li>
-                  <li><i [className]="s.rating >= 3 ? 'fa fa-star':'fa fa-star-o' "></i> </li>
-                  <li><i [className]="s.rating >= 4 ? 'fa fa-star':'fa fa-star-o' "></i> </li>
-                  <li><i [className]="s.rating >= 5 ? 'fa fa-star':'fa fa-star-o' "></i> </li>
-              </ul>
-          </ul>
-      </div>
+    <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+        <div class="col-xs-4 col-sm-3 text-center pt-1" *ngFor="let s of letters">
+            <img alt="assets/img" class="img-responsive margin-0-auto" src="../../../assets/atp/news-letter/{{s.id}}.PNG" (click)="redirect(s.id)" />
+            <ul class="list-block">
+                <li><span class="genericGreyText" [innerText]="s.name"></span> </li>
+                <!--<li><span class="atp-color opacity-point-7" [innerText]="s.addr"></span> </li>-->
+                <!--<ul class="rating">
+                <li><i [className]="s.rating >= 1 ? 'fa fa-star':'fa fa-star-o' "></i> </li>
+                <li><i [className]="s.rating >= 2 ? 'fa fa-star':'fa fa-star-o' "></i> </li>
+                <li><i [className]="s.rating >= 3 ? 'fa fa-star':'fa fa-star-o' "></i> </li>
+                <li><i [className]="s.rating >= 4 ? 'fa fa-star':'fa fa-star-o' "></i> </li>
+                <li><i [className]="s.rating >= 5 ? 'fa fa-star':'fa fa-star-o' "></i> </li>
+            </ul>-->
+            </ul>
+        </div>
+    </div>
   </div>

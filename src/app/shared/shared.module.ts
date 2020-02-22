@@ -22,7 +22,6 @@ import { SmartProgressbarModule } from "./ui/smart-progressbar/smart-progressbar
 import { CalendarComponentsModule } from "@app/shared/calendar/calendar-components.module";
 import { NgxSpinnerModule } from "ngx-spinner";
 import { SocialLoginModule } from "angularx-social-login";
-import { ModalModule } from "ngx-bootstrap";
 
 @NgModule({
     imports: [

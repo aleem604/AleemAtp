@@ -10,12 +10,22 @@ import { PoliticianResponsesComponent } from "../../shared/politician-responses/
 import { PoliticianResponseDetailComponent } from "../../shared/politician-response-detail/politician-response-detail.component";
 import { PoliticianVoteHistoryComponent } from "../../shared/politician-vote-history/politician-vote-history.component";
 import { PoliticianWriteMeComponent } from "../../shared/politician-write-me/politician-write-me.component";
+import { PoliticianWriteLetterComponent } from "../../shared/politician-write-letter/politician-write-letter.component";
+import { PoliticianWriteLetterEditComponent } from "../../shared/politician-write-letter/politician-write-letter-edit/politician-write-letter-edit.component";
 
 export const routes: Routes = [
     {
         path: '',
         component: AtpPoliticiansComponent,
         children: [
+            {
+                path: 'write-a-letter',
+                component: PoliticianWriteLetterComponent
+            },
+            {
+                path: 'write-a-letter/edit',
+                component: PoliticianWriteLetterEditComponent
+            },
             {
                 path: 'vote-history',
                 component: PoliticianVoteHistoryComponent
@@ -50,7 +60,7 @@ export const routes: Routes = [
             },
             {
                 path: '',
-                redirectTo: 'vote-history'
+                redirectTo: 'write-a-letter'
             },
         ]
     }

@@ -14,7 +14,7 @@
             width: 14%;
 
             img {
-                width: 140px;
+                width: 160px;
                 height: 90px;
             }
 
@@ -33,6 +33,12 @@
         }
     }
 
+    hr {
+        margin-top: 9px;
+        margin-bottom: 9px;
+        border: 0;
+        border-top: 1px solid #eee;
+    }
 
     .videos-loop {
         padding-right: 0;

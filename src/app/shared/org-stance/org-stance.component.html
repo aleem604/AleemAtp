@@ -1,12 +1,17 @@
-<div class="row letters pl-1 pr-2">
-    <div class="col-xs-12 atp-blue pt-2 txt-xs-center bolder">
-        Representatives supported
+<div class="row letters">
+    <div class="col-xs-12 atp-blue pt-2 txt-xs-center text-center bolder">
+        <select class="custom-select">
+            <option>Representatives Supported</option>
+            <option>Representatives Boycotted</option>
+        </select>
     </div>
-    <div class="col-xs-6 col-sm-4 col-md-4 col-lg-2 mt-1 mb-half" *ngFor="let s of letters">
-        <img alt="assets/img" class="img-responsive margin-0-auto" src="../../../assets/atp/news-letter/{{s.id}}.PNG">
-        <ul class="list-block text-center">
-            <li><span class="bold" [innerText]="s.name"></span> </li>
-            <li><span class="atp-color opacity-point-7" [innerText]="s.addr"></span> </li>
-        </ul>
+    <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+        <div class="col-xs-4 col-sm-3" *ngFor="let s of letters">
+            <img alt="assets/img" class="img-responsive margin-0-auto" src="../../../assets/atp/news-letter/{{s.id}}.PNG">
+            <ul class="list-block text-center">
+                <li class="bold" [innerText]="s.name"></li>
+                <li class="atp-color opacity-point-7" [innerText]="s.addr"></li>
+            </ul>
+        </div>
     </div>
 </div>

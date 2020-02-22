@@ -1,0 +1,104 @@
+<!-- MAIN CONTENT -->
+<div class="row partial-wrapper">
+
+    <div id="content">
+        <div class="input-group input-group-lg search-bar">
+            <input class="form-control input-lg" type="text" placeholder="Search again..." id="search-project">
+            <div class="input-group-btn">
+                <button type="submit" class="btn btn-default">
+                    &#xA0;&#xA0;&#xA0;<i class="fa fa-fw fa-search fa-lg"></i>&#xA0;&#xA0;&#xA0;
+                </button>
+            </div>
+        </div>
+        <div class="row letters">
+            <div class="col-sm-12 mb-3">
+                <a class="pull-right atp-blue pt-half pr-half" (click)="showMessage(template)">Change my address</a>
+            </div>
+            <div class="col-xs-12 text-center">
+                <h1 class="letter-heading">Federal</h1>
+            </div>
+            <div class="col-xs-4 col-sm-3 text-center" *ngFor="let f of letters.federal">
+                <img alt="assets/img" class="img-responsive margin-0-auto" src="../../../assets/atp/news-letter/{{f.id}}.PNG">
+                <ul class="list-block">
+                    <li><span class="smallBlueBoldText" [innerText]="f.name"></span> </li>
+                    <li><span class="genericGreyText" [innerText]="f.addr"></span> </li>
+                    <li><!--<span class="smallRedBoldText" [innerText]="f.district"></span>--> </li>
+                </ul>
+            </div>
+
+            <div class="col-xs-12 text-center">
+                <h1 class="letter-heading">State</h1>
+            </div>
+            <div class="col-xs-4 col-sm-3 text-center" *ngFor="let s of letters.state">
+                <img alt="assets/img" class="img-responsive margin-0-auto" src="../../../assets/atp/news-letter/{{s.id}}.PNG">
+                <ul class="list-block">
+                    <li><span class="smallBlueBoldText" [innerText]="s.name"></span> </li>
+                    <li><span class="genericGreyText" [innerText]="s.addr"></span> </li>
+                    <li><!--<span class="smallRedBoldText" [innerText]="s.district"></span>--> </li>
+                </ul>
+            </div>
+
+            <div class="col-xs-12 text-center">
+                <h1 class="letter-heading">Local</h1>
+            </div>
+            <div class="col-xs-6 col-sm-4 col-md-4 col-lg-3 text-center" *ngFor="let l of letters.local">
+                <img alt="assets/img" class="img-responsive margin-0-auto" src="../../../assets/atp/news-letter/{{l.id}}.PNG">
+                <ul class="list-block">
+                    <li><span class="smallBlueBoldText" [innerText]="l.name"></span> </li>
+                    <li><span class="genericGreyText" [innerText]="l.addr"></span> </li>
+                    <li><!--<span class="smallRedBoldText" [innerText]="l.district"></span>--> </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<ng-template #template>
+    <div class="modal-header">
+        <h4 class="modal-title pull-left atp-blue"><i class="fa fa-address-card"></i> Find My Representative</h4>
+        <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body pl-1 pr-1">
+        <div class="row">
+            <div class="col-md-12 pt-1">
+                <div class="form-group">
+                    <label class="col-md-2 control-label">Address: </label>
+                    <div class="col-md-10">
+                        <input class="form-control" placeholder="address" type="text">
+                    </div>
+                </div>
+                </div>
+            <div class="col-md-12 pt-1">
+                <div class="form-group">
+                    <label class="col-md-2 control-label">City: </label>
+                    <div class="col-md-10">
+                        <input class="form-control" placeholder="city" type="text">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 pt-1">
+                <div class="form-group">
+                    <label class="col-md-4 control-label">State: </label>
+                    <div class="col-md-8">
+                        <input class="form-control" placeholder="state" type="text">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 pt-1">
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Zip code: </label>
+                    <div class="col-md-8">
+                        <input class="form-control" placeholder="zip code" type="text">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer atp-modal-footer">
+        <button type="button" class="btn btn-default" aria-label="Close" (click)="modalRef.hide()">
+            Search
+        </button>
+    </div>
+</ng-template>

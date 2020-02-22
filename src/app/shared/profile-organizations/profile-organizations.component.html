@@ -1,14 +1,19 @@
 <div class="row partial-wrapper">
-  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 pl-0 pr-0" *ngFor="let a of organizations; first as isFirst; last as isLast" [ngClass]="{'pt-2':isFirst, 'pb-2':isLast}">
-    <table class="wrapper-table">
-      <tr>
-        <td><img [src]="a.avatar[0].src" alt="avatar" class="img-post"></td>
-        <td><strong class="level-1h" [innerText]="a.name"></strong></td>
-        <td class="width-100p"><button class="btn btn-round btn-following">Following</button></td>
-      </tr>
-    </table>
-    <div *ngIf="!isLast" class="clearfix mt-0 mb-0">
-      <hr class="clearfix" />
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 pl-0 pr-0" *ngFor="let a of organizations; first as isFirst; last as isLast" [ngClass]="{'pt-2':isFirst, 'pb-2':isLast}">
+        <table class="wrapper-table">
+            <tr>
+                <td><img [src]="a.avatar[0].src" alt="avatar" class="img-post cursor-pointer" [routerLink]="['/organizations/video/', a.id]"></td>
+                <td><span class="blackTitles cursor-pointer text-ellipses" [innerText]="a.name" [routerLink]="['/organizations/video/', a.id]"></span> </td>
+                <td class="width-100p">
+                    <button (click)="switchFollowing(a)" *ngIf="a.following;else notFollowing" class="followingAndSupportedButton">Following</button>
+                    <ng-template #notFollowing>
+                        <button (click)="switchFollowing(a)" class="followAndSupportButton">Follow</button>
+                    </ng-template>
+                </td>
+            </tr>
+        </table>
+        <div *ngIf="!isLast" class="clearfix mt-0 mb-0">
+            <hr class="clearfix" />
+        </div>
     </div>
-  </div>
 </div>

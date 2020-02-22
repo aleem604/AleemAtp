@@ -59,10 +59,16 @@
 
             li {
                 text-align: left;
+                overflow: hidden;
+                line-height: 30px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
             }
         }
     }
 }
+
 .modal-sm {
     top: 50%;
     left: 50%;
@@ -72,4 +78,12 @@
     margin-left: -15em;
     background-color: #001b00;
     /*position:fixed;*/
+}
+.dialog-header-wait {
+    background-color: #012778;
+    color: #a4c6f5;
+}
+
+.dialog-body-wait {
+    color: #047f92d9;
 }
