@@ -15,19 +15,19 @@ export class OrgVideosComponent implements OnInit {
     videos = [
         {
             name: 'Space X',
-            title: 'title of video',
+            title: 'Title of video',
             date: '23 september',
             url: '../../../assets/atp/videos/space shuttle launch 1.jpg'
         },
         {
             name: 'NASA',
-            title: 'title of video',
+            title: 'Title of video',
             date: '23 september',
             url: '../../../assets/atp/videos/space shuttle launch 3.jpg'
         },
         {
             name: 'Space X',
-            title: 'title of video',
+            title: 'Title of video',
             date: '23 september',
             url: '../../../assets/atp/videos/space shuttle launch 4.jpg'
         },
@@ -45,13 +45,13 @@ export class OrgVideosComponent implements OnInit {
         },
         {
             name: 'Space X',
-            title: 'title of video',
+            title: 'Title of video',
             date: '23 september',
             url: '../../../assets/atp/videos/space shuttle launch 1.jpg'
         },
         {
             name: 'Space X',
-            title: 'title of video',
+            title: 'Title of video',
             date: '23 september',
             url: '../../../assets/atp/videos/space shuttle launch 1.jpg'
         }

@@ -14,11 +14,11 @@
                     <tr>
                         <td colspan="2"><img [src]="n.avatar[0].src" alt="avatar" class="img-post"> </td>
                         <td>
-                            <div class="pb-half">
-                                <strong class="blackTitles" [innerText]="n.name"></strong>
+                            <div>
+                                <span class="blueBoldText" [innerText]="n.event"></span>
                                 <small class="pull-right" [innerText]="n.time"></small>
                             </div>
-                            <div class="blueTitles" [innerText]="n.event"></div>
+                            <!--<div class="blueTitles" [innerText]="n.event"></div>-->
                             <div class="genericRedText" [innerText]="n.date"></div>
                             <p class="smallGreyBoldText pt-half" [innerText]="n.address"></p>
                             <p class="genericBlackText" [innerText]="n.desc"></p>

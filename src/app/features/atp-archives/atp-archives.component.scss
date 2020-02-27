@@ -30,6 +30,7 @@ $legHeight: 887px;
                         padding: 0 !important;
 
                         select {
+                            text-align-last: center;
                             padding: 6px 28px 6px 20px;
                             width: 100%;
                             height: 44px;
@@ -39,7 +40,7 @@ $legHeight: 887px;
                     }
 
                     td:last-child {
-                        border-right: none;
+                        border-right: none;                      
                     }
 
                     td.active-cell {

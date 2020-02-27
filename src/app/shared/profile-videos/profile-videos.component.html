@@ -10,7 +10,7 @@
                 </td>
                 <td class="vertical-middle line-height-23">
                     <div class="genericGreyText" [innerText]="v.name"></div>
-                    <div class="blueTitles" [innerText]="v.title"></div>
+                    <div class="blueTitles" [innerText]="v.title | slice : 0 : 30"></div>
                     <div class="genericRedText" [innerText]="v.date"></div>
                 </td>
             </tr>

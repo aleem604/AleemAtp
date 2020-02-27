@@ -5,10 +5,10 @@
         <td colspan="2"><img [src]="a.avatar[0].src" alt="avatar" class="img-post"></td>
         <td>         
           <div class="row">
-            <div class="col-xs-12"><strong class="atp-blue level-1h" [innerText]="a.name"></strong></div>
+            <div class="col-xs-12"><span class="blueTitles" [innerText]="a.name"></span></div>
             
           </div>
-        <p class="desc" [innerHtml]="a.desc  | slice: 0 : trunkLength"></p>    
+        <p class="genericBlackText" [innerHtml]="a.desc  | slice: 0 : trunkLength"></p>    
         </td>       
       </tr>
     </table>

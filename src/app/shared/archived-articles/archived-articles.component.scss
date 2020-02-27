@@ -1,36 +1,79 @@
 .partial-wrapper {
-  height: 837px;
+    height: 837px;
 
-  table.wrapper-table {
-      width:auto;
-      margin-left:auto;
-    tr {
-      td:first-of-type {
-        padding-left: 1.2em;
-        padding-right: 0.8em;
-        text-align: center;
-        vertical-align: top;
-        min-width: 90px;
-        img {
-          /*width: 90px;*/
-          /*height: 70%;*/
+    table.wrapper-table {
+        width: auto;
+        margin-left: auto;
+
+        tr {
+            td:first-of-type {
+                padding-left: 1.2em;
+                padding-right: 0.8em;
+                text-align: center;
+                vertical-align: top;
+                min-width: 90px;
+
+                img {
+                    /*width: 90px;*/
+                    /*height: 70%;*/
+                }
+            }
+
+            td:last-child {
+                .blueTitles {
+                    flex-wrap: nowrap;
+                    width: inherit;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                }
+
+                @media (max-width: 800px) {
+                    .blueTitles {
+                        width: 410px;
+                    }
+                }
+
+                @media (max-width: 700px) {
+                    .blueTitles {
+                        width: 580px;
+                    }
+                }
+
+                @media (max-width: 600px) {
+                    .blueTitles {
+                        width: 480px;
+                    }
+                }
+
+                @media (max-width: 500px) {
+                    .blueTitles {
+                        width: 274px;
+                    }
+                }
+
+                @media (max-width: 320px) {
+                    .blueTitles {
+                        width: 208px;
+                    }
+                }
+            }
         }
-      }
-    }
 
-    .rating {
-      float: right;
-      padding:0;
-      li {
-        display: inline;
-        padding-right: 3px;
-        float: left;
-        font-size:11px;
-      }
+        .rating {
+            float: right;
+            padding: 0;
 
-      .fa-star {
-        color: #ffd800;
-      }
+            li {
+                display: inline;
+                padding-right: 3px;
+                float: left;
+                font-size: 11px;
+            }
+
+            .fa-star {
+                color: #ffd800;
+            }
+        }
     }
-  }
 }
