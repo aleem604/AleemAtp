@@ -1089,6 +1089,66 @@ button.btn-follow-small {
     margin-right: -2px;
     padding-right: 2px;
 
+    .flex-wrapper {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: flex-start;
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+
+        .item1 {
+            padding-right: 5px;
+
+            img {
+                width: 80px;
+                padding: 0px 4px 0px 2px;
+            }
+
+
+            @media (max-width: 800px) {
+                img {
+                    width: 80px;
+                    /*height: 80%;*/
+                }
+            }
+
+            @media (max-width: 700px) {
+                img {
+                    width: 80px;
+                    /*height: 70%;*/
+                }
+            }
+
+            @media (max-width: 600px) {
+                img {
+                    width: 70px;
+                    /*height: 60%;*/
+                }
+            }
+
+            @media (max-width: 500px) {
+                img {
+                    width: 60px;
+                    /*height: 60%;*/
+                }
+            }
+
+            @media (max-width: 400px) {
+                img {
+                    width: 50px;
+                    /*height: 60%;*/
+                }
+            }
+        }
+
+        .item2 {
+            flex-grow: 1;
+        }
+    }
+
+
+
+
     table.wrapper-table {
         width: 100%;
         margin-left: 2.0rem;
@@ -1103,42 +1163,36 @@ button.btn-follow-small {
                 min-width: 60px;
 
                 img {
-                    /*width: 50px;*/
-                    height: 60%;
+                    width: 80px;
                 }
 
                 @media (max-width: 800px) {
                     img {
-                        /*width: 50px;*/
-                        height: 60%;
+                        width: 80px;
                     }
                 }
 
                 @media (max-width: 700px) {
                     img {
-                        /*width: 50px;*/
-                        height: 60%;
+                        width: 80px;
                     }
                 }
 
                 @media (max-width: 600px) {
                     img {
-                        /*width: 50px;*/
-                        height: 60%;
+                        width: 70px;
                     }
                 }
 
                 @media (max-width: 500px) {
                     img {
-                        /*width: 50px;*/
-                        height: 60%;
+                        width: 60px;
                     }
                 }
 
                 @media (max-width: 400px) {
                     img {
-                        /*width: 50px;*/
-                        height: 60%;
+                        width: 50px;
                     }
                 }
             }
@@ -1216,4 +1270,11 @@ button.btn-follow-small {
             border-bottom: solid 2px $atp-blue;
         }
     }
+}
+
+.text-ellipses {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: list-item;
 }

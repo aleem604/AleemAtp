@@ -1,19 +1,25 @@
 .partial-wrapper {
-  height: 695px;
+    height: 695px;
 
-  table.wrapper-table {
-      margin-left:auto;
-    tr {
-      td.width-100p {
-        width: 110px;
-      }
-
-      td:first-of-type {
-        width: 90px;
-        padding-left: 0.5em;
-        padding-right: 0.5em;
-        text-align: center;
-      }
+    hr {
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
-  }
+
+    table.wrapper-table {
+        margin-left: auto;
+
+        tr {
+            td.width-100p {
+                width: 110px;
+            }
+
+            td:first-of-type {
+                width: 90px;
+                padding-left: 0.5em;
+                padding-right: 0.5em;
+                text-align: center;
+            }
+        }
+    }
 }

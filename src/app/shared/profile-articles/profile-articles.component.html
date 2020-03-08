@@ -1,5 +1,5 @@
 <div class="row partial-wrapper">
-  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 pl-0 pr-0" *ngFor="let a of articles; first as isFirst; last as isLast" [ngClass]="{'pt-2':isFirst, 'pb-2':isLast}">
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 pl-0 pr-0" *ngFor="let a of articles; first as isFirst; last as isLast" [ngClass]="{'pt-1':isFirst, 'pb-2':isLast}">
     <table class="wrapper-table">
       <tr>
         <td colspan="2"><img [src]="a.avatar[0].src" alt="avatar" class="img-post"></td>
