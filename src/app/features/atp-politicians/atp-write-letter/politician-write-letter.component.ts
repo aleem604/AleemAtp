@@ -1,11 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, TemplateRef } from '@angular/core';
+import { BsModalService, BsModalRef } from 'ngx-bootstrap';
 
 @Component({
-    selector: 'write-letter',
-    templateUrl: './write-letter.component.html',
-    styleUrls: ['./write-letter.component.scss'],
+    selector: 'politician-write-letter',
+    templateUrl: './politician-write-letter.component.html',
+    styleUrls: ['./politician-write-letter.component.scss'],
 })
-export class WhiteLetterComponent implements OnInit {
+export class PoliticianWriteLetterComponent implements OnInit {
+    modalRef: BsModalRef;
+
     letters = {
         "federal":
             [
@@ -80,8 +83,14 @@ export class WhiteLetterComponent implements OnInit {
     };
 
 
-    constructor() { }
 
+
+    showMessage(template: TemplateRef<any>) {
+        this.modalRef = this.modalService.show(template, { class: 'modal-sm modal-dialog-centered change-address', ignoreBackdropClick: false, keyboard: false });
+        return this.modalRef;
+    }
+
+    constructor(private modalService: BsModalService) { }
     ngOnInit() {
     }
 

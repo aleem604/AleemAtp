@@ -20,10 +20,25 @@
         </div>
     </div>
 </div>
-<ng-template #shareTemplate>
-    <span class="well-sm">
-        <i class="fa fa-facebook-official facebook-color txt-14"></i>
-        <span class="txt-14 pl-1 pr-1 atp-blue opacity-point-4">|</span>
-        <i class="fa fa-twitter twitter-color txt-14"></i>
-    </span>
-</ng-template>
+
+
+<!--<div class="row partial-wrapper">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 pl-0 pr-0" *ngFor="let a of articles; first as isFirst; last as isLast" [ngClass]="{'pt-2':isFirst, 'pb-2':isLast}">
+        <table class="wrapper-table">
+            <tr>
+                <td colspan="2"><img [src]="a.avatar[0].src" alt="avatar" class="img-post"></td>
+                <td>
+                    <div class="row">
+                        <div class="col-xs-12"><span class="blueTitles" [innerText]="a.name"></span></div>
+                        <div class="col-xs-2 text-right genericBlackText p-0" [innerText]="a.time"></div>
+                        <div class="col-xs-12 pt-half"><span class="genericBlackText" [innerHtml]="a.desc"></span> </div>
+                    </div>
+                    <p class="genericBlackText" [innerHtml]="a.desc  | slice: 0 : trunkLength"></p>
+                </td>
+            </tr>
+        </table>
+        <div *ngIf="!isLast" class="clearfix mt-0 mb-0">
+            <hr class="clearfix" />
+        </div>
+    </div>
+</div>-->

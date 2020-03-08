@@ -7,6 +7,11 @@
     margin-right: -2px;
     padding-right: 2px;
 
+    .clearfix{
+        margin: 4px 0;
+
+    } 
+    
     .flex-wrapper {
         display: flex;
         margin-right: 0.75em;
@@ -21,7 +26,7 @@
                 margin: 0 auto;
                 min-width: 82px;
                 padding-right: 0.5em;
-                border-radius:57px;
+                border-radius: 57px;
             }
         }
 

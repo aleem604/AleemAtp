@@ -1,36 +1,7 @@
 .partial-wrapper {
-  height: 695px;
+    height: 695px;
 
-  table.wrapper-table {
-      width:auto;
-      margin-left:auto;
-    tr {
-      td:first-of-type {
-        padding-left: 1.2em;
-        padding-right: 0.8em;
-        text-align: center;
-        vertical-align: top;
-        min-width: 90px;
-        img {
-          /*width: 90px;*/
-          /*height: 70%;*/
-        }
-      }
+    table.wrapper-table {
+        width: auto;
     }
-
-    .rating {
-      float: right;
-      padding:0;
-      li {
-        display: inline;
-        padding-right: 3px;
-        float: left;
-        font-size:11px;
-      }
-
-      .fa-star {
-        color: #ffd800;
-      }
-    }
-  }
 }

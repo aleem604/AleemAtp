@@ -58,4 +58,9 @@ export class PoliticianResponsesComponent implements OnInit {
     redirect(id): void {
         this.router.navigate(['/politicians/responses',id]);
     }
+
+    navigateTo(detailId: number) {
+        var url = '/politicians/responses/1/detail/2';
+        this.router.navigate([url]);
+    }
 }

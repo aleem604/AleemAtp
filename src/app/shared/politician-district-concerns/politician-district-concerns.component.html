@@ -1,11 +1,11 @@
 <div class="row partial-wrapper">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 display-flex" *ngFor="let a of articles; first as isFirst; last as isLast" [ngClass]="{'pt-1':isFirst, 'pb-2':isLast}">
-        <div class="col-xs-7 text-left"><strong class="level-2h atp-blue">Name of topic</strong></div>
-        <div class="col-xs-5 text-right"><small [innerText]="a.time"></small> </div>
-        <div class="col-xs-12"><strong class="atp-red">Plan of action:</strong> <span class="genericBlackText pl-half" [innerHtml]="a.desc"></span></div>
+        <div class="col-xs-7 text-left"><strong class="blueBoldText">Name of topic</strong></div>
+        <div class="col-xs-5 text-right"><small class="genericBlackText" [innerText]="a.time"></small> </div>
+        <div class="col-xs-12"><strong class="genericRedText">Plan of action:</strong> <span class="genericBlackText pl-half" [innerHtml]="a.desc"></span></div>
 
         <div class="col-xs-12">
-            <small class="atp-blue">Users approve of plan of action </small>
+            <small class="genericBlueText">Users approve of plan of action </small>
             <span class="relative pull-right"><small class="thumbs-down"><i class="fa fa-thumbs-o-down"></i><small>52</small> </small></span>
             <span class="relative pull-right pr-1"><small class="thumbs-up"><i class="fa fa-thumbs-o-up"></i><small>52</small> </small></span>
         </div>

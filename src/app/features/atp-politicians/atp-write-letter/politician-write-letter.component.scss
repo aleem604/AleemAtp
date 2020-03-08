@@ -1,0 +1,90 @@
+.partial-wrapper {
+    height: 887px;
+
+    #content {
+        padding: 0px;
+        overflow-x: hidden;
+
+
+        .blotter-filter {
+            ul {
+                border-top: none;
+                border-left: none;
+                border-right: none;
+            }
+
+            .active > a {
+                color: #333;
+            }
+
+            a, a:hover {
+                border: none;
+            }
+        }
+
+        .letters {
+            margin-left: 1em;
+            margin-right: 1em;
+
+            .letter-heading {
+                color: #CE0000;
+                opacity: 0.8;
+                font-weight: bold;
+                padding-bottom: 0.5em;
+            }
+
+            .politician-wrapper {
+                display: list-item;
+                width: 100%;
+                list-style-type: none;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+
+                .list-block {
+                    list-style-type: none;
+                    list-style: none;
+                    padding: 10px 10px 10px 0px;
+                    min-width: 90px;
+                    width: 100%;
+                    max-width: 260px;
+                    text-align: center;
+                    margin: 0 auto;
+                    line-height: 20px;
+                    height: 5em;
+
+                    li {
+                        text-align: center;
+
+                        .text-wrap {
+                            margin-bottom: 0;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.modal-wrapper {
+    .form-control {
+        padding: 6px 6px !important;
+        height: 30px;
+    }
+
+    .modal-header {
+        padding: 12px 10px;
+        border-bottom: 1px solid #e5e5e5;
+    }
+
+    .close {
+        position: absolute;
+        right: 1em;
+        top: 1em;
+    }
+}

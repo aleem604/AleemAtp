@@ -1,19 +1,19 @@
 $legHeight: 695px;
 .partial-wrapper {
-        height: $legHeight;
-        overflow-y: scroll;
-        padding: 0;
-        border-right: 2px solid rgba(220,220,220,0.5);
-        box-shadow: 1px 1px 6px rgba(228,228,228,0.5);
-        margin-right:-5px;
+    height: $legHeight;
+    overflow-y: scroll;
+    padding: 0;
+    border-right: 2px solid rgba(220,220,220,0.5);
+    box-shadow: 1px 1px 6px rgba(228,228,228,0.5);
+    margin-right: -5px;
 
     img {
         /*max-width: 180px;
         max-height: 180px;
         min-width:120px;
         min-height:120px;*/
-        width:100%;
-        height:100%;
+        width: 100%;
+        height: 100%;
         border-radius: 99px;
     }
 
@@ -26,10 +26,17 @@ $legHeight: 695px;
         text-align: center;
         margin: 0 auto;
         line-height: 20px;
-        height: 75px;
+        height: auto;
 
         li {
             text-align: center;
+            display: grid;
+
+            span {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
         }
 
         .rating {

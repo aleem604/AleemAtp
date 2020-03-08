@@ -1,0 +1,101 @@
+<!-- MAIN CONTENT -->
+<div class="row partial-wrapper">
+    <div id="content">
+        <div class="row letters">
+            <div class="col-sm-12 mb-1">
+                <a class="pull-right atp-blue pt-half pr-half" (click)="showMessage(template)">Change my address</a>
+            </div>
+            <div class="col-xs-12 text-center">
+                <h1 class="letter-heading">Federal</h1>
+            </div>
+            <div class="col-xs-4 col-sm-3 text-center" *ngFor="let f of letters.federal" [routerLink]="['/politicians/vote-history/', f.id]">
+                <div class="politician-wrapper">
+                    <img alt="assets/img" class="img-responsive margin-0-auto" src="../../../assets/atp/news-letter/{{f.id}}.PNG">
+                    <ul class="list-block">
+                        <li><p class="smallBlueBoldText text-wrap" [innerText]="f.name"></p> </li>
+                        <li><p class="genericGreyText text-wrap" [innerText]="f.addr"></p></li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="col-xs-12 text-center">
+                <h1 class="letter-heading">State</h1>
+            </div>
+            <div class="col-xs-4 col-sm-3 text-center" *ngFor="let f of letters.state" [routerLink]="['/politicians/vote-history/', f.id]">
+                <div class="politician-wrapper">
+                    <img alt="assets/img" class="img-responsive margin-0-auto" src="../../../assets/atp/news-letter/{{f.id}}.PNG">
+                    <ul class="list-block">
+                        <li><p class="smallBlueBoldText text-wrap" [innerText]="f.name"></p> </li>
+                        <li><p class="genericGreyText text-wrap" [innerText]="f.addr"></p></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-xs-12 text-center">
+                <h1 class="letter-heading">Local</h1>
+            </div>
+            <div class="col-xs-4 col-sm-3 text-center" *ngFor="let f of letters.local" [routerLink]="['/politicians/vote-history/', f.id]">
+                <div class="politician-wrapper">
+                    <img alt="assets/img" class="img-responsive margin-0-auto" src="../../../assets/atp/news-letter/{{f.id}}.PNG">
+                    <ul class="list-block">
+                        <li><p class="smallBlueBoldText text-wrap" [innerText]="f.name"></p> </li>
+                        <li><p class="genericGreyText text-wrap" [innerText]="f.addr"></p></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<ng-template #template>
+    <div class="modal-wrapper">
+        <div class="modal-header">
+            <h4 class="modal-title genericBlueText"><i class="fa fa-address-card"></i> Find My Representatives</h4>
+            <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body pt-0 pl-1 pr-1">
+            <div class="row">
+                <div class="col-sm-12 pt-1">
+                    <div class="form-group">
+                        <small class="col-sm-3 p-0 mt-half control-label">Address: </small>
+                        <div class="col-sm-9 pl-0">
+                            <input class="form-control" placeholder="address" type="text">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 pt-1">
+                    <div class="form-group">
+                        <small class="col-sm-3 p-0 mt-half control-label">City: </small>
+                        <div class="col-sm-9 pl-0">
+                            <input class="form-control" placeholder="city" type="text">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 pr-0 pt-1">
+                    <div class="form-group">
+                        <small class="col-sm-6 p-0 mt-half control-label">State: </small>
+                        <div class="col-sm-6 pl-0">
+                            <input class="form-control" placeholder="state" type="text">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 pt-1">
+                    <div class="form-group">
+                        <small class="col-sm-3 p-0 mt-half control-label">Zip: </small>
+                        <div class="col-sm-9 pl-0">
+                            <input class="form-control" placeholder="zip" type="text">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer atp-modal-footer text-center">
+            <button type="button" class="btn btn-default btn-sm" aria-label="Close" (click)="modalRef.hide()">
+                Search
+            </button>
+        </div>
+    </div>
+</ng-template>

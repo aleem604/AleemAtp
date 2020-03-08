@@ -14,7 +14,7 @@
 
 /* 1 - Screen using it: "Welcome Screen". */
 .welcome {
-    font-size: 18px;
+    font-size: 26px;
     font-family: 'Freight Sans Bold', Helvetica, Arial;
     color: #000000;
 }
@@ -36,6 +36,13 @@
     font-family: 'Freight Sans Bold', Helvetica, Arial;
     color: #5e6163;
 }
+
+.loginSupportText {
+    font-size: 14px;
+    font-family: 'Freight Sans Bold', Helvetica, Arial;
+    color: #5e6163;
+}
+
 
 /* 7, 8, 46 - Screens using it: "Welcome Screen", "Blotter"  */
 .greyBoldText {
@@ -96,6 +103,14 @@
     font-weight: bold;
     color: #c40000;
 }
+
+.redBoldText {
+    font-size: 13px;
+    font-family: 'Freight Sans Bold', Helvetica, Arial;
+    font-weight: bold !important;
+    color: #c40000;
+}
+
 
 /* 16, 30, 34, 42, 63, 78, 84 - Screens using it: "User Profile: Articles Tab, Videos Tab, Boycott Tab, Petitions", "Main Menu: Events Tab, Archives Tab, Boycott Tab" */
 .genericRedText {
@@ -246,6 +261,34 @@
     background: #012778;
 }
 
+.font-500 {
+    font-weight: 500;
+}
+
 .font-600{
     font-weight:600;
+}
+
+.btn-primary {
+    background-color: #012778;
+    color:white;
+}
+
+.btn-primary:hover, .btn-primary:active, .btn-primary:focus {
+    background-color: #012778;
+    color: #c0cbf8;
+}
+
+
+.atp-white{
+    color:white !important;
+}
+
+.btn-round{
+    border-radius: 12px;
+    /*box-shadow: 1px 1px 0 #0449fc;*/
+}
+
+.btn-xs{
+    padding: 3px 17px;
 }

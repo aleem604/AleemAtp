@@ -116,11 +116,6 @@ const routes: Routes = [
                 data: { pageTitle: "New Feed" }
             },
             {
-                path: "write-a-letter",
-                loadChildren: () => import('./features/atp-write-letter/write-letter.module').then(m => m.WriteLetterModule),
-                data: { pageTitle: "Write a Letter" }
-            },
-            {
                 path: "vote",
                 loadChildren: () => import('./features/atp-vote/atp-vote.module').then(m => m.AtpVoteModule),
                 data: { pageTitle: "Vote" }

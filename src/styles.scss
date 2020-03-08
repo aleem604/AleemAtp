@@ -3,8 +3,8 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,300,400,700");
 @import "./src/assets/css/updated-design.scss";
 
-html, body{
-    overflow-x:hidden;
+html, body {
+    overflow-x: hidden;
 }
 
 .mat-accent .mat-slider-thumb, .mat-accent .mat-slider-thumb-label, .mat-accent .mat-slider-track-fill {
@@ -22,9 +22,18 @@ html, body{
         text-align: center;
     }
 }
+
 .progress {
     margin-bottom: -11px;
 }
+
+.change-address {
+    .modal-content {
+        border-radius: 10px;
+        border: solid 2px #012778;
+    }
+}
+
 
 .input-group-lg > .form-control, .input-group-lg > .input-group-addon, .input-group-lg > .input-group-btn > .btn {
     height: 40px;
@@ -37,6 +46,7 @@ html, body{
 .font-800 {
     font-weight: 800;
 }
+
 .font-normal {
     font-weight: normal;
 }
@@ -493,6 +503,7 @@ html, body{
 .mb-half {
     margin-bottom: 0.5em;
 }
+
 .mb-0 {
     margin-bottom: 0;
 }
@@ -816,6 +827,7 @@ html, body{
 .pb-half {
     padding-bottom: 0.5em;
 }
+
 .pb-0 {
     padding-bottom: 0;
 }
@@ -962,8 +974,8 @@ html, body{
     color: #1DA1F2;
 }
 /*----------------------------------------LINE HEIGHT -----------------------------*/
-.line-height-15{
-    line-height:15px;
+.line-height-15 {
+    line-height: 15px;
 }
 
 .line-height-16 {
@@ -1054,7 +1066,7 @@ button.btn-follow {
     font-weight: 800;
 }
 
-button.btn-follow-small{
+button.btn-follow-small {
     background-color: white;
     border: solid 1px #ccc;
     box-shadow: 1px 1px 0px #ccc;
@@ -1089,6 +1101,7 @@ button.btn-follow-small{
                 text-align: center;
                 vertical-align: top;
                 min-width: 60px;
+
                 img {
                     /*width: 50px;*/
                     height: 60%;
@@ -1182,8 +1195,8 @@ button.btn-follow-small{
         display: flex;
 
         span {
-            flex:1;
-            text-align:center;
+            flex: 1;
+            text-align: center;
             padding: 15px 16px;
             cursor: pointer;
             color: $atp-black;

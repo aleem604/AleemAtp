@@ -43,8 +43,6 @@ import { PoliticianResponseDetailComponent } from "../politician-response-detail
 import { PoliticianVoteHistoryComponent } from "../politician-vote-history/politician-vote-history.component";
 import { PoliticianWriteMeComponent } from "../politician-write-me/politician-write-me.component";
 import { OrganizationsOrganizationsComponent } from "../organizations-organizations/organizations-organizations.component";
-import { PoliticianWriteLetterComponent } from "../politician-write-letter/politician-write-letter.component";
-import { PoliticianWriteLetterEditComponent } from "../politician-write-letter/politician-write-letter-edit/politician-write-letter-edit.component";
 
 @NgModule({
     imports: [
@@ -95,8 +93,6 @@ import { PoliticianWriteLetterEditComponent } from "../politician-write-letter/p
         PoliticianResponseDetailComponent,
         PoliticianVoteHistoryComponent,
         PoliticianWriteMeComponent,
-        PoliticianWriteLetterComponent,
-        PoliticianWriteLetterEditComponent,
         OrganizationsOrganizationsComponent,
 
     ],
@@ -130,8 +126,6 @@ import { PoliticianWriteLetterEditComponent } from "../politician-write-letter/p
         PoliticianResponseDetailComponent,
         PoliticianVoteHistoryComponent,
         PoliticianWriteMeComponent,
-        PoliticianWriteLetterComponent,
-        PoliticianWriteLetterEditComponent,
         OrganizationsOrganizationsComponent
     ]
 })

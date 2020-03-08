@@ -9,70 +9,30 @@
     </div>
     <div class="row wrapper">
         <div class="col-xs-12 col-sm-8 col-md-8 col-lg-9 content-section">
-            <div class="profile-section pt-1 pb-1">
+            <div class="profile-section pt-1 pb-1" [hidden]="!politicianId">
                 <table>
                     <tr>
                         <td rowspan="2">
                             <div class="push-bit"><img src="../../../assets/atp/profile.jpg" /></div>
                         </td>
                         <td>
-                            <label class="txt-16 atp-color bolder m-0">Nick Taylor</label> <small class="pull-right pr-1 atp-blue opacity-point-8">53 years . New York</small>
+                            <label class="txt-16 atp-color bolder m-0">Nick Taylor</label>
                         </td>
                     </tr>
                     <tr>
-                        <td><label class="atp-blue bold"><img class="profile-image" src="../../../assets/atp/org2-logo.png" /> Freedom Party</label></td>
+                        <td><label class="atp-blue bold"><i class="fa fa-map-marker"></i> New York, USA</label></td>
                     </tr>
                 </table>
             </div>
-
-            <!--<div class="sub-menu">
-              <nav class="navbar navbar-default">
-                <div class="container-fluid pl-0 pr-0">
-
-                  <div class="navbar-header visible-xs">
-                    <button type="button" class="navbar-toggle collapsed" (click)="isCollapsed = !isCollapsed" aria-expanded="false">
-                      <span class="sr-only">Toggle navigation</span>
-                      <span class="icon-bar"></span>
-                      <span class="icon-bar"></span>
-                      <span class="icon-bar"></span>
-                    </button>
-
-                  </div>
-
-
-                  <div class="collapse navbar-collapse1" [collapse]=isCollapsed>
-                    <ul class="nav navbar-nav">
-                      <li routerLinkActive="active">
-                        <a (click)="isCollapsed = !isCollapsed" [routerLink]="'/politicians/vote-history'">Vote History</a>
-                      </li>
-                      <li  routerLinkActive="active">
-                        <a (click)="isCollapsed = !isCollapsed" [routerLink]="'/politicians/write-me'">Write me</a>
-                      </li>
-                      <li routerLinkActive="active">
-                          <a (click)="isCollapsed = !isCollapsed" [routerLink]="'/politicians/posts'">Posts</a>
-                      </li>
-                      <li routerLinkActive="active">
-                          <a (click)="isCollapsed = !isCollapsed" [routerLink]="'/politicians/responses'">Responses</a>
-                      </li>
-                      <li routerLinkActive="active">
-                          <a (click)="isCollapsed = !isCollapsed" [routerLink]="'/politicians/district-concerns'">District Concerns</a>
-                      </li>
-
-                    </ul>
-                  </div>
-                </div>
-              </nav>
-
-            </div>-->
-            <div class="scroll-menu">
+            <div class="scroll-menu" [hidden]="!politicianId">
                 <header class="atp-scroll-menu">
                     <nav class="vertical-align-middle">
-                        <span routerLinkActive="active" [routerLink]="'/politicians/write-a-letter'">Write a Letter</span>
-                        <span routerLinkActive="active" [routerLink]="'/politicians/vote-history'">Vote History</span>
-                        <span routerLinkActive="active" [routerLink]="'/politicians/write-me'">Write me</span>
-                        <span routerLinkActive="active" [routerLink]="'/politicians/posts'">Posts</span>
-                        <span routerLinkActive="active" [routerLink]="'/politicians/responses'">Responses</span>
-                        <span routerLinkActive="active" [routerLink]="'/politicians/district-concerns'">District Concerns</span>
+                        <!--<span routerLinkActive="active" [routerLink]="'/politicians/write-a-letter'">Write a Letter</span>-->
+                        <span routerLinkActive="active" [routerLink]="['/politicians/vote-history', politicianId]">Vote History</span>
+                        <span routerLinkActive="active" [routerLink]="['/politicians/write-me', politicianId]">Write me</span>
+                        <span routerLinkActive="active" [routerLink]="['/politicians/posts', politicianId]">Posts</span>
+                        <span routerLinkActive="active" [routerLink]="['/politicians/responses', politicianId]">Responses</span>
+                        <span routerLinkActive="active" [routerLink]="['/politicians/district-concerns', politicianId]">District Concerns</span>
                     </nav>
                 </header>
             </div>

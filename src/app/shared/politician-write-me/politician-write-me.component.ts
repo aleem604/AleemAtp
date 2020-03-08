@@ -17,7 +17,7 @@ export class PoliticianWriteMeComponent implements OnInit {
 
     showDebateDiag(event: Event, template: TemplateRef<any>) {
         if (!this.debate) {
-            this.bsModalRef = this.modalService.show(template, { class: 'modal-sm modal-dialog-centered', ignoreBackdropClick: false, keyboard: false });
+            this.bsModalRef = this.modalService.show(template, { class: 'modal-md modal-dialog-centered', ignoreBackdropClick: false, keyboard: false });
         } else {
             this.bsModalRef.hide();
         }

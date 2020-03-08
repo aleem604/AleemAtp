@@ -10,8 +10,7 @@ import { PoliticianResponsesComponent } from "../../shared/politician-responses/
 import { PoliticianResponseDetailComponent } from "../../shared/politician-response-detail/politician-response-detail.component";
 import { PoliticianVoteHistoryComponent } from "../../shared/politician-vote-history/politician-vote-history.component";
 import { PoliticianWriteMeComponent } from "../../shared/politician-write-me/politician-write-me.component";
-import { PoliticianWriteLetterComponent } from "../../shared/politician-write-letter/politician-write-letter.component";
-import { PoliticianWriteLetterEditComponent } from "../../shared/politician-write-letter/politician-write-letter-edit/politician-write-letter-edit.component";
+import { PoliticianWriteLetterComponent } from "./atp-write-letter/politician-write-letter.component";
 
 export const routes: Routes = [
     {
@@ -19,48 +18,40 @@ export const routes: Routes = [
         component: AtpPoliticiansComponent,
         children: [
             {
-                path: 'write-a-letter',
-                component: PoliticianWriteLetterComponent
-            },
-            {
-                path: 'write-a-letter/edit',
-                component: PoliticianWriteLetterEditComponent
-            },
-            {
-                path: 'vote-history',
+                path: 'vote-history/:id',
                 component: PoliticianVoteHistoryComponent
             },
             {
-                path: 'articles',
+                path: 'articles/:id',
                 component: ProfileArticlesComponent
             },
             {
-                path: 'organizations',
+                path: 'organizations/:id',
                 component: ProfileOrganizationsComponent
             },
             {
-                path: 'posts',
+                path: 'posts/:id',
                 component: PoliticianPostsComponent
             },
             {
-                path: 'responses',
+                path: 'responses/:id',
                 component: PoliticianResponsesComponent
             },
             {
-                path: 'responses/:id',
+                path: 'responses/:id/detail/:detailId',
                 component: PoliticianResponseDetailComponent
             },
             {
-                path: 'district-concerns',
+                path: 'district-concerns/:id',
                 component: PoliticianDistrictConcernsComponent
             },
             {
-                path: 'write-me',
+                path: 'write-me/:id',
                 component: PoliticianWriteMeComponent
             },
             {
                 path: '',
-                redirectTo: 'write-a-letter'
+                component: PoliticianWriteLetterComponent
             },
         ]
     }
