@@ -1,5 +1,17 @@
 import { Component, OnInit, Input } from '@angular/core';
 
+export interface BoycottModel {
+    id: number;
+    website: string;
+    avatar: any;
+    name: string;
+    desc: string;
+    time: string; 
+    date: string;
+    rating: string;
+    likes: string;
+}
+
 @Component({
     selector: 'profile-boycott',
     templateUrl: './profile-boycott.component.html',
@@ -25,8 +37,9 @@ import { Component, OnInit, Input } from '@angular/core';
     ]
 })
 export class ProfileBoycottComponent implements OnInit {
-    articles = [
+    boycottData = [
         {
+            id: 1012,
             website:'americataxpayer.com',
             avatar: [{ src: '../../../assets/atp/presbyterian-women-logo.png', alt: 'avatar' }],
             name: 'Habbit for Humanity',
@@ -37,6 +50,7 @@ export class ProfileBoycottComponent implements OnInit {
             likes: 10
         },
         {
+            id: 1011,
             website: 'americataxpayer.com',
             avatar: [{ src: '../../../assets/atp/presbyterian-women-logo.png', alt: 'avatar' }],
             name: 'Habbit for Humanity',
@@ -47,6 +61,7 @@ export class ProfileBoycottComponent implements OnInit {
             likes: 2
         },
         {
+            id: 1010,
             website: 'americataxpayer.com',
             avatar: [{ src: '../../../assets/atp/presbyterian-women-logo.png', alt: 'avatar' }],
             name: 'WWF12',
@@ -57,6 +72,7 @@ export class ProfileBoycottComponent implements OnInit {
             likes: 12
         },
         {
+            id: 1009,
             website: 'americataxpayer.com',
             avatar: [{ src: '../../../assets/atp/presbyterian-women-logo.png', alt: 'avatar' }],
             name: 'Habbit for Humanity',
@@ -67,6 +83,7 @@ export class ProfileBoycottComponent implements OnInit {
             likes: 10
         },
         {
+            id: 1008,
             website: 'americataxpayer.com',
             avatar: [{ src: '../../../assets/atp/presbyterian-women-logo.png', alt: 'avatar' }],
             name: 'Habbit for Humanity',
@@ -76,6 +93,7 @@ export class ProfileBoycottComponent implements OnInit {
             likes: 2
         },
         {
+            id: 1007,
             website: 'americataxpayer.com',
             avatar: [{ src: '../../../assets/atp/presbyterian-women-logo.png', alt: 'avatar' }],
             name: 'WWF12',
@@ -86,6 +104,7 @@ export class ProfileBoycottComponent implements OnInit {
             likes: 12
         },
         {
+            id: 1006,
             website: 'americataxpayer.com',
             avatar: [{ src: '../../../assets/atp/presbyterian-women-logo.png', alt: 'avatar' }],
             name: 'Habbit for Humanity',
@@ -96,6 +115,7 @@ export class ProfileBoycottComponent implements OnInit {
             likes: 10
         },
         {
+            id: 1004,
             website: 'americataxpayer.com',
             avatar: [{ src: '../../../assets/atp/presbyterian-women-logo.png', alt: 'avatar' }],
             name: 'Habbit for Humanity',
@@ -106,6 +126,7 @@ export class ProfileBoycottComponent implements OnInit {
             likes: 2
         },
         {
+            id: 1003,
             website: 'americataxpayer.com',
             avatar: [{ src: '../../../assets/atp/presbyterian-women-logo.png', alt: 'avatar' }],
             name: 'WWF12',
@@ -116,6 +137,7 @@ export class ProfileBoycottComponent implements OnInit {
             likes: 12
         },
         {
+            id: 10002,
             website: 'americataxpayer.com',
             avatar: [{ src: '../../../assets/atp/presbyterian-women-logo.png', alt: 'avatar' }],
             name: 'Habbit for Humanity',
@@ -126,6 +148,7 @@ export class ProfileBoycottComponent implements OnInit {
             likes: 10
         },
         {
+            id : 10001,
             website: 'americataxpayer.com',
             avatar: [{ src: '../../../assets/atp/presbyterian-women-logo.png', alt: 'avatar' }],
             name: 'Habbit for Humanity',
@@ -142,4 +165,8 @@ export class ProfileBoycottComponent implements OnInit {
     ngOnInit() {
     }
 
+    remove(row: BoycottModel) {
+        const rowIndex = this.boycottData.findIndex(e => e.id == row.id);
+        this.boycottData.splice(rowIndex, 1);
+    }
 }

@@ -5,10 +5,10 @@
                 <td><img [src]="a.avatar[0].src" alt="avatar" class="img-post cursor-pointer" [routerLink]="['/organizations/video/', a.id]"></td>
                 <td><span class="blackTitles cursor-pointer text-ellipses" [innerText]="a.name" [routerLink]="['/organizations/video/', a.id]"></span> </td>
                 <td class="width-100p">
-                    <button (click)="switchFollowing(a)" *ngIf="a.following;else notFollowing" class="followingAndSupportedButton">Following</button>
-                    <ng-template #notFollowing>
+                    <button (click)="remove(a)" class="removeButton">Remove</button>
+                    <!--<ng-template #notFollowing>
                         <button (click)="switchFollowing(a)" class="followAndSupportButton">Follow</button>
-                    </ng-template>
+                    </ng-template>-->
                 </td>
             </tr>
         </table>

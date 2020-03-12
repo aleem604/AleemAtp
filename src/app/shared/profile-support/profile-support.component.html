@@ -1,5 +1,5 @@
 <div class="row partial-wrapper">
-    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 pl-0 pr-0" *ngFor="let a of articles; first as isFirst; last as isLast" [ngClass]="{'pt-1':isFirst, 'pb-2':isLast}">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 pl-0 pr-0" *ngFor="let a of supports; first as isFirst; last as isLast" [ngClass]="{'pt-1':isFirst, 'pb-2':isLast}">
         <table class="wrapper-table">
             <tr>
                 <td colspan="2">
@@ -7,12 +7,14 @@
                     <img [src]="a.avatar[0].src" alt="avatar" class="img-post">
                 </td>
                 <td>
-                    
-                    <div class="row">
-                        <div class="col-xs-7"><span class="blackTitles" [innerText]="a.name"></span></div>
-                        <div class="col-xs-5 text-right"><button class="followingAndSupportedButton">Supported</button> </div>
+
+                    <div class="row pb-half">
+                        <div class="col-xs-7"><strong class="blackTitles text-ellipses" [innerText]="a.name"></strong></div>
+                        <div class="col-xs-5 text-right pl-0">
+                            <button (click)="remove(a)" class="removeButton">Remove</button>
+                        </div>
+                        <div class="col-xs-12"><span class="genericBlueText">Reason: </span></div>
                     </div>
-                    <div class=""><strong class="genericBlueText">Reason: </strong></div>
                     <div class="genericBlackText" [innerHtml]="a.desc"></div>
 
                 </td>

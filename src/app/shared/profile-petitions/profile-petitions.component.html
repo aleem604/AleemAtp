@@ -6,12 +6,14 @@
                     <img [src]="a.avatar[0].src" alt="avatar" class="img-post">
                 </td>
                 <td>
-                    <div><span class="genericBlackText" [innerHtml]="a.org"></span></div>
-                    <div class="row">
-                        <div class="col-xs-10"><span class="blueTitles" [innerText]="a.name"></span></div>
-                        <div class="col-xs-2 text-right genericBlackText p-0" [innerText]="a.time"></div>
-                        <div class="col-xs-12 pt-half"><span class="genericBlackText" [innerHtml]="a.desc"></span> </div>
+                    <div class="row pb-half">
+                        <div class="col-xs-7 pr-0"><span class="blueTitles text-ellipses mb-half" [innerText]="a.name"></span></div>
+                        <div class="col-xs-5 pl-0 text-right">
+                            <button (click)="remove(a)" class="removeButton">Remove</button>
+                        </div>
+                        <div class="col-xs-12"><strong class="genericRedText">Topic </strong></div>
                     </div>
+                    <p class="genericBlackText" [innerHtml]="a.desc"></p>
                 </td>
             </tr>
         </table>

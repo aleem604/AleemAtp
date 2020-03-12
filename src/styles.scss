@@ -1163,36 +1163,36 @@ button.btn-follow-small {
                 min-width: 60px;
 
                 img {
-                    width: 80px;
+                    width: 50px;
                 }
 
                 @media (max-width: 800px) {
                     img {
-                        width: 80px;
+                        width: 50px;
                     }
                 }
 
                 @media (max-width: 700px) {
                     img {
-                        width: 80px;
+                        width: 50px;
                     }
                 }
 
                 @media (max-width: 600px) {
                     img {
-                        width: 70px;
+                        width: 50px;
                     }
                 }
 
                 @media (max-width: 500px) {
                     img {
-                        width: 60px;
+                        width: 50px;
                     }
                 }
 
                 @media (max-width: 400px) {
                     img {
-                        width: 50px;
+                        width: 48px;
                     }
                 }
             }
@@ -1273,8 +1273,8 @@ button.btn-follow-small {
 }
 
 .text-ellipses {
-    white-space: nowrap;
+    display: block;
     overflow: hidden;
+    white-space: nowrap;
     text-overflow: ellipsis;
-    display: list-item;
 }

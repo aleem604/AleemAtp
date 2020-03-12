@@ -1,11 +1,22 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+
+export interface ProfileSupportModel {
+    id: number;
+    avatar: any;
+    name: string;
+    desc: string;
+    time: string; 
+    date: string;
+    rating: string;
+    likes: string;
+}
 
 @Component({
     selector: 'profile-support',
     templateUrl: './profile-support.component.html',
     styleUrls: ['./profile-support.component.scss'],
     styles: [
-        `
+    `
       :host >>> table > tr > td> .tooltip-inner {
         border-radius: 25px;
         background-color: #fff;
@@ -25,8 +36,9 @@ import { Component, OnInit, Input } from '@angular/core';
     ]
 })
 export class ProfileSupportComponent implements OnInit {
-    articles = [
+    supports = [
         {
+            id: 1001,
             avatar: [{ src: '../../../assets/atp/presbyterian-women-logo.png', alt: 'avatar' }],
             name: 'Habbit for Humanity',
             desc: 'Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.Nullam dictum felis eu pede mollis pretium.Integer tincidunt.Cras dapibus.Vivamus elementum semper nisi.Aenean vulputate eleifend tellus.Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.Phasellus viverra nulla ut metus varius laoreet.Quisque rutrum.Aenean imperdiet.',
@@ -36,6 +48,7 @@ export class ProfileSupportComponent implements OnInit {
             likes: 10
         },
         {
+            id: 1002,
             avatar: [{ src: '../../../assets/atp/presbyterian-women-logo.png', alt: 'avatar' }],
             name: 'Habbit for Humanity',
             desc: 'Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.Nullam dictum felis eu pede mollis pretium.Integer tincidunt.Cras dapibus.Vivamus elementum semper nisi.Aenean vulputate eleifend tellus.Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.Phasellus viverra nulla ut metus varius laoreet.Quisque rutrum.Aenean imperdiet.',
@@ -45,6 +58,7 @@ export class ProfileSupportComponent implements OnInit {
             likes: 2
         },
         {
+            id: 1003,
             avatar: [{ src: '../../../assets/atp/presbyterian-women-logo.png', alt: 'avatar' }],
             name: 'WWF12',
             desc: 'Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.Nullam dictum felis eu pede mollis pretium.Integer tincidunt.Cras dapibus.Vivamus elementum semper nisi.Aenean vulputate eleifend tellus.Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.Phasellus viverra nulla ut metus varius laoreet.Quisque rutrum.Aenean imperdiet.',
@@ -54,6 +68,7 @@ export class ProfileSupportComponent implements OnInit {
             likes: 12
         },
         {
+            id: 1004,
             avatar: [{ src: '../../../assets/atp/presbyterian-women-logo.png', alt: 'avatar' }],
             name: 'Habbit for Humanity',
             desc: 'Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.Nullam dictum felis eu pede mollis pretium.Integer tincidunt.Cras dapibus.Vivamus elementum semper nisi.Aenean vulputate eleifend tellus.Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.Phasellus viverra nulla ut metus varius laoreet.Quisque rutrum.Aenean imperdiet.',
@@ -63,6 +78,7 @@ export class ProfileSupportComponent implements OnInit {
             likes: 10
         },
         {
+            id: 1004,
             avatar: [{ src: '../../../assets/atp/presbyterian-women-logo.png', alt: 'avatar' }],
             name: 'Habbit for Humanity',
             desc: 'Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.Nullam dictum felis eu pede mollis pretium.Integer tincidunt.Cras dapibus.Vivamus elementum semper nisi.Aenean vulputate eleifend tellus.Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.Phasellus viverra nulla ut metus varius laoreet.Quisque rutrum.Aenean imperdiet.',
@@ -71,6 +87,7 @@ export class ProfileSupportComponent implements OnInit {
             likes: 2
         },
         {
+            id: 1005,
             avatar: [{ src: '../../../assets/atp/presbyterian-women-logo.png', alt: 'avatar' }],
             name: 'WWF12',
             desc: 'Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.Nullam dictum felis eu pede mollis pretium.Integer tincidunt.Cras dapibus.Vivamus elementum semper nisi.Aenean vulputate eleifend tellus.Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.Phasellus viverra nulla ut metus varius laoreet.Quisque rutrum.Aenean imperdiet.',
@@ -80,6 +97,7 @@ export class ProfileSupportComponent implements OnInit {
             likes: 12
         },
         {
+            id: 1006,
             avatar: [{ src: '../../../assets/atp/presbyterian-women-logo.png', alt: 'avatar' }],
             name: 'Habbit for Humanity',
             desc: 'Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.Nullam dictum felis eu pede mollis pretium.Integer tincidunt.Cras dapibus.Vivamus elementum semper nisi.Aenean vulputate eleifend tellus.Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.Phasellus viverra nulla ut metus varius laoreet.Quisque rutrum.Aenean imperdiet.',
@@ -89,6 +107,7 @@ export class ProfileSupportComponent implements OnInit {
             likes: 10
         },
         {
+            id: 1007,
             avatar: [{ src: '../../../assets/atp/presbyterian-women-logo.png', alt: 'avatar' }],
             name: 'Habbit for Humanity',
             desc: 'Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.Nullam dictum felis eu pede mollis pretium.Integer tincidunt.Cras dapibus.Vivamus elementum semper nisi.Aenean vulputate eleifend tellus.Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.Phasellus viverra nulla ut metus varius laoreet.Quisque rutrum.Aenean imperdiet.',
@@ -98,6 +117,7 @@ export class ProfileSupportComponent implements OnInit {
             likes: 2
         },
         {
+            id: 1008,
             avatar: [{ src: '../../../assets/atp/presbyterian-women-logo.png', alt: 'avatar' }],
             name: 'WWF12',
             desc: 'Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.Nullam dictum felis eu pede mollis pretium.Integer tincidunt.Cras dapibus.Vivamus elementum semper nisi.Aenean vulputate eleifend tellus.Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.Phasellus viverra nulla ut metus varius laoreet.Quisque rutrum.Aenean imperdiet.',
@@ -107,6 +127,7 @@ export class ProfileSupportComponent implements OnInit {
             likes: 12
         },
         {
+            id: 1009,
             avatar: [{ src: '../../../assets/atp/presbyterian-women-logo.png', alt: 'avatar' }],
             name: 'Habbit for Humanity',
             desc: 'Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.Nullam dictum felis eu pede mollis pretium.Integer tincidunt.Cras dapibus.Vivamus elementum semper nisi.Aenean vulputate eleifend tellus.Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.Phasellus viverra nulla ut metus varius laoreet.Quisque rutrum.Aenean imperdiet.',
@@ -116,6 +137,7 @@ export class ProfileSupportComponent implements OnInit {
             likes: 10
         },
         {
+            id: 1010,
             avatar: [{ src: '../../../assets/atp/presbyterian-women-logo.png', alt: 'avatar' }],
             name: 'Habbit for Humanity',
             desc: 'Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.Nullam dictum felis eu pede mollis pretium.Integer tincidunt.Cras dapibus.Vivamus elementum semper nisi.Aenean vulputate eleifend tellus.Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.Phasellus viverra nulla ut metus varius laoreet.Quisque rutrum.Aenean imperdiet.',
@@ -131,4 +153,8 @@ export class ProfileSupportComponent implements OnInit {
     ngOnInit() {
     }
 
+    remove(row: ProfileSupportModel) {
+        const rowIndex = this.supports.findIndex(e => e.id == row.id);
+        this.supports.splice(rowIndex, 1);
+    }
 }

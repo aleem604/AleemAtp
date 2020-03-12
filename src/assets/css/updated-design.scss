@@ -142,6 +142,19 @@
     width: 90px;
 }
 
+.removeButton {
+    font-size: 10px;
+    font-family: 'Freight Sans Bold', Helvetica, Arial;
+    font-weight: 600;
+    color: #fff;
+    background: #012778;
+    padding: 4px 13px;
+    border-radius: 12px;
+    border: solid 1px #024e86;
+    box-shadow: #b4bfc7 1px 1px 1px;
+    width: 70px;
+}
+
 
 /* 32, 40, 55, 70 - Screens using it: "User Profile: Organizations Tab, Support Tab", "Main Menu: Organizations Tab, Support Tab" */
 .followingAndSupportedButton {

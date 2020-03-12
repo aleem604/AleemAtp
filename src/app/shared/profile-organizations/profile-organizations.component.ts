@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { OrganizationModel } from '../../core';
+import * as _ from 'lodash';
 
 @Component({
     selector: 'profile-organizations',
@@ -93,7 +94,8 @@ export class ProfileOrganizationsComponent implements OnInit {
     ngOnInit() {
     }
 
-    switchFollowing(row: OrganizationModel) {
-        row.following = !row.following;
+    remove(row: OrganizationModel) {
+        const rowIndex = this.organizations.findIndex(e => e.id == row.id);
+        this.organizations.splice(rowIndex, 1);
     }
 }
