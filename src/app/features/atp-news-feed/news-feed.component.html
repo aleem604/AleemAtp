@@ -7,78 +7,15 @@
             </button>
         </div>
     </div>
-    <div class="row submit-content">
-        <div class="col-xs-12 col-sm-10 col-sm-offset-1" *ngIf="isSubmit">
-            <form method="post" class="well post-form" onsubmit="return false;">
-                <div class="row">
-                    <div class="col-xs-12">
-                        <textarea rows="4" class="form-control" placeholder="Extra info regarding content ..."></textarea>
-                    </div>
-                </div>
-                <div class="row m-0">
-                    <div class="col-xs-12 col-sm-3 child">
-                        <label class="genericBlackText link-child">
-                            <img class="visible-xs-inline bottom-4" src="../../../assets/atp/news-feed/Link_Icon_25.png" />
-                            <span> Link: <input class="" placeholder="" type="text" /></span>
-                        </label>
-                        
-                    </div>
-                    <div class="col-xs-12 col-sm-3 child">
-                        <label class="genericBlackText" for="image">
-                            <img class="visible-xs-inline bottom-4" src="../../../assets/atp/news-feed/Photo_Video_Icon_25.png" />
-                            Photo / Video<input id="image" class="hidden" placeholder="" type="file" accept=".jpeg, .jpg, .jpe, .jfif, .jif, .mp4, .wmv, .mkv" />
-                        </label>
-                    </div>
-                    <div class="col-xs-12 col-sm-2 child p-0">
-                        <!--<div class="col-xs-1 visible-xs content-img">
-                            <img class="visible-xs-inline" src="../../../assets/atp/news-feed/Content_Icon_25.png" />
-                        </div>-->
-                        <div class="col-xs-12 p-0">
-                            <select class="genericBlackText">
-                                <option>Content Type</option>
-                                <option value="Image">Image</option>
-                                <option value="Video">Video</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="col-xs-12 col-sm-2 child p-0">
-                        <!--<div class="col-xs-1 visible-xs content-img">
-                            <img class="visible-xs-inline" src="../../../assets/atp/news-feed/Topic_Icon_25.png" />
-                        </div>-->
-                        <div class="col-xs-12 p-0">
-                            <select class="genericBlackText">
-                                <option>Topic</option>
-                                <option value="AK">Topic 1</option>
-                                <option value="HI">Topic 2</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-2 child p-0">
-                        <!--<div class="col-xs-1 visible-xs content-img">
-                            <img class="visible-xs-inline" src="../../../assets/atp/news-feed/State_Icon_25.png" />
-                        </div>-->
-                        <div class="col-xs-12 p-0">
-                            <select class="genericBlackText">
-                                <option>State</option>
-                                <option value="AK">Alaska</option>
-                                <option value="HI">Huwaii</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-
-
-                <fieldset class="p-0">
-                    <div class="text-center genericBlackText">
-                        <button type="submit" class="btn btn-block">Submit Content</button>
-                    </div>
-                </fieldset>
-            </form>
-        </div>
-    </div>
-    <div class="row partial-wrapper">
+    <div class="row partial-wrapper">     
         <div class="col-xs-12 col-sm-8 col-md-8 col-lg-9 content-section">
+            <div class="row">
+                <div class="col-xs-12" *ngIf="isSubmit">
+                    <button type="button" class="btn btn-block" (click)="submitContent(template)">Submit Content</button>
+                </div>
+            </div>
+
+
             <div class="col-xs-12 pr-0 pl-0" *ngFor="let n of news; first as isFirst; last as isLast" [ngClass]="{'pt-2':isFirst, 'pb-2':isLast}">
                 <table class="wrapper-table">
                     <tr>
@@ -91,16 +28,16 @@
                             </div>
                             <p>
                                 <span><i class="fa fa-heart-o heart"></i> {{n.likes}}</span>
-                                <span class="ml-1 cursor-p" placement="bottom" [tooltip]="shareTemplate" containerClass="share-tooltip"><i class="fa fa-share-alt cogs"></i> 2</span>
-                                <span class="pull-right">
-                                    <ul class="rating">
-                                        <li><i [className]="n.rating >= 1 ? 'fa fa-star':'fa fa-star-o' "></i> </li>
-                                        <li><i [className]="n.rating >= 2 ? 'fa fa-star':'fa fa-star-o' "></i> </li>
-                                        <li><i [className]="n.rating >= 3 ? 'fa fa-star':'fa fa-star-o' "></i> </li>
-                                        <li><i [className]="n.rating >= 4 ? 'fa fa-star':'fa fa-star-o' "></i> </li>
-                                        <li><i [className]="n.rating >= 5 ? 'fa fa-star':'fa fa-star-o' "></i> </li>
-                                    </ul>
-                                </span>
+                                <!--<span class="ml-1 cursor-p" placement="bottom" [tooltip]="shareTemplate" containerClass="share-tooltip"><i class="fa fa-share-alt cogs"></i> 2</span>-->
+                                <!--<span class="pull-right">
+                            <ul class="rating">
+                                <li><i [className]="n.rating >= 1 ? 'fa fa-star':'fa fa-star-o' "></i> </li>
+                                <li><i [className]="n.rating >= 2 ? 'fa fa-star':'fa fa-star-o' "></i> </li>
+                                <li><i [className]="n.rating >= 3 ? 'fa fa-star':'fa fa-star-o' "></i> </li>
+                                <li><i [className]="n.rating >= 4 ? 'fa fa-star':'fa fa-star-o' "></i> </li>
+                                <li><i [className]="n.rating >= 5 ? 'fa fa-star':'fa fa-star-o' "></i> </li>
+                            </ul>
+                        </span>-->
                             </p>
                         </td>
                     </tr>
@@ -119,10 +56,57 @@
     </div>
 </div>
 <!-- END MAIN CONTENT -->
-<ng-template #shareTemplate>
-    <span class="well-sm">
-        <i class="fa fa-facebook-official facebook-color txt-14"></i>
-        <span class="txt-14 pl-1 pr-1 atp-blue opacity-point-4">|</span>
-        <i class="fa fa-twitter twitter-color txt-14"></i>
-    </span>
+<ng-template #template>
+    <div class="modal-header dialog-header-wait">
+        <h4 class="modal-title pull-left"><i class="fa fa-info-circle"></i> Submit Content</h4>
+        <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body dialog-body-wait">
+        <form>
+            <div class="form-group">
+                <label class="col-xs-4">Type:</label>
+                <div class="col-xs-8">                
+                    <select class="form-control select2-select">
+                        <option>Articles</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-xs-4">Location:</label>
+                <div class="col-xs-8">
+                    <select class="form-control">
+                        <option>Illinois</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-xs-4">Topic:</label>
+                <div class="col-xs-8">
+                    <select class="form-control">
+                        <option>Abortion</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-xs-4">Link:</label>
+                <div class="col-xs-8">
+                    <input type="text" class="form-control" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-xs-4">Add:</label>
+                <div class="col-xs-8">
+                    <span class="image-placeholder">Image or Video</span>
+                    <input class="opacity-0" type="file" value="Image or Video" />
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer text-right atp-modal-footer">
+        <button type="button" class="btn btn-default btn-block btn-content " aria-label="Close" (click)="modalRef.hide()">
+            Submit
+        </button>
+    </div>
 </ng-template>

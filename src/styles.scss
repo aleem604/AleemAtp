@@ -926,6 +926,10 @@ html, body {
 }
 
 /*-----------Opacity--------------*/
+.opacity-0 {
+    opacity: 0;
+}
+
 .opacity-point-1 {
     opacity: 0.1;
 }
@@ -1278,3 +1282,7 @@ button.btn-follow-small {
     white-space: nowrap;
     text-overflow: ellipsis;
 }
+.display-none{
+    display:none;
+}
+

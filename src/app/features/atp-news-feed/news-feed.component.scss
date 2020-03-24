@@ -293,3 +293,66 @@ $legHeight: 887px;
         }
     }
 }
+
+
+
+.modal-sm {
+    top: 50%;
+    left: 50%;
+    width: 30em;
+    height: 18em;
+    margin-top: -9em;
+    margin-left: -15em;
+    background-color: #001b00;
+    /*position:fixed;*/
+}
+
+.dialog-header-wait {
+    background-color: #012778;
+    color: #a4c6f5;
+    font-size: 17px;
+}
+
+.dialog-body-wait {
+    color: #047f92d9;
+    position: relative;
+    padding: 12px 3px 0px 3px;
+    display: table !important;
+    width: 100%;
+
+    .form-group {
+        display: table;
+        width: 100%;
+        margin-bottom: 10px;
+
+        label {
+            color: #012778
+        }
+
+        select.form-control, input.form-control {
+            border-radius: 4px !important;
+            color: #012778;
+        }
+
+        select.form-control {
+            
+        }
+
+        input[type=file] {
+            display: table;
+            width: 100%;
+            color: #012778
+        }
+
+        .image-placeholder {
+            position: absolute;
+            cursor: pointer;
+            color: #012778;
+        }
+    }
+}
+
+.btn-content {
+    border: solid 1px #012778;
+    color: #012778;
+}
