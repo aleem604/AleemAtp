@@ -7,16 +7,13 @@
             </button>
         </div>
     </div>
-    <div class="row partial-wrapper">     
+    <div class="row partial-wrapper">
         <div class="col-xs-12 col-sm-8 col-md-8 col-lg-9 content-section">
-            <div class="row">
-                <div class="col-xs-12" *ngIf="isSubmit">
-                    <button type="button" class="btn btn-block" (click)="submitContent(template)">Submit Content</button>
-                </div>
+            <div *ngIf="isSubmit" class="submit-wrapper">
+                <button type="button" class="btn btn-block" (click)="submitContent(template)">Submit Content</button>
             </div>
 
-
-            <div class="col-xs-12 pr-0 pl-0" *ngFor="let n of news; first as isFirst; last as isLast" [ngClass]="{'pt-2':isFirst, 'pb-2':isLast}">
+            <div class="col-xs-12 pr-0 pl-0" *ngFor="let n of news; first as isFirst; last as isLast" [ngClass]="{'pt-1':isFirst, 'pb-1':isLast}">
                 <table class="wrapper-table">
                     <tr>
                         <td colspan="2"><img [src]="n.avatar[0].src" alt="avatar" class="img-post"> </td>
@@ -30,14 +27,14 @@
                                 <span><i class="fa fa-heart-o heart"></i> {{n.likes}}</span>
                                 <!--<span class="ml-1 cursor-p" placement="bottom" [tooltip]="shareTemplate" containerClass="share-tooltip"><i class="fa fa-share-alt cogs"></i> 2</span>-->
                                 <!--<span class="pull-right">
-                            <ul class="rating">
-                                <li><i [className]="n.rating >= 1 ? 'fa fa-star':'fa fa-star-o' "></i> </li>
-                                <li><i [className]="n.rating >= 2 ? 'fa fa-star':'fa fa-star-o' "></i> </li>
-                                <li><i [className]="n.rating >= 3 ? 'fa fa-star':'fa fa-star-o' "></i> </li>
-                                <li><i [className]="n.rating >= 4 ? 'fa fa-star':'fa fa-star-o' "></i> </li>
-                                <li><i [className]="n.rating >= 5 ? 'fa fa-star':'fa fa-star-o' "></i> </li>
-                            </ul>
-                        </span>-->
+                                    <ul class="rating">
+                                        <li><i [className]="n.rating >= 1 ? 'fa fa-star':'fa fa-star-o' "></i> </li>
+                                        <li><i [className]="n.rating >= 2 ? 'fa fa-star':'fa fa-star-o' "></i> </li>
+                                        <li><i [className]="n.rating >= 3 ? 'fa fa-star':'fa fa-star-o' "></i> </li>
+                                        <li><i [className]="n.rating >= 4 ? 'fa fa-star':'fa fa-star-o' "></i> </li>
+                                        <li><i [className]="n.rating >= 5 ? 'fa fa-star':'fa fa-star-o' "></i> </li>
+                                    </ul>
+                                </span>-->
                             </p>
                         </td>
                     </tr>
@@ -45,7 +42,7 @@
 
 
                 <div *ngIf="!isLast" class="clearfix">
-                    <hr class="clearfix" />
+                    <hr class="atp-separator" />
                 </div>
             </div>
         </div>
@@ -67,7 +64,7 @@
         <form>
             <div class="form-group">
                 <label class="col-xs-4">Type:</label>
-                <div class="col-xs-8">                
+                <div class="col-xs-8">
                     <select class="form-control select2-select">
                         <option>Articles</option>
                     </select>

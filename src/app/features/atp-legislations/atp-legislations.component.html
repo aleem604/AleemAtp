@@ -10,7 +10,7 @@
   </div>
     <div class="row partial-wrapper">
       <div class="col-xs-12 col-sm-8 col-md-8 col-lg-9 content-section">
-          <div class="col-xs-12 pr-0 pl-0" *ngFor="let n of news; first as isFirst; last as isLast" [ngClass]="{'pt-2':isFirst}">
+          <div class="col-xs-12 pr-0 pl-0" *ngFor="let n of news; first as isFirst; last as isLast" [ngClass]="{'pt-1':isFirst}">
               <table class="wrapper-table">
                   <tr>
                       <td>
@@ -33,7 +33,7 @@
               </table>
 
               <div *ngIf="!isLast" class="clearfix">
-                  <hr class="clearfix" />
+                  <hr class="atp-separator clearfix" />
               </div>
           </div>
       </div>

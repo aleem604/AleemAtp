@@ -255,6 +255,18 @@ $legHeight: 887px;
             padding: 0;
             border-right: 2px solid rgba(220,220,220,0.5);
             box-shadow: 1px 1px 6px rgba(228,228,228,0.5);
+            position: relative;
+
+            .submit-wrapper {
+                position: sticky;
+                background-color: rgb(240, 240, 240);
+                top: 0px;
+                z-index: 100;
+
+                button {
+                    background-color: #f0f0f0;
+                }
+            }
         }
 
         .recomm-section {

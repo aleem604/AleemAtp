@@ -1,5 +1,5 @@
 app-root, app-main-layout, app-auth-layout, app-locked, #extr-page{
-  min-height: 100vh;
+  min-height: 100%;
 }
 
 sa-outlook,

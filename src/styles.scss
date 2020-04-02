@@ -1282,7 +1282,63 @@ button.btn-follow-small {
     white-space: nowrap;
     text-overflow: ellipsis;
 }
-.display-none{
-    display:none;
+
+.display-none {
+    display: none;
 }
 
+.atp-separator {
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+
+.archive-ngx-select2 {
+    .select2-results__option[aria-selected] {
+        text-align: center;
+    }
+
+    .select2-selection__arrow b {
+        border:none !important;
+
+    }
+
+    .select2-selection__arrow b:before {
+        content: "\f107";
+        bottom: 5px;
+        right: 4px;
+        position:absolute;
+    }
+
+    .select2-container {
+        height: 44px !important;
+        width: 100% !important;
+
+        .select2-selection__placeholder{
+            color: #333;
+        }
+
+        .select2-selection--single {
+            height: 44px !important;
+            border-radius: unset;
+        }
+
+        .select2-selection__arrow {
+            height: 41px !important;
+            background: none;
+            border: none;
+        }
+
+        .select2-selection__rendered {
+            line-height: 37px !important;
+        }
+
+        .select2-results li {
+            text-align: center;
+        }
+    }
+}
+
+.select2-results li {
+    text-align: center;
+}

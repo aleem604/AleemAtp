@@ -1,4 +1,4 @@
-$legHeight: 887px;
+$legHeight: 80vh;
 
 #content {
     padding: 0;
@@ -13,6 +13,8 @@ $legHeight: 887px;
         margin: 0;
 
         .top-bar {
+            
+
             table {
                 width: 100%;
 
@@ -40,7 +42,7 @@ $legHeight: 887px;
                     }
 
                     td:last-child {
-                        border-right: none;                      
+                        border-right: none;
                     }
 
                     td.active-cell {
@@ -57,7 +59,7 @@ $legHeight: 887px;
         }
 
         .content-section {
-            height: $legHeight;
+            /*height: $legHeight;*/
             /*overflow-y: auto;
       overflow-x: hidden;*/
             padding: 0;
@@ -66,7 +68,7 @@ $legHeight: 887px;
         }
 
         .recomm-section {
-            height: $legHeight;
+            /*height: $legHeight;*/
             overflow-y: auto;
             overflow-x: hidden;
             background: rgba(248, 248, 248, 0.5);

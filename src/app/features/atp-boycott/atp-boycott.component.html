@@ -1,12 +1,4 @@
 <div id="content" class="pl-0">
-    <div class="input-group input-group-lg search-div">
-        <input class="form-control input-lg" type="text" placeholder="Search" id="search-project">
-        <div class="input-group-btn">
-            <button type="submit" class="btn btn-default">
-                &#xA0;&#xA0;&#xA0;<i class="fa fa-fw fa-search fa-lg"></i>&#xA0;&#xA0;&#xA0;
-            </button>
-        </div>
-    </div>
     <div class="row partial-wrapper">
         <div class="col-xs-12 col-sm-8 col-md-8 col-lg-9 content-section">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 mt-half pl-0 pr-0" *ngFor="let a of articles; first as isFirst; last as isLast" [ngClass]="{'pt-1':isFirst, 'pb-1':isLast}">
@@ -32,7 +24,7 @@
                     </tr>
                 </table>
                 <div *ngIf="!isLast" class="clearfix mt-0 mb-0">
-                    <hr class="clearfix" />
+                    <hr class="atp-separator clearfix" />
                 </div>
             </div>
         </div>

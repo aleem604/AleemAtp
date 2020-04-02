@@ -1,5 +1,5 @@
 body:not(.menu-on-top).desktop-detected {
-  min-height: 970px !important;
+  min-height: 100% !important;
 }
 .smart-style-1 a {
     transition: color .1s linear 0s, background-color .1s linear 0s !important

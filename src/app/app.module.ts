@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
+import { NgSelect2Module } from 'ng-select2';
 
 import { AtpRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -25,6 +26,7 @@ import { AlertModule, ModalModule } from 'ngx-bootstrap';
         ModalModule.forRoot(),
         AtpRoutingModule,
         SharedModule,
+        NgSelect2Module,
         CoreModule,
         ToastrModule.forRoot({
             timeOut: 10000,
