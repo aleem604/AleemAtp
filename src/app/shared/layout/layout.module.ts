@@ -19,8 +19,6 @@ import { UtilsModule } from "../utils/utils.module";
 import { AtpUserComponent } from "@app/features/atp-user/user.component";
 import { NgxSpinnerModule } from "ngx-spinner";
 import { RecommendedOrgsComponent } from "../recommended-orgs/recommended-orgs.component";
-import { ArchivedArticlesComponent } from "../archived-articles/archived-articles.component";
-import { ArchivedVideosComponent } from "../archived-videos/archived-videos.component";
 import { PipesModule } from "../pipes/pipes.module";
 import { SmartadminInputModule } from "../forms/input/smartadmin-input.module";
 import { ProfileArticlesComponent } from "../profile-articles/profile-articles.component";
@@ -72,8 +70,6 @@ import { OrganizationsOrganizationsComponent } from "../organizations-organizati
         RouteBreadcrumbsComponent,
         AtpUserComponent,
         RecommendedOrgsComponent,
-        ArchivedArticlesComponent,
-        ArchivedVideosComponent,
         ProfileArticlesComponent,
         ProfileOrganizationsComponent,
         ProfileLettersComponent,
@@ -105,8 +101,6 @@ import { OrganizationsOrganizationsComponent } from "../organizations-organizati
         LayoutSwitcherComponent,
         AtpUserComponent,
         RecommendedOrgsComponent,
-        ArchivedArticlesComponent,
-        ArchivedVideosComponent,
         ProfileArticlesComponent,
         ProfileOrganizationsComponent,
         ProfileLettersComponent,

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, ViewChild, TemplateRef } from '@angular/core';
+import { Component, OnInit, Input, ViewChild, TemplateRef, AfterViewInit, ElementRef, AfterContentChecked } from '@angular/core';
 import { ModalDirective, BsModalService, BsModalRef } from 'ngx-bootstrap';
 
 
@@ -9,7 +9,7 @@ import { ModalDirective, BsModalService, BsModalRef } from 'ngx-bootstrap';
     providers: []
 })
 export class ArchivedVideosComponent implements OnInit {
-    //@ViewChild('lgModal', { static: true }) public modalRef: ModalDirective;
+    @ViewChild('containerRef', { static: true }) containerRef: ElementRef;
     public modalRef: BsModalRef;
     videos = [
         {

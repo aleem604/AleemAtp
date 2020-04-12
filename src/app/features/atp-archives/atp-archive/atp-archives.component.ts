@@ -1,13 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Select2OptionData } from 'ng-select2';
 
 @Component({
     selector: 'atp-archives',
     templateUrl: './atp-archives.component.html',
+    queries: {
+        "tabsContentRef": new ViewChild("tabsContentRef", { static: true })
+    },
     styleUrls: ['./atp-archives.component.scss'],
 })
-export class AtpArchivesComponent implements OnInit {
+export class AtpArchivesComponent implements OnInit, AfterViewInit {
+    public tabsContentRef!: ElementRef;
     exampleData: Array<Select2OptionData>;
     topics: { id: string, text: '' };
     options = {
@@ -55,8 +59,14 @@ export class AtpArchivesComponent implements OnInit {
         ];
     }
 
-    toggleVisibility(obj): void {
-
+    ngAfterViewInit(): void {
+       
     }
 
+    toggleVisibility(tab: string): void {
+        this.activeTab = tab;     
+    }
+
+
+   
 }
