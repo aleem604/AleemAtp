@@ -1,36 +1,6 @@
-## AOT Note
-Starting from version 0.4.5 we are supporting AOT builds.  
- 
-use `ng build --prod` to run AOT build
- 
-if you'll get `FATAL ERROR: CALL_AND_RETRY_LAST Allocation failed - JavaScript heap out of memory` use `npm run build:aot2` or increase node memory heep size even more (check `package.json` `scripts` section for details) 
+American Taxpayer system 
 
-
-## Prerequisites
-
-Make sure latest [angular-cli] installed globally. Follow [update-how-to](https://github.com/angular/angular-cli#updating-angular-cli)  
-
-This project has dependencies that require **Node 4.x.x and NPM 3.x.x**.
-
-For Windows users [git-bash](https://git-scm.com/downloads) is perfect **terminal**-window to manage nodejs projects. [1]
- 
- 
-## Installation
-
-1. Download and unpack
-2. Run `npm i`. This may take a while. It may even *freeze* a bit on final steps - be patient. 
-  * Also Remember, that npm on installing project dependencies may try to rebuild some modules (i.e *gyp*) and show scary red errors on that rebuild fails. Don't panic. If your `npm install` ends with long tree of project dependencies - then you are going right way. Nevermind deprecation WARNs. 
-
-3. To start whole app template (this means a lot of initial compilation) in local dev server run
-  * `npm run server`
-  * or checkout *cookbook* section for some starting tips
-4. Point your browser to [http://localhost:4200](http://localhost:4200)
-
-#### tip 
-quick way to speed up builds when testing 
-* exclude whole template parts from compilation by commenting them in `src/app/app.routing.ts` 
-
-
+Application built on Angular 10 with SmartAdmin theme
  
 ## App structure
 
